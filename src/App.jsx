@@ -38,8 +38,8 @@ export default function App() {
 
   return (
     <>
-      <div className="banner bg-[url('/images/bgImage.png')] w-full bg-cover bg-center relative  2xl:h-[90vh]  h-[100vh]">
-        <section className=" z-50 relative flex justify-center items-center flex-col pt-  h-full">
+      <div className="banner bg-[url('/images/bgImage.png')] w-full bg-cover bg-center relative  2xl:h-[90vh]  lg:h-[100vh] h-[80vh]">
+        <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
           <div className="banner-content">
             <img src="/images/bannerContent.png" alt="" className="w-[650px]" />
           </div>
@@ -48,7 +48,7 @@ export default function App() {
             Unleash the power of memes and earn rewards.
           </p>
 
-          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 absolute  bottom-20 ">
+          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 lg:absolute relative  lg:bottom-20 ">
             <div className="banner-content">
               <Button
                 type={"beta"}

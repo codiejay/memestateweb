@@ -152,7 +152,7 @@ const Navbar = () => {
         <div className="flex justify-center">
           <img src="/images/logo.svg" alt="" className="w-[136px]" />
         </div>
-        <div className="flex gap-4 justify-end">
+        <div className=" gap-4 justify-end lg:flex hidden">
           {socialIcon.map((icon, index) => (
             <a href={icon.link} key={index}>
               <img src={icon.icon} alt={icon.name} />
