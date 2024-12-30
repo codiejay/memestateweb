@@ -38,7 +38,7 @@ export default function App() {
 
   return (
     <>
-      <div className="banner bg-[url('/images/bgImage.png')] w-full bg-cover bg-center relative  2xl:h-[90vh]  lg:h-[100vh] h-[80vh]">
+      <div className="banner bg-[url('/images/bgImage.png')] w-full bg-cover bg-center relative  2xl:h-[90vh]  h-screen">
         <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
           <div className="banner-content">
             <img src="/images/bannerContent.png" alt="" className="w-[650px]" />
