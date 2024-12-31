@@ -489,7 +489,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden  h-screen">
+      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden">
         <div className="flex flex-col justify-center items-center ">
           <div>
             <img
