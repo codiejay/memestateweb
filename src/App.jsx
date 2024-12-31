@@ -178,7 +178,7 @@ export default function App() {
             <div className="absolute top-[-3rem] -left-28 z-50 lg:block hidden ">
               <img src="/images/bigDiamond.png" alt="" />
             </div>
-            <div>
+            <div className="  lg:w-fit  w-full">
               <div className=" w-full relative">
                 <div className="border-[#000] border-[12px] shadow-black-custom h-[130px] bg-[#9D9FD8] flex justify-center items-center ">
                   <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-32  px-2 leading-9">
