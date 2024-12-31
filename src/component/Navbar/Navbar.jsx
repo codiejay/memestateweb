@@ -162,14 +162,14 @@ const Navbar = () => {
       </div>
       <nav>
         <ul
-          className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-12 ${
+          className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-16 ${
             isMenuOpen ? "block" : "hidden"
           } md:flex`}
         >
           {links.map((link, index) => (
             <li
               key={index}
-              className="text-xl md:text-2xl font-normal text-white"
+              className="text-xl md:text-xl font-normal text-white"
             >
               <a href={link.link} className="text-white">
                 {link.name}

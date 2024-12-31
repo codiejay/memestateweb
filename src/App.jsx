@@ -10,6 +10,7 @@ import {
   carouselItems,
   howToPlay,
   socialFooterIcon,
+  useWindowSize,
 } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 import Advertisement from "./component/Advertisement/Advertisement";
@@ -36,24 +37,175 @@ export default function App() {
     );
   }, []);
 
+  // useEffect(() => {
+  //   const animateCards = () => {
+  //     // Select all cards
+  //     const cards = document.querySelectorAll(".masked-div-1, .masked-div-2");
+
+  //     cards.forEach((card) => {
+  //       const isLeft = card.classList.contains("masked-div-1");
+  //       const text = card.querySelectorAll("h2, p"); // Text elements
+  //       const image = card.querySelector("img"); // Image elements
+
+  //       // Animation timeline for each card
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: card,
+  //           start: "top 80%", // Start animation when card is 80% visible
+  //           end: "bottom 20%", // End animation when card is almost out of view
+  //           toggleActions: "play none none reverse", // Play forward on enter, reverse on leave
+  //         },
+  //       });
+
+  //       // Add animations
+  //       tl.fromTo(
+  //         card,
+  //         {
+  //           x: isLeft ? -200 : 200, // Slide left or right based on class
+  //           opacity: 0,
+  //         },
+  //         {
+  //           x: 0,
+  //           opacity: 1,
+  //           duration: 1,
+  //           ease: "power3.out",
+  //         }
+  //       )
+  //         .fromTo(
+  //           image,
+  //           {
+  //             scale: 0,
+  //           },
+  //           {
+  //             scale: 1,
+  //             duration: 0.8,
+  //             ease: "power3.inOut",
+  //           },
+  //           "<" // Start at the same time as the previous animation
+  //         )
+  //         .fromTo(
+  //           text,
+  //           {
+  //             y: -50,
+  //             opacity: 0,
+  //           },
+  //           {
+  //             y: 0,
+  //             opacity: 1,
+  //             duration: 0.8,
+  //             stagger: 0.2, // Animate each text element with a slight delay
+  //           },
+  //           "-=0.5" // Overlap the text fade-in with image scaling
+  //         );
+  //     });
+  //   };
+
+  //   animateCards();
+  // }, []);
+  const contentList = [
+    {
+      title: (
+        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+          Growing User <br className="lg:block  hidden" /> Base
+        </h2>
+      ),
+
+      text: (
+        <p className="max-w-md font-poppins my-5">
+          Join the growing Memestate community and turn every dice roll into a
+          thrilling experience!
+        </p>
+      ),
+      image: "/images/meme00.gif",
+    },
+    {
+      title: (
+        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+          increased advertisement
+          <br className="lg:block  hidden" />
+          demand and prize table volume
+        </h2>
+      ),
+
+      text: (
+        <p className="max-w-md font-poppins my-5">
+          Drive ad demand with targeted placements tied to user activity and
+          community engagement.
+        </p>
+      ),
+      image: "/images/meme1.gif",
+    },
+    {
+      title: (
+        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+          increased advertisement
+          <br className="lg:block  hidden" />
+          AND GAME REVENUE
+        </h2>
+      ),
+
+      text: (
+        <p className="max-w-md font-poppins my-5">
+          Drive ad demand with targeted placements tied to user activity and
+          community engagement.
+        </p>
+      ),
+      image: "/images/meme2.gif",
+    },
+    {
+      title: (
+        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+          bigger rewards pool for
+          <br className="lg:block  hidden" />
+          free players
+        </h2>
+      ),
+
+      text: (
+        <p className="max-w-md font-poppins my-5">
+          Unlock bigger rewards for free players with community-driven prize
+          pools. Boost participation through play-to-earn opportunities and
+          token incentives.
+        </p>
+      ),
+      image: "/images/meme3.gif",
+    },
+    {
+      title: (
+        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+          bigger rewards pool for
+          <br className="lg:block  hidden" />
+          free players
+        </h2>
+      ),
+
+      text: (
+        <p className="max-w-md font-poppins my-5">
+          Unlock bigger rewards for free players with community-driven prize
+          pools. Boost participation through play-to-earn opportunities and
+          token incentives.
+        </p>
+      ),
+      image: "/images/meme3.gif",
+    },
+  ];
   return (
     <>
-      <div className="banner bg-[url('/images/bgImage.png')] w-full bg-cover bg-center relative  2xl:h-[90vh]  h-screen">
+      <div className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen">
         <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
           <div className="banner-content">
-            <img src="/images/bannerContent.png" alt="" className="w-[650px]" />
+            <img src="/images/bannerContent.png" alt="" className="w-[590px]" />
           </div>
-
           <p className="text-2xl font-bold text-[#EEEFFF] text-center banner-content">
             Unleash the power of memes and earn rewards.
           </p>
 
-          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 lg:absolute relative  lg:bottom-20 ">
+          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 lg:absolute relative  lg:bottom-16 ">
             <div className="banner-content">
               <Button
                 type={"beta"}
                 soundPath={"/audio/button.mp3"}
-                label={"play beta now"}
+                label={"play Demo"}
                 className={"bg-[#FF0000]"}
               />
             </div>
@@ -72,122 +224,124 @@ export default function App() {
         <div className="w-full  bg-[#53224D] h-4"></div>
         <MarqueeComponent />
       </div>
-      <section className="bg-[#27297A] lg:px-16 px-3 py-8 relative overflow-hidden ">
-        <div className="flex flex-col justify-center items-center ">
-          <h1 className="text-white font-normal capitalize mb-2">Join the</h1>
-          <div>
-            <img
-              src="/images/memestate.png"
-              alt=""
-              className="w-[402px] h-[92px]"
-            />
-          </div>
-          <h1 className="text-white font-normal capitalize mt-1 text-center">
-            Presale
-          </h1>
-        </div>
 
-        <div className="flex lg:flex-row flex-col gap-28 mt-20 justify-center">
-          <div className="">
-            <HowItWorks items={carouselItems} />
-
-            <div className="mt-5">
-              <h3 className="text-2xl font-normal text-[#FFC727]">
-                Presale Rounds
-              </h3>
-              <ul className=" grid lg:grid-cols-3 grid-cols-1  lg:flex-nowrap   justify-between lg:mt-0 mt-10">
-                <li>
-                  <h2 className="text-white text-[32px] font-normal">
-                    Round 1
-                  </h2>
-                  <p className="text-base font-normal text-white">
-                    Lowest $GEM price + <br className="lg:block hidden" />{" "}
-                    exclusive bonuses.
-                  </p>
-                </li>
-                <li>
-                  <h2 className="text-white text-[32px] font-normal">
-                    Round 2
-                  </h2>
-                  <p className="text-base font-normal text-white">
-                    Lowest $GEM price + <br className="lg:block hidden" />{" "}
-                    exclusive bonuses.
-                  </p>
-                </li>
-                <li>
-                  <h2 className="text-white text-[32px] font-normal">
-                    Round 3
-                  </h2>
-                  <p className="text-base font-normal text-white">
-                    Final chance before <br className="lg:block hidden" />{" "}
-                    public launch.
-                  </p>
-                </li>
-              </ul>
+      <section className="bg-[#27297A] lg:px-24 px-3 py- relative">
+        <div className="grid lg:grid-cols-2 flex-col gap-28 py-8 justify-center">
+          <div className="w-full">
+            <div className="flex flex-col mb-4 ">
+              <h1 className="text-white font-normal capitalize mb-2 text-3xl">
+                Join the
+              </h1>
+              <div>
+                <img
+                  src="/images/memestate.png"
+                  alt=""
+                  className="h-20 object-contain"
+                />
+              </div>
+              <h1 className="text-white font-normal capitalize mt-1  text-3xl">
+                Presale
+              </h1>
             </div>
+            <HowItWorks items={carouselItems} />
           </div>
-          <div className="relative  flex justify-end lg:mt-0 mt-10">
-            <div className="absolute top-[-3rem] left-0 z-50 lg:block hidden ">
+          <div className="relative  flex justify-end lg:mt-0 mt-10 w-full">
+            <div className="absolute top-[-3rem] -left-28 z-50 lg:block hidden ">
               <img src="/images/bigDiamond.png" alt="" />
             </div>
-            <div className="lg:w-[601px] w-full relative">
-              <div className="border-[#000] border-[12px] shadow-black-custom h-[234px] bg-[#9D9FD8] flex justify-center items-center ">
-                <h1 className="text-black text-center  lg:text-[59px] text-3xl leading-[58.74px]">
-                  Buy $gems Token in presale now!
-                </h1>
-              </div>
-              <div className="absolute top-[11.25rem] lg:left-8 left-0">
-                <CountDown />
-              </div>
-              <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 ">
-                <div className="text-black text-center flex justify-center items-center gap-4">
-                  <p className="lg:text-4xl text-2xl">1 $GEMS</p>{" "}
-                  <img src="/images/equals.svg" alt="" />
-                  <p className="lg:text-4xl text-2xl">$0.00033 USDT</p>
+            <div>
+              <div className=" w-full relative">
+                <div className="border-[#000] border-[12px] shadow-black-custom h-[130px] bg-[#9D9FD8] flex justify-center items-center ">
+                  <h1 className="text-black text-center  lg:text-[36px] text-xl  px-32 leading-9">
+                    Buy $gems Token in presale now!
+                  </h1>
                 </div>
+                <div className="absolute top-[7rem] lg:left-8 left-0 hidden lg:block ">
+                  <CountDown />
+                </div>
+                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 h-[480px] ">
+                  <div className="text-black text-center flex justify-center items-center gap-4 mt-8">
+                    <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
+                    <img src="/images/equals.svg" alt="" />
+                    <p className="lg:text-3xl text-2xl">$0.00033 USDT</p>
+                  </div>
 
-                <div className="border-[4px] border-[#000] bg-[#ECECEC] w-full flex gap-3 justify-center py-2 my-8">
-                  <p className="lg:text-5xl text-2xl font-normal text-black">
-                    Raised:
-                  </p>
-                  <p className="lg:text-5xl text-2xl font-normal text-black">
-                    $17,840,804.97
-                  </p>
-                </div>
-                <div className="w-full flex flex-col gap-5">
-                  <div className="w-full">
-                    <Button
-                      label={"Buy with Card"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#FF0000]  w-full"}
-                    />
+                  <div className="border-[4px] border-[#000] bg-[#ECECEC] w-full flex gap-3 justify-center py-2 my-4">
+                    <p className="lg:text-5xl text-2xl font-normal text-black">
+                      Raised:
+                    </p>
+                    <p className="lg:text-5xl text-2xl font-normal text-black">
+                      $17,840,804.97
+                    </p>
                   </div>
-                  <div className="w-full">
-                    <Button
-                      label={"Buy with Card"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#FF0000]  w-full"}
-                    />
+                  <div className="w-full flex flex-col gap-5">
+                    <div className="w-full">
+                      <Button
+                        label={"Buy with Card"}
+                        type={"beta"}
+                        soundPath={"/audio/button.mp3"}
+                        className={"bg-[#FF0000]  w-full"}
+                      />
+                    </div>
+                    <div className="w-full">
+                      <Button
+                        label={"Buy with Card"}
+                        type={"beta"}
+                        soundPath={"/audio/button.mp3"}
+                        className={"bg-[#FF0000]  w-full"}
+                      />
+                    </div>
                   </div>
+                  <a
+                    href="/"
+                    className="text-[32px] underline text-black inline-block my-3"
+                  >
+                    Don’t have a wallet?
+                  </a>
                 </div>
-                <a
-                  href="/"
-                  className="text-[32px] underline text-black inline-block my-3"
-                >
-                  Don’t have a wallet?
-                </a>
+              </div>
+              <div className="mt-9">
+                <h3 className="text-2xl font-normal text-[#FFC727]">
+                  Presale Rounds
+                </h3>
+                <ul className=" grid lg:grid-cols-3 grid-cols-1  lg:flex-nowrap   justify-between lg:mt-0 mt-10">
+                  <li>
+                    <h2 className="text-white text-[32px] font-normal">
+                      Round 1
+                    </h2>
+                    <p className="text-base font-normal text-white">
+                      Lowest $GEM price + <br className="lg:block hidden" />{" "}
+                      exclusive bonuses.
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-[32px] font-normal">
+                      Round 2
+                    </h2>
+                    <p className="text-base font-normal text-white">
+                      Lowest $GEM price + <br className="lg:block hidden" />{" "}
+                      exclusive bonuses.
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-[32px] font-normal">
+                      Round 3
+                    </h2>
+                    <p className="text-base font-normal text-white">
+                      Final chance before <br className="lg:block hidden" />{" "}
+                      public launch.
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="absolute lg:-bottom-14 bottom-0 right-16">
+        <div className="absolute lg:bottom-20 bottom-0 right-0">
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-16  px-4  pt-20  pb-10 relative overflow-hidden">
+      <section className="bg-[#27297A] lg:px-24  px-4  pt-20  pb-10 relative overflow-x-hidden">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div>
@@ -208,160 +362,54 @@ export default function App() {
         </div>
         <div className="flex justify-center">
           <div className="flex justify-center flex-col mt-8 max-w-[1200px]">
-            <div className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full">
-              <div className="px-10 py-4 flex justify-end   lg:absolute  relative z-[10000] w-fit  right-0">
-                <div className="w-[400px] ">
-                  <img src="/images/meme00.gif" alt="" />
-                </div>
-              </div>
-              <div className="z-40">
-                <div className="masked-div-1 relative lg:w-[924px] w-full">
-                  <div className="px-10 pt-4 pb-6">
-                    <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-                      Growing User <br className="lg:block  hidden" /> Base
-                    </h2>
-                    <p className="max-w-md font-poppins my-5">
-                      Join the growing Memestate community and turn every dice
-                      roll into a thrilling experience!
-                    </p>
+            {contentList.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full"
+                >
+                  <div className="z-40">
+                    <div className="masked-div-1 relative lg:w-[924px] w-full">
+                      <div className="px-10 pt-4 pb-6">
+                        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+                          {item.title}
+                        </h2>
+                        <p className="max-w-md font-poppins my-5">
+                          {item.text}
+                        </p>
 
-                    <Button
-                      label={"Learn more"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#2C2F8C]"}
-                    />
+                        <Button
+                          label={"Learn more"}
+                          type={"beta"}
+                          soundPath={"/audio/button.mp3"}
+                          className={"bg-[#2C2F8C]"}
+                        />
+                      </div>
+                      <div className="absolute right-[1%] top-8 lg:block  hidden">
+                        <img src="/images/KNOT.png" alt="" />
+                      </div>
+                      <div className="absolute right-[22%] bottom-10 lg:block  hidden">
+                        <img src="/images/KNOT.png" alt="" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="absolute right-[1%] top-8 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                  <div className="absolute right-[22%] bottom-10 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="-ml-40 z-30 mt-6 relative lg:block hidden">
-                <div className="masked-div-2   "></div>
-              </div>
-            </div>
-            <div className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full">
-              <div className="px-10 py-4 flex justify-end  w-fit  right-0 lg:absolute  relative z-[10000] top-10">
-                <div className="w-[400px] ">
-                  <img src="/images/meme1.gif" alt="" />
-                </div>
-              </div>
-              <div className="z-40">
-                <div className="masked-div-1 relative lg:w-[924px] w-full">
-                  <div className="px-10 pt-4 pb-6">
-                    <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-                      increased advertisement
-                      <br className="lg:block  hidden" />
-                      demand and prize table volume
-                    </h2>
-                    <p className="max-w-md font-poppins my-5">
-                      Drive ad demand with targeted placements tied to user
-                      activity and community engagement.
-                    </p>
-
-                    <Button
-                      label={"Learn more"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#2C2F8C]"}
-                    />
-                  </div>
-                  <div className="absolute right-[1%] top-8 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                  <div className="absolute right-[22%] bottom-10 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
+                  <div className="-ml-40 z-30 mt-6 relative lg:block ">
+                    <div className="masked-div-2">
+                      <div className=" py-4 flex justify-end items-center ">
+                        <div className="w-[400px] mt-6 ">
+                          <img src={item.image} alt="" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="-ml-40 z-30 mt-6 relative lg:block hidden">
-                <div className="masked-div-2 "></div>
-              </div>
-            </div>
-            <div className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full">
-              <div className="px-10 py-4 flex justify-end   z-[10000] lg:absolute  relative w-fit  right-0 ">
-                <div className="w-[400px] ">
-                  <img src="/images/meme2.gif" alt="" />
-                </div>
-              </div>
-              <div className="z-40">
-                <div className="masked-div-1 relative lg:w-[924px] w-full">
-                  <div className="px-10 pt-4 pb-6">
-                    <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-                      increased advertisement
-                      <br className="lg:block  hidden" />
-                      AND GAME REVENUE
-                    </h2>
-                    <p className="max-w-md font-poppins my-5">
-                      Drive ad demand with targeted placements tied to user
-                      activity and community engagement.
-                    </p>
-
-                    <Button
-                      label={"Learn more"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#2C2F8C]"}
-                    />
-                  </div>
-                  <div className="absolute right-[1%] top-8 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                  <div className="absolute right-[22%] bottom-10 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="-ml-40 z-30 mt-6 relative lg:block hidden">
-                <div className="masked-div-2 "></div>
-              </div>
-            </div>
-            <div className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full">
-              <div className="px-10 py-4 flex justify-end  w-full z-[10000] lg:absolute  relative w-fit  right-0">
-                <div className="w-[400px] ">
-                  <img src="/images/meme3.gif" alt="" />
-                </div>
-              </div>
-              <div className="z-40">
-                <div className="masked-div-1 relative lg:w-[924px] w-full">
-                  <div className="px-10 pt-4 pb-6">
-                    <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-                      bigger rewards pool for
-                      <br className="lg:block  hidden" />
-                      free players
-                    </h2>
-                    <p className="max-w-md font-poppins my-5">
-                      Drive ad demand with targeted placements tied to user
-                      activity and community engagement.
-                    </p>
-
-                    <Button
-                      label={"Learn more"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#2C2F8C]"}
-                    />
-                  </div>
-                  <div className="absolute right-[1%] top-8 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                  <div className="absolute right-[22%] bottom-10 lg:block  hidden">
-                    <img src="/images/KNOT.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="-ml-40 z-30 mt-6 relative lg:block hidden">
-                <div className="masked-div-2 "></div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-16 px-0 py-16 relative overflow-hidden    ">
+
+      <section className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden    ">
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-white font-normal capitalize mb-2  lg:text-[48px] text-2xl">
             How to play
@@ -376,31 +424,32 @@ export default function App() {
         </div>
         <HowToPlay items={howToPlay} />
       </section>
-      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative ">
+
+      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative h-screen ">
         <div className="absolute -top-20 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-1 w-full lg:mt-56  mt-10justify-center items-end">
+        <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10justify-center items-end">
           <div className="col-span-2 ">
             <div className="flex flex-col justify-start items-start">
-              <div className="flex flex-col justify-start items-start mt-10">
+              <div className="flex flex-col justify-start items-start my-6 ">
                 <img src="/images/rocket.png" alt="" />
               </div>
-              <p className="text-[35px] font-normal  text-white leading-tight mr-24  ">
+              <p className="text-[28px] font-normal  text-white leading-tight mr-24  ">
                 FAST PACED GAMEPLAY:
               </p>
-              <p className="text-xl font-medium mt-4 font-poppins">
+              <p className="text-base font-medium mt-4 font-poppins">
                 Enjoy rapid 5-minute rounds for a fun and manageable experience.
               </p>
             </div>
             <div className="flex flex-col justify-start items-start">
-              <div className="flex flex-col justify-start items-start mt-10">
+              <div className="flex flex-col justify-start items-start  my-6">
                 <img src="/images/gold.png" alt="" />
               </div>
-              <p className="text-[35px] font-normal  text-white leading-tight mr-24  ">
+              <p className="text-[28px] font-normal  text-white leading-tight mr-24  ">
                 CLAIM YOUR REWARD:
               </p>
-              <p className="text-xl font-medium mt-4 font-poppins">
+              <p className="text-base font-medium mt-4 font-poppins">
                 Collect reward chests with character shards and gems, and use
                 gems to create and customize your guild, with funny Memechance
                 and Memeopportunity cards adding humor to the game.
@@ -409,30 +458,30 @@ export default function App() {
           </div>
           <div className="col-span-3 flex justify-center">
             <div>
-              <img src="/images/foxy.png" alt="" />
+              <img src="/images/foxy.png" alt="" className="w-[350px]" />
             </div>
           </div>
           <div className="col-span-2">
             <div className="flex flex-col justify-end items-end">
-              <div>
+              <div className="my-6">
                 <img src="/images/flash.png" alt="" />
               </div>
-              <p className="text-[35px] font-normal  text-white leading-tight mt-3 mb-2 text-right">
+              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 text-right">
                 FEEL THE PROGRESSION
               </p>
-              <p className="text-xl font-medium mt-4 font-poppins text-right">
+              <p className="text-base font-medium mt-4 font-poppins text-right">
                 Unlock, level up, and enhance characters with special abilities
                 to gain strategic advantages.
               </p>
             </div>
             <div className="flex flex-col justify-end items-end mt-10">
-              <div>
+              <div className="my-6">
                 <img src="/images/cup.png" alt="" />
               </div>
-              <p className="text-[35px] font-normal  text-white leading-tight mt-3 mb-2 ml-24 text-right">
+              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 ml-24 text-right">
                 BE THE CHAMPION
               </p>
-              <p className="text-xl font-medium mt-4 font-poppins text-right">
+              <p className="text-base font-medium mt-4 font-poppins text-right">
                 Climb leagues and leaderboards to become the Ultimate Memestate
                 Champion.
               </p>
@@ -440,7 +489,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden">
+      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden  h-screen">
         <div className="flex flex-col justify-center items-center ">
           <div>
             <img
@@ -460,6 +509,7 @@ export default function App() {
         <div className="flex justify-center ">
           <img src="/images/memestatePrize.png" alt="" className="w-[1000px]" />
         </div>
+
         <div className=" grid lg:grid-cols-2 justify-center items-center gap-16 mt-10 ">
           <div className="lg:col-span-1 col-span-2 flex justify-end">
             <div className="w-full">

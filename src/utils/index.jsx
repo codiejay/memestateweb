@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
+
 export const carouselItems = [
   <div key="1" className="w-100% my-8 px-4">
     <div className="flex flex-col">
       <div>
-        <img src="/images/wallet.png" alt="Image 1" className=" " />
+        <img src="/images/wallet.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[32px] text-white my-3">Early Access, big savings</h2>
-      <p className="text-xl font-normal text-white my-2 ">
+      <h2 className="text-[28px] text-white my-3">Early Access, big savings</h2>
+      <p className="text-lg font-normal text-white my-1 ">
         Grab $GEM tokens at discounted <br /> rates across three rounds.
       </p>
-      <p className="text-xl font-normal  text-white my-2">
+      <p className="text-lg font-normal  text-white my-1">
         The earlier you buy, the more you <br /> save!
       </p>
     </div>
@@ -16,11 +18,11 @@ export const carouselItems = [
   <div key="2" className="w-100% my-8  px-4">
     <div className="flex flex-col">
       <div>
-        <img src="/images/flexedBiceps.png" alt="Image 2" className=" " />
+        <img src="/images/flexedBiceps.png" alt="Image 2" className=" w-28" />
       </div>
-      <h2 className="text-[32px] text-white my-3">Exclusive Rewards</h2>
+      <h2 className="text-[28px] text-white my-3">Exclusive Rewards</h2>
 
-      <p className="text-xl font-normal  text-white my-2">
+      <p className="text-lg font-normal  text-white my-1">
         Unlock premium in-game items, perks, and unique bonuses.
       </p>
     </div>
@@ -28,10 +30,10 @@ export const carouselItems = [
   <div key="3" className="w-100% my-8  px-4">
     <div className="flex flex-col">
       <div>
-        <img src="/images/flyingMoney.png" alt="Image 1" className=" " />
+        <img src="/images/flyingMoney.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[32px] text-white my-3">Fund the Future</h2>
-      <p className="text-xl font-normal text-white my-2 ">
+      <h2 className="text-[28px] text-white my-3">Fund the Future</h2>
+      <p className="text-lg font-normal text-white my-1 ">
         Your contributions will support game development, marketing, and
         sustainable rewards for players.
       </p>
@@ -39,7 +41,7 @@ export const carouselItems = [
   </div>,
 ];
 export const howToPlay = [
-  <div key={"1"} className=" h-full">
+  <div key={"1"} className=" h-full ">
     <div className="flex flex-col items-center justify-between h-full">
       <h1 className="text-[48px] font-normal text-white">STEP 1</h1>
       <div className="border-4 border-black bg-white shadow-black-custom w-[380px]">
@@ -112,3 +114,18 @@ export const socialFooterIcon = [
     link: "https://www.twitter.com",
   },
 ];
+export function useWindowSize() {
+  const [size, setSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () =>
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return size;
+}

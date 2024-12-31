@@ -41,12 +41,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(50% 50% at 50% 50%,
-      rgba(46, 49, 146, 0.50) 0%,
-      rgba(14, 15, 44, 0.94) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(46, 49, 146, 0.5) 0%,
+    rgba(14, 15, 44, 0.94) 100%
+  );
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -55,7 +55,6 @@ h1 {
 
 .masked-div-1 {
   height: 403px;
-
 
   /* clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%); */
   background-color: transparent;
@@ -76,8 +75,6 @@ h1 {
   background-image: url("../public/images/mask2.svg");
   background-size: cover;
   background-position: center;
-
-
 }
 
 .glassCard,
@@ -90,18 +87,14 @@ h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 
 .glassCardBig {
   background-image: url("../public/images/glassCardBig.png");
-
-
 }
 
 .glassCardRight {
   background-image: url("../public/images/glassCardRight.png");
-
 }
 
 .glassCardStyle {
@@ -111,13 +104,9 @@ h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 
 .text-shadow-custom {
-  text-shadow:
-    2px 2px 0px #ff0000,
-    /* Red shadow */
-    4px 4px 0px #000000;
+  text-shadow: 2px 2px 0px #ff0000, /* Red shadow */ 4px 4px 0px #000000;
   /* Black shadow */
 }

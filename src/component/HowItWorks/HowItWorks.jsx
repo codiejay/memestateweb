@@ -30,7 +30,7 @@ const HowItWorks = ({ items }) => {
 
   return (
     <div
-      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000] h-[637px]  lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
+      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000] h-[535px]  lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
       style={{ boxShadow: " 0px 4px 4px 0px #00000040" }}
     >
       <h2 className="text-2xl text-[#FFC727]  px-4">How it works</h2>
@@ -56,7 +56,7 @@ const HowItWorks = ({ items }) => {
       {/* Carousel Navigation */}
 
       {/* Carousel Counter */}
-      <div className="absolute bottom-8 flex  text-white text-xl items-center justify-between w-[80%]  px-4">
+      <div className="absolute lg:bottom-8  bottom-1 flex  text-white text-xl items-center justify-between w-[80%]  px-4">
         <div className=" flex gap-6  items-center">
           <button
             onClick={handlePrevious}
