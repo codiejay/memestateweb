@@ -43,7 +43,7 @@ const HowToPlay = ({ items }) => {
         <div>
           <button
             onClick={handlePrevious}
-            className={` hidden md:flex text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  flex justify-center items-center transition-all transform ${
+            className={` hidden md:flex text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
               clickedPrevious ? "scale-95" : ""
             }`}
             style={{ boxShadow: "8px 8px 0px 0px #000000" }}
@@ -52,9 +52,9 @@ const HowToPlay = ({ items }) => {
           </button>
         </div>
         <div className="relative overflow-hidden">
-          <div className="absolute top-[15%] w-full lg:h-[300px] h-[unset] ">
+          <div className="absolute top-[12%] w-full lg:h-[300px] h-[unset] ">
             <div
-              className={`carousel-items flex transition-transform duration-500 ease-in-out w-full h-full ${
+              className={`carousel-items flex transition-transform duration-500 ease-in-out w-full ${
                 direction === "next" ? "transform translate-x-[-100%]" : ""
               }`}
               style={{

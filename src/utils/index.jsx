@@ -43,24 +43,34 @@ export const carouselItems = [
 export const howToPlay = [
   <div key={"1"} className=" h-full ">
     <div className="flex flex-col items-center justify-between h-full">
-      <h1 className="text-[48px] font-normal text-white">STEP 1</h1>
-      <div className="border-4 border-black bg-white shadow-black-custom w-[380px]">
-        <p className="text-black py-2 px-3 text-center">
-          You have 2 choices...Play the free game and win some $GEMS token OR
-          get some $GEMS token and put them on the line and win big
-        </p>
-      </div>
+      <h1 className="text-[48px] font-normal text-white absolute w-full text-center">
+        STEP 1
+      </h1>
+      <img src="./images/step1.png" alt="" />
     </div>
   </div>,
   <div key={"2"} className=" h-full">
     <div className="flex flex-col items-center justify-between h-full">
-      <h1 className="text-[48px] font-normal text-white">STEP 2</h1>
-      <div className="border-4 border-black bg-white shadow-black-custom w-[380px] py-2 px-3">
-        <p className="text-black text-center">
-          Buy $GEMS and exchange for Gems you can use in the game
-        </p>
-        e
-      </div>
+      <h1 className="text-[48px] font-normal text-white absolute w-full text-center">
+        STEP 2
+      </h1>
+      <img src="./images/step2.png" alt="" />
+    </div>
+  </div>,
+  <div key={"3"} className=" h-full">
+    <div className="flex flex-col items-center justify-between h-full">
+      <h1 className="text-[48px] font-normal text-white absolute w-full text-center">
+        STEP 3
+      </h1>
+      <img src="./images/step3.png" alt="" />
+    </div>
+  </div>,
+  <div key={"4"} className=" h-full">
+    <div className="flex flex-col items-center justify-between h-full">
+      <h1 className="text-[48px] font-normal text-white absolute w-full text-center">
+        STEP 4
+      </h1>
+      <img src="./images/step4.png" alt="" />
     </div>
   </div>,
 ];
