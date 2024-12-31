@@ -6,11 +6,11 @@ const RewardSystem = () => {
   return (
     <div>
       {width <= 988 ? (
-        <div className="my-6 flex flex-col gap-14 items-center justify-center">
+        <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
           {contentList.map((item, index) => {
             return (
               <div
-                className="h-[788px] w-full shadow-black-custom relative"
+                className="h-[788px] w-full shadow-black-custom relative "
                 key={index}
               >
                 <div className="bg-[#A3A5E1] h-[381px]">
