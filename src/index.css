@@ -110,3 +110,23 @@ h1 {
   text-shadow: 2px 2px 0px #ff0000, /* Red shadow */ 4px 4px 0px #000000;
   /* Black shadow */
 }
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-slider {
+  position: unset !important;
+}
+.slick-slider button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick-slider .button1 {
+  left: 54%;
+}
+.slick-slider .button2 {
+  left: 46%;
+}

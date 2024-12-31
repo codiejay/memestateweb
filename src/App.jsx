@@ -16,6 +16,7 @@ import HowToPlay from "./component/HowToPlay/HowToPlay";
 import Advertisement from "./component/Advertisement/Advertisement";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import { links } from "./component/Navbar/Navbar";
+import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
 
 // Register ScrollTrigger plugin
 
@@ -489,21 +490,22 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden">
-        <div className="flex flex-col justify-center items-center ">
+      <section className="bg-[#27297A] px-16 py-2 relative overflow-hidden">
+        <div className="flex flex-col justify-center items-center my-10 ">
           <div>
             <img
               src="/images/memestate.png"
               alt=""
-              className="w-[402px] h-[92px]"
+              className="w-[402px] h-[92px] my-1"
             />
           </div>
-          <h1 className="text-white font-normal capitalize mt-2">
+          <h1 className="text-white font-normal capitalize text-2xl mt-2">
             Advertisement Model
           </h1>
         </div>
 
-        <Advertisement items={advertisement} />
+        {/* <Advertisement items={advertisement} /> */}
+        <AdvertisementSlick />
       </section>
       <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden ">
         <div className="flex justify-center ">

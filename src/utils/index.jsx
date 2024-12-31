@@ -66,23 +66,23 @@ export const howToPlay = [
 ];
 
 export const advertisement = [
-  <div key={"1"} style={{ paddingTop: "70px" }}>
-    <div className="grid grid-cols-2  gap-10 py- px-32">
+  <div key={"1"}>
+    <div className="flex justify-center items-center  gap-10 py- px-32">
       <div>
-        <img src="/images/advert1.png" alt="" />
+        <img src="/images/advert1.png" alt="" width={"365px"} />
       </div>
       <div>
-        <img src="/images/advert2.png" alt="" />
+        <img src="/images/advert2.png" alt="" width={"365px"} />
       </div>
     </div>
   </div>,
   <div key={"2"}>
-    <div className="grid grid-cols-2  gap-10 py-20 px-32">
+    <div className="flex justify-center items-center  gap-10 py- px-32">
       <div>
-        <img src="/images/advert3.png" alt="" />
+        <img src="/images/advert3.png" alt="" width={"365px"} />
       </div>
       <div>
-        <img src="/images/advert4.png" alt="" />
+        <img src="/images/advert4.png" alt="" width={"365px"} />
       </div>
     </div>
   </div>,

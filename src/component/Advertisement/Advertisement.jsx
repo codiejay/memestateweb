@@ -31,7 +31,7 @@ const Advertisement = ({ items }) => {
   return (
     <div className=" flex flex-col">
       <div
-        className={`carousel-items flex transition-transform duration-500 ease-in-out w-full   ${
+        className={`carousel-items flex transition-transform duration-500 ease-in-out w-full h-[70vh]   ${
           direction === "next" ? "transform translate-x-[-100%]  " : ""
         }`}
         style={{
