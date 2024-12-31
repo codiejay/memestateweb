@@ -143,7 +143,7 @@ const Navbar = () => {
         <div className="flex items-center">
           {/* Hamburger button */}
           <button
-            className="md:hidden text-white text-2xl"
+            className="md:hidden text-white text-2xl hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             ☰
