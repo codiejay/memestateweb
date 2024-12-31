@@ -139,3 +139,91 @@ export function useWindowSize() {
 
   return size;
 }
+
+export const contentList = [
+  {
+    title: (
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+        Growing User <br className="lg:block  hidden" /> Base
+      </h2>
+    ),
+
+    text: (
+      <p className="max-w-md font-poppins my-5">
+        Join the growing Memestate community and turn every dice roll into a
+        thrilling experience!
+      </p>
+    ),
+    image: "/images/meme00.gif",
+  },
+  {
+    title: (
+      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+        increased advertisement
+        <br className="lg:block  hidden" />
+        demand and prize table volume
+      </h2>
+    ),
+
+    text: (
+      <p className="max-w-md font-poppins my-5">
+        Drive ad demand with targeted placements tied to user activity and
+        community engagement.
+      </p>
+    ),
+    image: "/images/meme1.gif",
+  },
+  {
+    title: (
+      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+        increased advertisement
+        <br className="lg:block  hidden" />
+        AND GAME REVENUE
+      </h2>
+    ),
+
+    text: (
+      <p className="max-w-md font-poppins my-5">
+        Drive ad demand with targeted placements tied to user activity and
+        community engagement.
+      </p>
+    ),
+    image: "/images/meme2.gif",
+  },
+  {
+    title: (
+      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+        bigger rewards pool for
+        <br className="lg:block  hidden" />
+        free players
+      </h2>
+    ),
+
+    text: (
+      <p className="max-w-md font-poppins my-5">
+        Unlock bigger rewards for free players with community-driven prize
+        pools. Boost participation through play-to-earn opportunities and token
+        incentives.
+      </p>
+    ),
+    image: "/images/meme3.gif",
+  },
+  {
+    title: (
+      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+        bigger rewards pool for
+        <br className="lg:block  hidden" />
+        free players
+      </h2>
+    ),
+
+    text: (
+      <p className="max-w-md font-poppins my-5">
+        Unlock bigger rewards for free players with community-driven prize
+        pools. Boost participation through play-to-earn opportunities and token
+        incentives.
+      </p>
+    ),
+    image: "/images/meme3.gif",
+  },
+];

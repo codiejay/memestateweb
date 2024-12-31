@@ -6,17 +6,16 @@ import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  advertisement,
   carouselItems,
   howToPlay,
   socialFooterIcon,
   useWindowSize,
 } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
-import Advertisement from "./component/Advertisement/Advertisement";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import { links } from "./component/Navbar/Navbar";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
+import RewardSystem from "./component/RewardSystem/RewardSystem";
 
 // Register ScrollTrigger plugin
 
@@ -103,93 +102,7 @@ export default function App() {
 
   //   animateCards();
   // }, []);
-  const contentList = [
-    {
-      title: (
-        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-          Growing User <br className="lg:block  hidden" /> Base
-        </h2>
-      ),
 
-      text: (
-        <p className="max-w-md font-poppins my-5">
-          Join the growing Memestate community and turn every dice roll into a
-          thrilling experience!
-        </p>
-      ),
-      image: "/images/meme00.gif",
-    },
-    {
-      title: (
-        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-          increased advertisement
-          <br className="lg:block  hidden" />
-          demand and prize table volume
-        </h2>
-      ),
-
-      text: (
-        <p className="max-w-md font-poppins my-5">
-          Drive ad demand with targeted placements tied to user activity and
-          community engagement.
-        </p>
-      ),
-      image: "/images/meme1.gif",
-    },
-    {
-      title: (
-        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-          increased advertisement
-          <br className="lg:block  hidden" />
-          AND GAME REVENUE
-        </h2>
-      ),
-
-      text: (
-        <p className="max-w-md font-poppins my-5">
-          Drive ad demand with targeted placements tied to user activity and
-          community engagement.
-        </p>
-      ),
-      image: "/images/meme2.gif",
-    },
-    {
-      title: (
-        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-          bigger rewards pool for
-          <br className="lg:block  hidden" />
-          free players
-        </h2>
-      ),
-
-      text: (
-        <p className="max-w-md font-poppins my-5">
-          Unlock bigger rewards for free players with community-driven prize
-          pools. Boost participation through play-to-earn opportunities and
-          token incentives.
-        </p>
-      ),
-      image: "/images/meme3.gif",
-    },
-    {
-      title: (
-        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-          bigger rewards pool for
-          <br className="lg:block  hidden" />
-          free players
-        </h2>
-      ),
-
-      text: (
-        <p className="max-w-md font-poppins my-5">
-          Unlock bigger rewards for free players with community-driven prize
-          pools. Boost participation through play-to-earn opportunities and
-          token incentives.
-        </p>
-      ),
-      image: "/images/meme3.gif",
-    },
-  ];
   return (
     <>
       <div className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen">
@@ -227,9 +140,24 @@ export default function App() {
       </div>
 
       <section className="bg-[#27297A] lg:px-24 px-3 py- relative">
-        <div className="grid lg:grid-cols-2 flex-col gap-28 py-8 justify-center">
-          <div className="w-full">
-            <div className="flex flex-col mb-4 ">
+        <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-9">
+          <h1 className="text-white font-normal capitalize mb-2 text-3xl">
+            Join the
+          </h1>
+          <div>
+            <img
+              src="/images/memestate.png"
+              alt=""
+              className="lg:h-20  h-16 object-contain"
+            />
+          </div>
+          <h1 className="text-white font-normal capitalize mt-1  text-3xl">
+            Presale
+          </h1>
+        </div>
+        <div className="grid lg:grid-cols-2 flex-col lg:gap-28 gap-9 py-8 justify-center">
+          <div className="w-full overflow-hidden lg:px-0 px-6  lg:order-1 order-2">
+            <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
               <h1 className="text-white font-normal capitalize mb-2 text-3xl">
                 Join the
               </h1>
@@ -237,7 +165,7 @@ export default function App() {
                 <img
                   src="/images/memestate.png"
                   alt=""
-                  className="h-20 object-contain"
+                  className="lg:h-20  h-16 object-contain"
                 />
               </div>
               <h1 className="text-white font-normal capitalize mt-1  text-3xl">
@@ -246,18 +174,18 @@ export default function App() {
             </div>
             <HowItWorks items={carouselItems} />
           </div>
-          <div className="relative  flex justify-end lg:mt-0 mt-10 w-full">
+          <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1">
             <div className="absolute top-[-3rem] -left-28 z-50 lg:block hidden ">
               <img src="/images/bigDiamond.png" alt="" />
             </div>
             <div>
               <div className=" w-full relative">
                 <div className="border-[#000] border-[12px] shadow-black-custom h-[130px] bg-[#9D9FD8] flex justify-center items-center ">
-                  <h1 className="text-black text-center  lg:text-[36px] text-xl  px-32 leading-9">
+                  <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-32  px-2 leading-9">
                     Buy $gems Token in presale now!
                   </h1>
                 </div>
-                <div className="absolute top-[7rem] lg:left-8 left-0 hidden lg:block ">
+                <div className="absolute top-[7rem] lg:left-8 left-0  ">
                   <CountDown />
                 </div>
                 <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 h-[480px] ">
@@ -301,7 +229,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="mt-9">
+              <div className="mt-9  lg:block hidden">
                 <h3 className="text-2xl font-normal text-[#FFC727]">
                   Presale Rounds
                 </h3>
@@ -338,14 +266,48 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="absolute lg:bottom-20 bottom-0 right-0">
+        <div className="mt-9  lg:hidden block">
+          <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
+            Presale Rounds
+          </h3>
+          <ul className=" grid lg:grid-cols-3 grid-cols-1  lg:flex-nowrap   lg:justify-between  justify-center lg:mt-0 mt-10">
+            <li>
+              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
+                Round 1
+              </h2>
+              <p className="text-base font-normal text-white lg:text-left text-center ">
+                Lowest $GEM price + <br className="lg:block hidden" /> exclusive
+                bonuses.
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
+                Round 2
+              </h2>
+              <p className="text-base font-normal text-white lg:text-left text-center ">
+                Lowest $GEM price + <br className="lg:block hidden" /> exclusive
+                bonuses.
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
+                Round 3
+              </h2>
+              <p className="text-base font-normal text-white lg:text-left text-center ">
+                Final chance before <br className="lg:block hidden" /> public
+                launch.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="absolute lg:bottom-20 bottom-0 right-0  hidden lg:block">
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-24  px-4  pt-20  pb-10 relative overflow-x-hidden">
+      <section className="bg-[#27297A] lg:px-24  px-4  lg:pt-20  pt-24 pb-10 relative overflow-x-hidden">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
-            <div>
+            <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
               <img src="/images/titleDiamond.png" alt="" />
             </div>
             <div className="flex flex-col justify-center items-center relative ">
@@ -361,53 +323,8 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="flex justify-center flex-col mt-8 max-w-[1200px]">
-            {contentList.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="grid lg:grid-cols-2  grid-cols-1 mt-10 relative justify-center w-full"
-                >
-                  <div className="z-40">
-                    <div className="masked-div-1 relative lg:w-[924px] w-full">
-                      <div className="px-10 pt-4 pb-6">
-                        <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
-                          {item.title}
-                        </h2>
-                        <p className="max-w-md font-poppins my-5">
-                          {item.text}
-                        </p>
 
-                        <Button
-                          label={"Learn more"}
-                          type={"beta"}
-                          soundPath={"/audio/button.mp3"}
-                          className={"bg-[#2C2F8C]"}
-                        />
-                      </div>
-                      <div className="absolute right-[1%] top-8 lg:block  hidden">
-                        <img src="/images/KNOT.png" alt="" />
-                      </div>
-                      <div className="absolute right-[22%] bottom-10 lg:block  hidden">
-                        <img src="/images/KNOT.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-ml-40 z-30 mt-6 relative lg:block ">
-                    <div className="masked-div-2">
-                      <div className=" py-4 flex justify-end items-center ">
-                        <div className="w-[400px] mt-6 ">
-                          <img src={item.image} alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <RewardSystem />
       </section>
 
       <section className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden    ">
@@ -419,70 +336,70 @@ export default function App() {
             <img
               src="/images/memestate.png"
               alt=""
-              className="lg:w-[402px] w-full lg:h-[92px] h-full"
+              className="lg:w-[402px] w-full lg:h-[92px] h-[4rem]"
             />
           </div>
         </div>
         <HowToPlay items={howToPlay} />
       </section>
 
-      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative h-screen ">
+      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-ful ">
         <div className="absolute -top-20 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
         <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10justify-center items-end">
           <div className="col-span-2 ">
-            <div className="flex flex-col justify-start items-start">
+            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center">
               <div className="flex flex-col justify-start items-start my-6 ">
                 <img src="/images/rocket.png" alt="" />
               </div>
-              <p className="text-[28px] font-normal  text-white leading-tight mr-24  ">
+              <p className="text-[28px] font-normal  text-white leading-tight lg:mr-24 lg:text-left text-center  ">
                 FAST PACED GAMEPLAY:
               </p>
-              <p className="text-base font-medium mt-4 font-poppins">
+              <p className="text-base font-medium mt-4 font-poppins ">
                 Enjoy rapid 5-minute rounds for a fun and manageable experience.
               </p>
             </div>
-            <div className="flex flex-col justify-start items-start">
-              <div className="flex flex-col justify-start items-start  my-6">
+            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center">
+              <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center  my-6">
                 <img src="/images/gold.png" alt="" />
               </div>
-              <p className="text-[28px] font-normal  text-white leading-tight mr-24  ">
+              <p className="text-[28px] font-normal  text-white leading-tight lg:mr-24 lg:text-left text-center  ">
                 CLAIM YOUR REWARD:
               </p>
-              <p className="text-base font-medium mt-4 font-poppins">
+              <p className="text-base font-medium mt-4 font-poppins lg:text-left text-center ">
                 Collect reward chests with character shards and gems, and use
                 gems to create and customize your guild, with funny Memechance
                 and Memeopportunity cards adding humor to the game.
               </p>
             </div>
           </div>
-          <div className="col-span-3 flex justify-center">
+          <div className="col-span-3  justify-center hidden lg:flex">
             <div>
               <img src="/images/foxy.png" alt="" className="w-[350px]" />
             </div>
           </div>
           <div className="col-span-2">
-            <div className="flex flex-col justify-end items-end">
+            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center">
               <div className="my-6">
                 <img src="/images/flash.png" alt="" />
               </div>
-              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 text-right">
+              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 lg:text-right text-center">
                 FEEL THE PROGRESSION
               </p>
-              <p className="text-base font-medium mt-4 font-poppins text-right">
+              <p className="text-base font-medium mt-4 font-poppins lg:text-right text-center">
                 Unlock, level up, and enhance characters with special abilities
                 to gain strategic advantages.
               </p>
             </div>
-            <div className="flex flex-col justify-end items-end mt-10">
+            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center mt-10">
               <div className="my-6">
                 <img src="/images/cup.png" alt="" />
               </div>
-              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 ml-24 text-right">
+              <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 lg:ml-24 lg:text-right text-center">
                 BE THE CHAMPION
               </p>
-              <p className="text-base font-medium mt-4 font-poppins text-right">
+              <p className="text-base font-medium mt-4 font-poppins lg:text-right text-center">
                 Climb leagues and leaderboards to become the Ultimate Memestate
                 Champion.
               </p>
@@ -532,7 +449,9 @@ export default function App() {
       </section>
       <section className="bg-[#27297A] py-5 ">
         <div className="flex justify-center  ">
-          <h1 className="text-[100px] font-normal text-white mb-16">ROADMAP</h1>
+          <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
+            ROADMAP
+          </h1>
         </div>
         <div className="flex justify-center ">
           <div className="flex  lg:flex-row flex-col justify-center items-center w-[1200px] relative h-[1685px] lg:pt-[20.4rem] pt-3  lg:gap-0 gap-6">
