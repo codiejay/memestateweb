@@ -188,8 +188,8 @@ export default function App() {
                     Buy $gems Token in presale now!
                   </h1>
                 </div>
-                <div className="absolute top-[7rem] lg:left-8 left-0  ">
-                  {/* <CountDown /> */}
+                <div className="absolute top-[7rem] lg:left-8 left-0 countdownStyle  ">
+                  <CountDown />
                 </div>
                 <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 h-[480px] ">
                   <div className="text-black text-center flex justify-center items-center gap-4 mt-8">
