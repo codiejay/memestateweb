@@ -143,13 +143,13 @@ export function useWindowSize() {
 export const contentList = [
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
         Growing User <br className="lg:block  hidden" /> Base
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base lg:text-left text-center">
         Join the growing Memestate community and turn every dice roll into a
         thrilling experience!
       </p>
@@ -158,7 +158,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
         increased advertisement
         <br className="lg:block  hidden" />
         demand and prize table volume
@@ -166,7 +166,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base lg:text-left text-center">
         Drive ad demand with targeted placements tied to user activity and
         community engagement.
       </p>
@@ -175,7 +175,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
         increased advertisement
         <br className="lg:block  hidden" />
         AND GAME REVENUE
@@ -183,7 +183,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base lg:text-left text-center">
         Drive ad demand with targeted placements tied to user activity and
         community engagement.
       </p>
@@ -192,7 +192,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players
@@ -200,7 +200,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base lg:text-left text-center">
         Unlock bigger rewards for free players with community-driven prize
         pools. Boost participation through play-to-earn opportunities and token
         incentives.
@@ -210,7 +210,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players
@@ -218,7 +218,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base lg:text-left text-center">
         Unlock bigger rewards for free players with community-driven prize
         pools. Boost participation through play-to-earn opportunities and token
         incentives.
