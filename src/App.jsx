@@ -453,7 +453,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] py-5 ">
+      <section className="bg-[#27297A] py-5 px-8 lg:px-0 ">
         <div className="flex justify-center  ">
           <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
             ROADMAP
