@@ -160,7 +160,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <nav>
+      <nav className="hidden">
         <ul
           className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-16 ${
             isMenuOpen ? "block" : "hidden"

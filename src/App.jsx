@@ -218,7 +218,7 @@ export default function App() {
                     </div>
                     <div className="w-full">
                       <ButtonWithSound
-                        label={"Buy with Card"}
+                        label={"Buy with Crypto"}
                         type={"beta"}
                         soundPath={"/audio/button.mp3"}
                         className={"bg-[#FF0000]  w-full"}
