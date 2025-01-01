@@ -143,7 +143,7 @@ export function useWindowSize() {
 export const contentList = [
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         Growing User <br className="lg:block  hidden" /> Base
       </h2>
     ),
@@ -158,7 +158,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         increased advertisement
         <br className="lg:block  hidden" />
         demand and prize table volume
@@ -175,7 +175,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         increased advertisement
         <br className="lg:block  hidden" />
         AND GAME REVENUE
@@ -192,7 +192,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players
@@ -210,7 +210,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5 lg:text-left text-center">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players

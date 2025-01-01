@@ -692,14 +692,14 @@ export default function App() {
           </div>
           <div className="flex justify-center my-8 flex-col items-center">
             <div className=" border-y-2 border-white flex justify-center py-6 lg:max-w-[1270px]">
-              <p className="text-[25px] text-white font-medium leading-[37.5px] font-poppins text-center">
+              <p className="lg:text-[25px] text-lg  text-white font-medium leading-[37.5px] font-poppins text-center lg:px-0 px-4">
                 Join us in reshaping the future of board games and digital
                 ownership. rollthe dice, conquer the board and become the
                 ultimate memestate champion.
               </p>
             </div>
 
-            <p className="text-[17px] font-normal text-center font-poppins lg:max-w-[1191px] my-8">
+            <p className="lg:text-[17px] text-lg font-normal text-center font-poppins lg:max-w-[1191px] my-8 lg:px-0 px-4">
               Disclaimer: We are not responsible fo r any losses or harms
               sustained by you due to vulnerability or any kind of failure,
               abnormal behavior of software (e.g., smart contract), blockchains,
