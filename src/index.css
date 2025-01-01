@@ -33,6 +33,11 @@ body {
 body {
   font-family: "GAMERIA", sans-serif;
 }
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .banner::before {
   content: "";
