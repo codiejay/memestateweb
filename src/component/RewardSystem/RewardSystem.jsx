@@ -17,18 +17,15 @@ const RewardSystem = () => {
                   <img src={item.image} alt="" />
                 </div>
                 <div className="h-[403px] bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
-                  <h1 className="text-3xl font-normal leading-[48px] text-white text-center">
-                    {item.title}
-                  </h1>
-                  <p className="text-lg font-poppins  leading-[24px] font-medium text-white text-center">
-                    {item.text}
-                  </p>
+                  {item.title}
+
+                  {item.text}
 
                   <ButtonWithSound
                     label={"Learn more"}
                     type={"beta"}
                     soundPath={"/audio/button.mp3"}
-                    className={"bg-[#2C2F8C]"}
+                    className={"bg-[#2C2F8C]  hidden"}
                   />
                 </div>
                 <div className="flex justify-between absolute top-[43%] w-full">
@@ -57,15 +54,13 @@ const RewardSystem = () => {
                       <div className="px-10 pt-4 pb-6">
                         {item.title}
 
-                        <p className="max-w-md font-poppins my-5">
-                          {item.text}
-                        </p>
+                        {item.text}
 
                         <ButtonWithSound
                           label={"Learn more"}
                           type={"beta"}
                           soundPath={"/audio/button.mp3"}
-                          className={"bg-[#2C2F8C]"}
+                          className={"bg-[#2C2F8C] hidden"}
                         />
                       </div>
                       <div className="absolute right-[1%] top-8 lg:block  hidden">

@@ -149,7 +149,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
         Join the growing Memestate community and turn every dice roll into a
         thrilling experience!
       </p>
@@ -166,7 +166,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
         Drive ad demand with targeted placements tied to user activity and
         community engagement.
       </p>
@@ -183,7 +183,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
         Drive ad demand with targeted placements tied to user activity and
         community engagement.
       </p>
@@ -200,7 +200,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
         Unlock bigger rewards for free players with community-driven prize
         pools. Boost participation through play-to-earn opportunities and token
         incentives.
@@ -218,7 +218,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5">
+      <p className="max-w-md font-poppins my-5 lg:text-xl text-base">
         Unlock bigger rewards for free players with community-driven prize
         pools. Boost participation through play-to-earn opportunities and token
         incentives.
