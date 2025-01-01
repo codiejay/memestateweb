@@ -16,8 +16,6 @@ import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
 import IFrameModal from "./component/IFrameModal/IFrameModal";
 import { useIframeModal } from "./context/IframeContext";
-import ScrollSnap from "scroll-snap";
-// Register ScrollTrigger plugin
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,65 +23,72 @@ export default function App() {
   const { openModal, isOpen } = useModal();
   const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
   const container = useRef(null);
+  const sectionRefs = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null), // Add more refs for additional sections
+    useRef(null),
+    useRef(null), // Add more refs for additional sections
+    // Add more refs for additional sections
+    // Add more refs for additional sections
+  ];
 
-  useEffect(() => {
-    function bindScrollSnap() {
-      const element = container.current;
-      if (element) {
-        const snapElement = new ScrollSnap(element, {
-          snapDestinationY: "90%",
-        });
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const [isScrolling, setIsScrolling] = useState(false);
 
-        snapElement.bind(() => {
-          console.log("snapped");
-        });
-      }
-    }
-
-    bindScrollSnap();
-  }, []);
-  // const sectionRefs = [
-  //   useRef(null),
-  //   useRef(null),
-  //   useRef(null),
-  //   useRef(null),
-  //   useRef(null),
-  //   useRef(null),
-  // ];
+  // const isDesktop = () => window.innerWidth > 1024;
 
   // const scrollToSection = (direction) => {
-  //   const currentScroll = window.scrollY;
-  //   const windowHeight = window.innerHeight;
+  //   const nextIndex = currentIndex + direction;
 
-  //   const currentIndex = Math.round(currentScroll / windowHeight);
-  //   let nextIndex = currentIndex + direction;
-
-  //   if (nextIndex < 0) nextIndex = 0; // Prevent scrolling above the first section
-  //   if (nextIndex >= sectionRefs.length) nextIndex = sectionRefs.length - 1; // Prevent scrolling past the last section
+  //   // Allow free scrolling for out-of-bound or non-referenced sections
+  //   if (nextIndex < 0 || nextIndex >= sectionRefs.length) {
+  //     setCurrentIndex(nextIndex);
+  //     return;
+  //   }
 
   //   const nextSection = sectionRefs[nextIndex].current;
 
   //   if (nextSection) {
+  //     setIsScrolling(true);
   //     nextSection.scrollIntoView({ behavior: "smooth" });
+
+  //     // Delay updating the index until scrolling completes
+  //     setTimeout(() => {
+  //       setCurrentIndex(nextIndex);
+  //       setIsScrolling(false);
+  //     }, 600); // Match smooth scrolling duration
   //   }
   // };
 
   // const handleScroll = (e) => {
-  //   if (e.deltaY > 0) {
-  //     scrollToSection(1); // Scroll down
-  //   } else {
-  //     scrollToSection(-1); // Scroll up
-  //   }
+  //   if (isScrolling || !isDesktop()) return; // Skip if already scrolling or on mobile/tablet
+
+  //   const direction = e.deltaY > 0 ? 1 : -1;
+  //   scrollToSection(direction);
   // };
 
   // useEffect(() => {
-  //   window.addEventListener("wheel", handleScroll, { passive: true });
+  //   const handleResize = () => {
+  //     if (!isDesktop()) {
+  //       // Reset state for regular scrolling on mobile/tablet
+  //       setCurrentIndex(0);
+  //       setIsScrolling(false);
+  //     }
+  //   };
+
+  //   const handleWheel = (e) => handleScroll(e);
+
+  //   window.addEventListener("wheel", handleWheel, { passive: false });
+  //   window.addEventListener("resize", handleResize);
 
   //   return () => {
-  //     window.removeEventListener("wheel", handleScroll);
+  //     window.removeEventListener("wheel", handleWheel);
+  //     window.removeEventListener("resize", handleResize);
   //   };
-  // }, []);
-
+  // }, [currentIndex, isScrolling]);
   useEffect(() => {
     // GSAP animation for banner content
     gsap.fromTo(
@@ -167,7 +172,10 @@ export default function App() {
 
   return (
     <div id="container" ref={container}>
-      <div className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen page">
+      <div
+        className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen page"
+        ref={sectionRefs[0]}
+      >
         <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
           <div className="banner-content">
             <img src="/images/bannerContent.png" alt="" className="w-[590px]" />
@@ -202,7 +210,10 @@ export default function App() {
         <div className="w-full  bg-[#53224D] h-4"></div>
         <MarqueeComponent />
       </div>
-      <section className="bg-[#27297A] lg:px-24 px-3 py-24 relative page">
+      <section
+        className="bg-[#27297A] lg:px-24 px-3 py-24 relative page"
+        ref={sectionRefs[1]}
+      >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
           <h1 className="text-white font-normal capitalize mb-2 text-3xl">
             Join the
@@ -370,7 +381,10 @@ export default function App() {
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page">
+      <section
+        className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page"
+        ref={sectionRefs[2]}
+      >
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
@@ -393,7 +407,10 @@ export default function App() {
         <RewardSystem />
       </section>
 
-      <section className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden  page  ">
+      <section
+        className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden  page  "
+        ref={sectionRefs[3]}
+      >
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-white font-normal capitalize mb-2  lg:text-[48px] text-2xl">
             How to play
@@ -409,7 +426,10 @@ export default function App() {
         <HowToPlay items={howToPlay} />
       </section>
 
-      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-screen page">
+      <section
+        className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-screen page"
+        ref={sectionRefs[4]}
+      >
         <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
@@ -473,7 +493,10 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] px-16 py-2 relative overflow-hidden page">
+      <section
+        className="bg-[#27297A] px-16 py-2 relative overflow-hidden page"
+        ref={sectionRefs[5]}
+      >
         <div className="flex flex-col justify-center items-center my-10 ">
           <div>
             <img
@@ -490,7 +513,10 @@ export default function App() {
         {/* <Advertisement items={advertisement} /> */}
         <AdvertisementSlick />
       </section>
-      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden  page">
+      <section
+        className="bg-[#27297A] px-16 py-16 relative overflow-hidden  page"
+        ref={sectionRefs[6]}
+      >
         <div className="flex justify-center ">
           <img src="/images/memestatePrize.png" alt="" className="w-[1000px]" />
         </div>
@@ -520,7 +546,7 @@ export default function App() {
           </h1>
         </div>
         <div className="flex justify-center ">
-          <div className="flex  lg:flex-row flex-col justify-center items-center w-[1200px] relative h-[1685px] lg:pt-[20.4rem] pt-3  lg:gap-0 gap-6">
+          <div className="flex  lg:flex-row flex-col justify-center items-center w-[1200px] relative lg:h-[1685px] lg:pt-[20.4rem] pt-3  lg:gap-0 gap-6">
             <div className="lg:absolute relative lg:left-[6.9rem] lg:top-0">
               <RoadMapCard
                 direction={"right"}

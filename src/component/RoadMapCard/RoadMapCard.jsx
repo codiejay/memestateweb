@@ -20,7 +20,7 @@ const RoadMapCard = ({ direction, small, large, content, imgLink }) => {
           </div>
 
           <div
-            className={`w-[400px] lg:h-[642px] h-full lg:rounded-none rounded-md   lg:border-0  border-2 border-#fff      ${
+            className={`lg:w-[400px]  w-full lg:h-[642px] h-full lg:rounded-none rounded-md   lg:border-0  border-2 border-#fff      ${
               small
                 ? "lg:bg-[url('/images/glassCardRightSmall.png')] glassCardStyle "
                 : "lg:bg-[url('/images/glassCardRight.png')] glassCardStyle "
@@ -56,7 +56,7 @@ const RoadMapCard = ({ direction, small, large, content, imgLink }) => {
           </div>
 
           <div
-            className={`w-[400px] lg:h-[782px] h-full lg:rounded-none rounded-md   lg:border-0  border-2 border-#fff   ${
+            className={`lg:w-[400px] w-full lg:h-[782px] h-full lg:rounded-none rounded-md   lg:border-0  border-2 border-#fff   ${
               large
                 ? "lg:bg-[url('/images/glassCardBig.png')] glassCardStyle"
                 : "lg:bg-[url('/images/glassCard.png')] glassCardStyle "

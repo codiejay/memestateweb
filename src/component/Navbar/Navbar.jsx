@@ -111,27 +111,23 @@ export const socialIcon = [
   {
     name: "X",
     icon: "/images/x.svg",
-    link: "https://www.twitter.com",
+    link: "https://x.com/memestate_",
   },
   {
     name: "Tiktok",
     icon: "/images/tiktok.svg",
-    link: "https://www.twitter.com",
+    link: "https://www.tiktok.com/@memestatep2e",
   },
   {
-    name: "Discord",
-    icon: "/images/discord.svg",
-    link: "https://www.linkedin.com",
+    name: "Instagram",
+    icon: "/images/ig.svg",
+    link: "https://www.instagram.com/memestateonbase/",
   },
-  {
-    name: "Telegram",
-    icon: "/images/telegram.svg",
-    link: "https://www.linkedin.com",
-  },
+
   {
     name: "Youtube",
     icon: "/images/youtube.svg",
-    link: "https://www.github.com",
+    link: "https://www.youtube.com/@memestatep2",
   },
 ];
 const Navbar = () => {
@@ -154,7 +150,7 @@ const Navbar = () => {
         </div>
         <div className=" gap-4 justify-end lg:flex hidden">
           {socialIcon.map((icon, index) => (
-            <a href={icon.link} key={index}>
+            <a href={icon.link} key={index} target="_blank">
               <img src={icon.icon} alt={icon.name} />
             </a>
           ))}
