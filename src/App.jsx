@@ -198,7 +198,7 @@ export default function App() {
                     <p className="lg:text-3xl text-2xl">$ 0.001 USDT</p>
                   </div>
 
-                  <div className="border-[4px] border-[#000] bg-[#ECECEC] w-full flex gap-3 justify-center py-2 my-4  hidden">
+                  <div className="border-[4px] border-[#000] bg-[#ECECEC] w-full  gap-3 justify-center py-2 my-4  hidden">
                     <p className="lg:text-5xl text-2xl font-normal text-black">
                       Raised:
                     </p>
