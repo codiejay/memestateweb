@@ -33,6 +33,7 @@ body {
 body {
   font-family: "GAMERIA", sans-serif;
 }
+
 .app-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -46,11 +47,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(46, 49, 146, 0.5) 0%,
-    rgba(14, 15, 44, 0.94) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(46, 49, 146, 0.5) 0%,
+      rgba(14, 15, 44, 0.94) 100%);
 }
 
 h1 {
@@ -112,11 +111,13 @@ h1 {
 }
 
 .text-shadow-custom {
-  text-shadow: 2px 2px 0px #ff0000, /* Red shadow */ 4px 4px 0px #000000;
+  text-shadow: 2px 2px 0px #ff0000,
+    /* Red shadow */
+    4px 4px 0px #000000;
   /* Black shadow */
 }
 
-.slick-slide > div {
+.slick-slide>div {
   margin: 0 10px;
 }
 
@@ -154,6 +155,18 @@ h1 {
   top: 0;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -1px 2px rgba(0, 0, 0, 0.25);
 }
+
+/* #container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.page {
+  scroll-snap-align: start;
+  height: 100vh;
+
+} */
 
 @media (max-width: 1086px) {
   .slick-slider .button1 {

@@ -16,7 +16,7 @@ import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
 import IFrameModal from "./component/IFrameModal/IFrameModal";
 import { useIframeModal } from "./context/IframeContext";
-
+import ScrollSnap from "scroll-snap";
 // Register ScrollTrigger plugin
 
 gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +24,66 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
   const { openModal, isOpen } = useModal();
   const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
+  const container = useRef(null);
+
+  useEffect(() => {
+    function bindScrollSnap() {
+      const element = container.current;
+      if (element) {
+        const snapElement = new ScrollSnap(element, {
+          snapDestinationY: "90%",
+        });
+
+        snapElement.bind(() => {
+          console.log("snapped");
+        });
+      }
+    }
+
+    bindScrollSnap();
+  }, []);
+  // const sectionRefs = [
+  //   useRef(null),
+  //   useRef(null),
+  //   useRef(null),
+  //   useRef(null),
+  //   useRef(null),
+  //   useRef(null),
+  // ];
+
+  // const scrollToSection = (direction) => {
+  //   const currentScroll = window.scrollY;
+  //   const windowHeight = window.innerHeight;
+
+  //   const currentIndex = Math.round(currentScroll / windowHeight);
+  //   let nextIndex = currentIndex + direction;
+
+  //   if (nextIndex < 0) nextIndex = 0; // Prevent scrolling above the first section
+  //   if (nextIndex >= sectionRefs.length) nextIndex = sectionRefs.length - 1; // Prevent scrolling past the last section
+
+  //   const nextSection = sectionRefs[nextIndex].current;
+
+  //   if (nextSection) {
+  //     nextSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
+  // const handleScroll = (e) => {
+  //   if (e.deltaY > 0) {
+  //     scrollToSection(1); // Scroll down
+  //   } else {
+  //     scrollToSection(-1); // Scroll up
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("wheel", handleScroll, { passive: true });
+
+  //   return () => {
+  //     window.removeEventListener("wheel", handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
     // GSAP animation for banner content
     gsap.fromTo(
@@ -106,8 +166,8 @@ export default function App() {
   // }, []);
 
   return (
-    <>
-      <div className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen">
+    <div id="container" ref={container}>
+      <div className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen page">
         <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
           <div className="banner-content">
             <img src="/images/bannerContent.png" alt="" className="w-[590px]" />
@@ -142,7 +202,7 @@ export default function App() {
         <div className="w-full  bg-[#53224D] h-4"></div>
         <MarqueeComponent />
       </div>
-      <section className="bg-[#27297A] lg:px-24 px-3 py- relative">
+      <section className="bg-[#27297A] lg:px-24 px-3 py-24 relative page">
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
           <h1 className="text-white font-normal capitalize mb-2 text-3xl">
             Join the
@@ -310,7 +370,7 @@ export default function App() {
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-24  px-4  lg:pt-20  pt-24 pb-10 relative overflow-x-hidden">
+      <section className="bg-[#27297A] lg:px-24  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
@@ -333,7 +393,7 @@ export default function App() {
         <RewardSystem />
       </section>
 
-      <section className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden    ">
+      <section className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden  page  ">
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-white font-normal capitalize mb-2  lg:text-[48px] text-2xl">
             How to play
@@ -349,7 +409,7 @@ export default function App() {
         <HowToPlay items={howToPlay} />
       </section>
 
-      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-ful ">
+      <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-screen page">
         <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
@@ -413,7 +473,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] px-16 py-2 relative overflow-hidden">
+      <section className="bg-[#27297A] px-16 py-2 relative overflow-hidden page">
         <div className="flex flex-col justify-center items-center my-10 ">
           <div>
             <img
@@ -422,7 +482,7 @@ export default function App() {
               className="w-[402px] h-[92px] my-1"
             />
           </div>
-          <h1 className="text-white font-normal capitalize text-2xl mt-2">
+          <h1 className="text-white font-normal capitalize text-2xl ">
             Advertisement Model
           </h1>
         </div>
@@ -430,7 +490,7 @@ export default function App() {
         {/* <Advertisement items={advertisement} /> */}
         <AdvertisementSlick />
       </section>
-      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden ">
+      <section className="bg-[#27297A] px-16 py-16 relative overflow-hidden  page">
         <div className="flex justify-center ">
           <img src="/images/memestatePrize.png" alt="" className="w-[1000px]" />
         </div>
@@ -453,7 +513,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] py-5 px-8 lg:px-0 ">
+      <section className="bg-[#27297A] py-5 px-8 lg:px-0 page">
         <div className="flex justify-center  ">
           <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
             ROADMAP
@@ -628,6 +688,6 @@ export default function App() {
         {isOpen && <VideoModal />}
         {isIframeOpen && <IFrameModal />}
       </section>
-    </>
+    </div>
   );
 }

@@ -15,6 +15,7 @@
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-slick": "^0.30.3",
+    "scroll-snap": "^4.0.5",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
