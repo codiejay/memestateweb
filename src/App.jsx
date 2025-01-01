@@ -427,7 +427,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-screen page"
+        className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-full"
         ref={sectionRefs[4]}
       >
         <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
