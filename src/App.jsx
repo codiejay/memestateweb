@@ -28,11 +28,9 @@ export default function App() {
     useRef(null),
     useRef(null),
     useRef(null),
-    useRef(null), // Add more refs for additional sections
     useRef(null),
-    useRef(null), // Add more refs for additional sections
-    // Add more refs for additional sections
-    // Add more refs for additional sections
+    useRef(null),
+    useRef(null),
   ];
 
   // const [currentIndex, setCurrentIndex] = useState(0);
