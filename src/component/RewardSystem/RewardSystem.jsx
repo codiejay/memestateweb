@@ -156,14 +156,12 @@ import ButtonWithSound from "../Button/Button";
 const RewardSystem = () => {
   const { width } = useWindowSize();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(null);
   const [clickedPrevious, setClickedPrevious] = useState(false);
   const [clicked, setClicked] = useState(false);
-
   const handleNext = () => {
     const audio = new Audio("/audio/button.mp3");
     audio.play();
-    setDirection("next");
+
     setCurrentIndex((prevIndex) => (prevIndex + 1) % contentList.length); // Loop back to 0
     setClicked(true);
     setTimeout(() => setClicked(false), 200); // Reset animation after 200ms
@@ -172,7 +170,7 @@ const RewardSystem = () => {
   const handlePrevious = () => {
     const audio = new Audio("/audio/button.mp3");
     audio.play();
-    setDirection("prev");
+
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + contentList.length) % contentList.length // Loop back to last item
     );
@@ -182,7 +180,7 @@ const RewardSystem = () => {
 
   return (
     <div className="h-full relative">
-      {width <= 988 ? (
+      {width <= 1020 ? (
         <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
           {contentList.map((item, index) => {
             const isActive = index === currentIndex;
@@ -223,7 +221,7 @@ const RewardSystem = () => {
         </div>
       ) : (
         <>
-          <div>
+          <div className={`${width <= 1434 ? "hidden" : "block"}`}>
             <button
               onClick={handleNext}
               className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px]  absolute  right-10 bottom-1/2 flex justify-center items-center transition-all transform ${
@@ -243,8 +241,8 @@ const RewardSystem = () => {
               <img src="/images/carouselButton.png" alt="" />
             </button>
           </div>
-          <div className="flex justify-center h-[80vh] items-center gap-8">
-            <div className="flex justify-center flex-col mt-8 max-w-[1200px] w-full relative h-full">
+          <div className="flex justify-center h-[80vh] flex-col items-center gap-8">
+            <div className="flex justify-center flex-col mt-8 max-w-[1200px] w-full relative h-full xl:mr-16 lg:mr-0">
               {contentList.map((item, index) => {
                 const isActive = index === currentIndex;
                 const zIndex = isActive ? 100 : 50 - index; // Set active card z-index to 100
@@ -286,7 +284,11 @@ const RewardSystem = () => {
                         </div>
                       </div>
                       {/* Right Section */}
-                      <div className="-ml-40 z-30 mt-6 relative lg:block">
+                      <div
+                        className={`  ${
+                          width >= 1280 ? "-ml-40" : "-ml-480"
+                        } z-30 mt-6 relative lg:block`}
+                      >
                         <div className="masked-div-2">
                           <div className="py-4 flex justify-end items-center">
                             <div className="w-[400px] mt-6">
@@ -300,7 +302,28 @@ const RewardSystem = () => {
                 );
               })}
             </div>
-            <div></div>
+            <div
+              className={` mt-16 ${width <= 1434 ? "flex gap-8 " : "hidden"}`}
+            >
+              <button
+                onClick={handlePrevious}
+                className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px]   flex justify-center items-center transition-all transform ${
+                  clickedPrevious ? "scale-95" : ""
+                }`}
+                style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+              >
+                <img src="/images/carouselButton.png" alt="" />
+              </button>
+              <button
+                onClick={handleNext}
+                className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px]   flex justify-center items-center transition-all transform ${
+                  clicked ? "scale-95" : ""
+                }`}
+                style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+              >
+                <img src="/images/carouselButton2.png" alt="" />
+              </button>
+            </div>
           </div>
         </>
       )}
