@@ -3,7 +3,7 @@ import { useModal } from "../../context/VideoContext";
 const VideoModal = () => {
   const { closeModal } = useModal();
   return (
-    <div className="fixed  w-screen z-[9999999] justify-center flex  h-screen top-10">
+    <div className="fixed  w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-10">
       <div className="border-[12px] border-[#282B7F] h-[647px] max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-black">
         <div className="w-full border-[10px] border-white h-full relative">
           <div className="absolute right-4 z-50">
