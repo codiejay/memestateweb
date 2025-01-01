@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-const ButtonWithSound = ({ label, soundPath, type, className }) => {
+const ButtonWithSound = ({ label, soundPath, type, className, onClick }) => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     // Play the provided click sound
     const audio = new Audio(soundPath);
     audio.play();
+    onClick();
 
     // Trigger the animation
     setClicked(true);

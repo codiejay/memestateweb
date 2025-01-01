@@ -13,7 +13,7 @@ const RewardSystem = () => {
                 className="h-[788px] w-full shadow-black-custom relative "
                 key={index}
               >
-                <div className="bg-[#A3A5E1] h-[381px]">
+                <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
                   <img src={item.image} alt="" />
                 </div>
                 <div className="h-[403px] bg-[#FF0000] flex  flex-col items-center gap-3 py-1">

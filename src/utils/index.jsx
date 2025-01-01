@@ -7,10 +7,10 @@ export const carouselItems = [
         <img src="/images/wallet.png" alt="Image 1" className=" w-28" />
       </div>
       <h2 className="text-[28px] text-white my-3">Early Access, big savings</h2>
-      <p className="text-lg font-normal text-white my-1 ">
+      <p className="lg:text-lg text-base font-normal text-white my-1 ">
         Grab $GEM tokens at discounted <br /> rates across three rounds.
       </p>
-      <p className="text-lg font-normal  text-white my-1">
+      <p className="lg:text-lg text-base font-normal  text-white my-1">
         The earlier you buy, the more you <br /> save!
       </p>
     </div>
@@ -22,7 +22,7 @@ export const carouselItems = [
       </div>
       <h2 className="text-[28px] text-white my-3">Exclusive Rewards</h2>
 
-      <p className="text-lg font-normal  text-white my-1">
+      <p className="lg:text-lg text-base font-normal  text-white my-1">
         Unlock premium in-game items, perks, and unique bonuses.
       </p>
     </div>
@@ -33,7 +33,7 @@ export const carouselItems = [
         <img src="/images/flyingMoney.png" alt="Image 1" className=" w-28" />
       </div>
       <h2 className="text-[28px] text-white my-3">Fund the Future</h2>
-      <p className="text-lg font-normal text-white my-1 ">
+      <p className="lg:text-lg text-base font-normal text-white my-1 ">
         Your contributions will support game development, marketing, and
         sustainable rewards for players.
       </p>
@@ -158,7 +158,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
         increased advertisement
         <br className="lg:block  hidden" />
         demand and prize table volume
@@ -175,7 +175,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
         increased advertisement
         <br className="lg:block  hidden" />
         AND GAME REVENUE
@@ -192,7 +192,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players
@@ -210,7 +210,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-4xl font-normal text-white lg:leading-[4rem] my-5">
+      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] my-5">
         bigger rewards pool for
         <br className="lg:block  hidden" />
         free players

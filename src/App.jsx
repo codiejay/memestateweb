@@ -5,23 +5,25 @@ import HowItWorks from "./component/HowItWorks/HowItWorks";
 import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  carouselItems,
-  howToPlay,
-  socialFooterIcon,
-  useWindowSize,
-} from "./utils";
+import { carouselItems, howToPlay, socialFooterIcon } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import { links } from "./component/Navbar/Navbar";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
 import RewardSystem from "./component/RewardSystem/RewardSystem";
+import VideoModal from "./component/VideoModal/VideoModal";
+import { useModal } from "./context/VideoContext";
+import ButtonWithSound from "./component/Button/Button";
+import IFrameModal from "./component/IFrameModal/IFrameModal";
+import { useIframeModal } from "./context/IframeContext";
 
 // Register ScrollTrigger plugin
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const { openModal, isOpen } = useModal();
+  const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
   useEffect(() => {
     // GSAP animation for banner content
     gsap.fromTo(
@@ -116,11 +118,12 @@ export default function App() {
 
           <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 lg:absolute relative  lg:bottom-16 ">
             <div className="banner-content">
-              <Button
+              <ButtonWithSound
                 type={"beta"}
                 soundPath={"/audio/button.mp3"}
-                label={"play Demo"}
+                label={"watch Demo"}
                 className={"bg-[#FF0000]"}
+                onClick={openModal}
               />
             </div>
 
@@ -129,6 +132,7 @@ export default function App() {
                 type={"alpha"}
                 soundPath={"/audio/button2.mp3"}
                 label={"Join $GEMS Pre-sale"}
+                onClick={openIFrameModal}
               />
             </div>
           </div>
@@ -138,9 +142,8 @@ export default function App() {
         <div className="w-full  bg-[#53224D] h-4"></div>
         <MarqueeComponent />
       </div>
-
       <section className="bg-[#27297A] lg:px-24 px-3 py- relative">
-        <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-9">
+        <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
           <h1 className="text-white font-normal capitalize mb-2 text-3xl">
             Join the
           </h1>
@@ -186,7 +189,7 @@ export default function App() {
                   </h1>
                 </div>
                 <div className="absolute top-[7rem] lg:left-8 left-0  ">
-                  <CountDown />
+                  {/* <CountDown /> */}
                 </div>
                 <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 h-[480px] ">
                   <div className="text-black text-center flex justify-center items-center gap-4 mt-8">
@@ -205,24 +208,27 @@ export default function App() {
                   </div>
                   <div className="w-full flex flex-col gap-5">
                     <div className="w-full">
-                      <Button
+                      <ButtonWithSound
                         label={"Buy with Card"}
                         type={"beta"}
                         soundPath={"/audio/button.mp3"}
                         className={"bg-[#FF0000]  w-full"}
+                        onClick={openIFrameModal}
                       />
                     </div>
                     <div className="w-full">
-                      <Button
+                      <ButtonWithSound
                         label={"Buy with Card"}
                         type={"beta"}
                         soundPath={"/audio/button.mp3"}
                         className={"bg-[#FF0000]  w-full"}
+                        onClick={openIFrameModal}
                       />
                     </div>
                   </div>
                   <a
-                    href="/"
+                    href="#"
+                    onClick={openIFrameModal}
                     className="text-[32px] underline text-black inline-block my-3"
                   >
                     Don’t have a wallet?
@@ -619,6 +625,8 @@ export default function App() {
             </p>
           </div>
         </div>
+        {isOpen && <VideoModal />}
+        {isIframeOpen && <IFrameModal />}
       </section>
     </>
   );
