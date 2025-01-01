@@ -183,16 +183,16 @@ export default function App() {
             </div>
             <div className="  lg:w-fit  w-full">
               <div className=" w-full relative">
-                <div className="border-[#000] border-[12px] shadow-black-custom h-[130px] bg-[#9D9FD8] flex justify-center items-center ">
-                  <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-32  px-2 leading-9">
+                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[130px] h-fit bg-[#9D9FD8] flex justify-center items-center ">
+                  <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-24  px-2 leading-9">
                     Buy $gems Token in presale now!
                   </h1>
                 </div>
                 <div className="absolute top-[7rem] lg:left-8 left-0 countdownStyle  ">
                   <CountDown />
                 </div>
-                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 h-[480px] ">
-                  <div className="text-black text-center flex justify-center items-center gap-4 mt-8">
+                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 lg:h-[380px] h-fit ">
+                  <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                     <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                     <img src="/images/equals.svg" alt="" />
                     <p className="lg:text-3xl text-2xl">$ 0.001 USDT</p>
