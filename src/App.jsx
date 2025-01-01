@@ -370,7 +370,7 @@ export default function App() {
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-24  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page">
+      <section className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">

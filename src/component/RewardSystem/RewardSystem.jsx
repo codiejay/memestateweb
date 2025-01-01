@@ -181,7 +181,7 @@ const RewardSystem = () => {
   };
 
   return (
-    <div className="h-full">
+    <div className="h-full relative">
       {width <= 988 ? (
         <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
           {contentList.map((item, index) => {
@@ -223,7 +223,27 @@ const RewardSystem = () => {
         </div>
       ) : (
         <>
-          <div className="flex justify-center h-screen flex-col">
+          <div>
+            <button
+              onClick={handleNext}
+              className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px]  absolute  right-10 bottom-1/2 flex justify-center items-center transition-all transform ${
+                clicked ? "scale-95" : ""
+              }`}
+              style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+            >
+              <img src="/images/carouselButton2.png" alt="" />
+            </button>
+            <button
+              onClick={handlePrevious}
+              className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px]  absolute left-10 bottom-1/2  flex justify-center items-center transition-all transform ${
+                clickedPrevious ? "scale-95" : ""
+              }`}
+              style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+            >
+              <img src="/images/carouselButton.png" alt="" />
+            </button>
+          </div>
+          <div className="flex justify-center h-[80vh] items-center gap-8">
             <div className="flex justify-center flex-col mt-8 max-w-[1200px] w-full relative h-full">
               {contentList.map((item, index) => {
                 const isActive = index === currentIndex;
@@ -234,7 +254,7 @@ const RewardSystem = () => {
                 return (
                   <div
                     key={index}
-                    className={`absolute w-full transition-all transform     `}
+                    className={`absolute w-full transition-all transform mx-1     `}
                     style={{
                       top: `${topPosition}px`,
                       left: `${leftPosition}px`,
@@ -280,26 +300,7 @@ const RewardSystem = () => {
                 );
               })}
             </div>
-            <div className="flex justify-center items-center gap-10">
-              <button
-                onClick={handlePrevious}
-                className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px] flex justify-center items-center transition-all transform ${
-                  clickedPrevious ? "scale-95" : ""
-                }`}
-                style={{ boxShadow: "8px 8px 0px 0px #000000" }}
-              >
-                <img src="/images/carouselButton.png" alt="" />
-              </button>
-              <button
-                onClick={handleNext}
-                className={`text-2xl font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black rounded-full w-[58px] h-[58px] flex justify-center items-center transition-all transform ${
-                  clicked ? "scale-95" : ""
-                }`}
-                style={{ boxShadow: "8px 8px 0px 0px #000000" }}
-              >
-                <img src="/images/carouselButton2.png" alt="" />
-              </button>
-            </div>
+            <div></div>
           </div>
         </>
       )}
