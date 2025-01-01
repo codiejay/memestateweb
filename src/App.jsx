@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Button from "./component/Button/Button";
 import CountDown from "./component/CountDown/CountDown";
 import HowItWorks from "./component/HowItWorks/HowItWorks";
@@ -537,7 +537,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] py-5 px-8 lg:px-0 page">
+      <section className="bg-[#27297A] py-5 px-8 lg:px-0 page" id="roadMap">
         <div className="flex justify-center  ">
           <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
             ROADMAP

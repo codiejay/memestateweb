@@ -87,22 +87,18 @@ import { useState } from "react";
 export const links = [
   {
     name: "About us",
-    icon: "/images/x.svg",
     link: "https://www.twitter.com",
   },
   {
     name: "Roadmap",
-    icon: "/images/tiktok.svg",
-    link: "https://www.twitter.com",
+    link: "#roadMap",
   },
   {
     name: "Docs",
-    icon: "/images/discord.svg",
     link: "https://www.linkedin.com",
   },
   {
     name: "Redeem winnings",
-    icon: "/images/telegram.svg",
     link: "https://www.linkedin.com",
   },
 ];
@@ -168,8 +164,12 @@ const Navbar = () => {
               className="text-xl md:text-xl font-normal text-white cursor-not-allowed"
             >
               <a
-                href={"#"}
-                className="text-white cursor-not-allowed "
+                href={link.name === "Roadmap" ? link.link : "#"}
+                className={`text-white  ${
+                  link.name === "Roadmap"
+                    ? "cursor-pointer"
+                    : "cursor-not-allowed"
+                } `}
                 aria-disabled
               >
                 {link.name}
