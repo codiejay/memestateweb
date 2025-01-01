@@ -160,7 +160,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <nav className="hidden">
+      <nav>
         <ul
           className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-16 ${
             isMenuOpen ? "block" : "hidden"
@@ -169,9 +169,13 @@ const Navbar = () => {
           {links.map((link, index) => (
             <li
               key={index}
-              className="text-xl md:text-xl font-normal text-white"
+              className="text-xl md:text-xl font-normal text-white cursor-not-allowed"
             >
-              <a href={link.link} className="text-white">
+              <a
+                href={"#"}
+                className="text-white cursor-not-allowed "
+                aria-disabled
+              >
                 {link.name}
               </a>
             </li>

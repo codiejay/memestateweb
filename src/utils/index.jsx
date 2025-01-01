@@ -224,6 +224,6 @@ export const contentList = [
         incentives.
       </p>
     ),
-    image: "/images/meme3.gif",
+    image: "/images/meme4.gif",
   },
 ];

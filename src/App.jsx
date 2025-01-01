@@ -350,7 +350,7 @@ export default function App() {
       </section>
 
       <section className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-ful ">
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 ">
+        <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
         <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10justify-center items-end">
