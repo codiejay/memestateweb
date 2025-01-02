@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-24 px-3  section-2 py-5 relative page h-screen overflow-hidden"
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page h-screen overflow-hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -241,7 +241,7 @@ export default function App() {
                 <img
                   src="/images/memestate.png"
                   alt=""
-                  className="lg:h-20  h-16 object-contain"
+                  className="lg:h-14  h-16 object-contain"
                 />
               </div>
               <h1 className="text-white font-normal capitalize mt-1  text-3xl">
@@ -268,13 +268,13 @@ export default function App() {
                   <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                     <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                     <img src="/images/equals.svg" alt="" />
-                    <p className="lg:text-3xl text-2xl">$ 0.001 USDT</p>
+                    <p className="lg:text-3xl text-2xl">0.001 USDT</p>
                   </div>
 
                   <div className="w-full flex flex-col gap-5">
                     <div className="w-full">
                       <ButtonWithSound
-                        label={"Buy GEMS"}
+                        label={"Buy $GEMS"}
                         type={"beta"}
                         soundPath={"/audio/button.mp3"}
                         className={"bg-[#FF0000]  w-full"}
@@ -285,35 +285,43 @@ export default function App() {
                 </div>
               </div>
               <div className="mt-9  lg:block hidden">
-                <h3 className="text-2xl font-normal text-[#FFC727]">
+                <h3 className="text-xl font-normal text-[#FFC727]">
                   Presale Rounds
                 </h3>
-                <ul className=" grid lg:grid-cols-3 grid-cols-1  lg:flex-nowrap   justify-between lg:mt-0 mt-10">
+                <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
                   <li>
-                    <h2 className="text-white text-[32px] font-normal">
-                      Round 1
+                    <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
+                      Stage 1{" "}
+                      <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
+                        OnGoing
+                      </span>
                     </h2>
-                    <p className="text-base font-normal text-white">
-                      Lowest $GEM price + <br className="lg:block hidden" />{" "}
-                      exclusive bonuses.
+                    <p className="text-sm font-normal text-white">
+                      Up to 200,000,000 $GEMS up for grabs at 67% discount
                     </p>
                   </li>
                   <li>
-                    <h2 className="text-white text-[32px] font-normal">
-                      Round 2
-                    </h2>
-                    <p className="text-base font-normal text-white">
-                      Lowest $GEM price + <br className="lg:block hidden" />{" "}
-                      exclusive bonuses.
+                    <h2 className="text-white text-2xl font-normal">Stage 2</h2>
+                    <p className="text-sm font-normal text-white">
+                      Up to 300,000,000 $GEMS up for grabs at 50% discount
                     </p>
                   </li>
                   <li>
-                    <h2 className="text-white text-[32px] font-normal">
-                      Round 3
-                    </h2>
-                    <p className="text-base font-normal text-white">
-                      Final chance before <br className="lg:block hidden" />{" "}
-                      public launch.
+                    <h2 className="text-white text-2xl font-normal">Stage 3</h2>
+                    <p className="text-sm font-normal text-white">
+                      Up to 400,000,000 $GEMS up for grabs at 33% discount
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 4</h2>
+                    <p className="text-sm font-normal text-white">
+                      Up to 500,000,000 $GEMS up for grabs at 25% discount
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 5</h2>
+                    <p className="text-sm font-normal text-white">
+                      Up to 600,000,000 $GEMS up for grabs at 25% discount
                     </p>
                   </li>
                 </ul>
@@ -325,7 +333,7 @@ export default function App() {
           <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
             Presale Rounds
           </h3>
-          <ul className=" grid lg:grid-cols-3 grid-cols-1  lg:flex-nowrap   lg:justify-between  justify-center lg:mt-0 mt-10">
+          <ul className=" grid lg:grid-cols-3 grid-cols-1   lg:flex-nowrap   lg:justify-between  justify-center lg:mt-0 mt-10">
             <li>
               <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
                 Round 1
@@ -355,10 +363,11 @@ export default function App() {
             </li>
           </ul>
         </div>
-        <div className="absolute lg:bottom-20 bottom-0 right-0  hidden lg:block">
+        <div className="absolute lg:bottom-28 bottom-0 right-0  hidden lg:block">
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
+
       <section
         className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page"
         ref={sectionRefs[2]}
@@ -386,7 +395,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-24 px-0 py-16 relative overflow-hidden  page  "
+        className="bg-[#27297A] lg:px-14 px-0 py-16 relative overflow-hidden  page  "
         ref={sectionRefs[3]}
       >
         <div className="flex flex-col justify-center items-center ">

@@ -97,6 +97,10 @@ export const links = [
     name: "pitch deck",
     link: "https://www.canva.com/design/DAGNpJF53qg/8IbGbX-DQeowe9bsDXJL_g/edit",
   },
+  {
+    name: "docs",
+    link: "https://coda.io/d/Memestate-Documentation_dXAqkGQes4-/Pitch-deck_suxYHrfT#_lulBjKkD",
+  },
 
   // {
   //   name: "Docs",
@@ -166,9 +170,14 @@ const Navbar = () => {
           {links.map((link, index) => (
             <li
               key={index}
-              className="text-xl md:text-xl font-normal text-white cursor-not-allowed"
+              className="text-xl md:text-xl font-normal text-white "
             >
-              <a href={link.link} className={`text-white`} aria-disabled>
+              <a
+                href={link.link}
+                className={`text-white`}
+                aria-disabled
+                target={link.name === "Roadmap" ? "_self" : "_blank"}
+              >
                 {link.name}
               </a>
             </li>

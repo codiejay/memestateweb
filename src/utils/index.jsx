@@ -1,17 +1,27 @@
 import { useEffect, useState } from "react";
 
 export const carouselItems = [
+  <div key="0" className="w-100% my-8 px-4">
+    <div className="flex flex-col">
+      <div>
+        <img src="/images/Tag.png" alt="Image 1" className=" w-28" />
+      </div>
+      <h2 className="text-[28px] text-white my-3"> Biggest Discount</h2>
+
+      <p className="lg:text-lg text-base font-normal  text-white my-1">
+        Get $GEMS at $0.0001—a massive 67% discount off the TGE price!
+      </p>
+    </div>
+  </div>,
   <div key="1" className="w-100% my-8 px-4">
     <div className="flex flex-col">
       <div>
         <img src="/images/wallet.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[28px] text-white my-3">Early Access, big savings</h2>
-      <p className="lg:text-lg text-base font-normal text-white my-1 ">
-        Grab $GEM tokens at discounted <br /> rates across three rounds.
-      </p>
-      <p className="lg:text-lg text-base font-normal  text-white my-1">
-        The earlier you buy, the more you <br /> save!
+      <h2 className="text-[24px] text-white my-1">Early Access, big savings</h2>
+
+      <p className="lg:text-lg text-base font-normal  text-white ">
+        Be among the first to own $GEMS and dominate Memestate’s ecosystem!
       </p>
     </div>
   </div>,
@@ -20,9 +30,9 @@ export const carouselItems = [
       <div>
         <img src="/images/flexedBiceps.png" alt="Image 2" className=" w-28" />
       </div>
-      <h2 className="text-[28px] text-white my-3">Exclusive Rewards</h2>
+      <h2 className="text-[28px] text-white my-1">Exclusive Rewards</h2>
 
-      <p className="lg:text-lg text-base font-normal  text-white my-1">
+      <p className="lg:text-lg font-normal  text-white ">
         Unlock premium in-game items, perks, and unique bonuses.
       </p>
     </div>
@@ -32,8 +42,8 @@ export const carouselItems = [
       <div>
         <img src="/images/flyingMoney.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[28px] text-white my-3">Fund the Future</h2>
-      <p className="lg:text-lg text-base font-normal text-white my-1 ">
+      <h2 className="text-[28px] text-white my-1">Fund the Future</h2>
+      <p className="lg:text-lg font-normal text-white  ">
         Your contributions will support game development, marketing, and
         sustainable rewards for players.
       </p>
