@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-24 px-3 py-10 relative page h-screen overflow-hidden"
+        className="bg-[#27297A] lg:px-24 px-3  section-2 py-5 relative page h-screen overflow-hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -231,7 +231,7 @@ export default function App() {
             Presale
           </h1>
         </div>
-        <div className="grid lg:grid-cols-2 flex-col lg:gap-28 gap-9 py-8 justify-center">
+        <div className="grid lg:grid-cols-2 flex-col lg:gap-28 gap-9 py-8 justify-center howItWorks ">
           <div className="w-full overflow-hidden lg:px-0 px-6  lg:order-1 order-2">
             <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
               <h1 className="text-white font-normal capitalize mb-2 text-3xl">
@@ -256,29 +256,21 @@ export default function App() {
             </div>
             <div className="  lg:w-fit  w-full">
               <div className=" w-full relative">
-                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[130px] h-fit bg-[#9D9FD8] flex justify-center items-center ">
-                  <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-24  px-2 leading-9">
+                <div className="border-[#000] border-[12px] shadow-black-custom  py-4 h-fit bg-[#9D9FD8] flex justify-center items-center ">
+                  <h1 className="text-black text-center  lg:text-[36px] text-xl    px-2 leading-9">
                     Buy your $gems Token in presale now!
                   </h1>
                 </div>
-                <div className="absolute top-[7rem] lg:left-8 left-0 countdownStyle  ">
+                <div className="absolute top-[7rem] lg:left-1/2 -translate-x-1/2 left-0 countdownStyle w-[80%]  ">
                   <CountDown />
                 </div>
-                <div className="border-[#000] border-[12px] shadow-black-custom min-h-[234px] bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-10 lg:h-[380px] h-fit ">
+                <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-12  h-fit ">
                   <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                     <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                     <img src="/images/equals.svg" alt="" />
                     <p className="lg:text-3xl text-2xl">$ 0.001 USDT</p>
                   </div>
 
-                  <div className="border-[4px] border-[#000] bg-[#ECECEC] w-full  gap-3 justify-center py-2 my-4  hidden">
-                    <p className="lg:text-5xl text-2xl font-normal text-black">
-                      Raised:
-                    </p>
-                    <p className="lg:text-5xl text-2xl font-normal text-black">
-                      $17,840,804.97
-                    </p>
-                  </div>
                   <div className="w-full flex flex-col gap-5">
                     <div className="w-full">
                       <ButtonWithSound
@@ -290,13 +282,6 @@ export default function App() {
                       />
                     </div>
                   </div>
-                  <a
-                    href="#"
-                    onClick={openIFrameModal}
-                    className="text-[32px] underline text-black inline-block my-3"
-                  >
-                    Don’t have a wallet?
-                  </a>
                 </div>
               </div>
               <div className="mt-9  lg:block hidden">

@@ -95,7 +95,7 @@ export const links = [
   },
   {
     name: "pitch deck",
-    link: "#roadMap",
+    link: "https://www.canva.com/design/DAGNpJF53qg/8IbGbX-DQeowe9bsDXJL_g/edit",
   },
 
   // {
@@ -168,15 +168,7 @@ const Navbar = () => {
               key={index}
               className="text-xl md:text-xl font-normal text-white cursor-not-allowed"
             >
-              <a
-                href={link.name === "Roadmap" ? link.link : "#"}
-                className={`text-white  ${
-                  link.name === "Roadmap"
-                    ? "cursor-pointer"
-                    : "cursor-not-allowed"
-                } `}
-                aria-disabled
-              >
+              <a href={link.link} className={`text-white`} aria-disabled>
                 {link.name}
               </a>
             </li>

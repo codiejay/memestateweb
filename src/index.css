@@ -190,4 +190,7 @@ h1 {
   .bannerContent {
     gap: 1rem;
   }
+  .howItWorks {
+    height: 100% !important;
+  }
 }

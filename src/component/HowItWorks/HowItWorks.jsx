@@ -30,7 +30,7 @@ const HowItWorks = ({ items }) => {
 
   return (
     <div
-      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000] h-[535px]  lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
+      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000]   lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
       style={{ boxShadow: " 0px 4px 4px 0px #00000040" }}
     >
       <h2 className="text-2xl text-[#FFC727]  px-4">How it works</h2>
