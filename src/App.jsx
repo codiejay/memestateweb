@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-24 px-3 relative page h-screen overflow-hidden"
+        className="bg-[#27297A] lg:px-24 px-3 py-10 relative page h-screen overflow-hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -258,7 +258,7 @@ export default function App() {
               <div className=" w-full relative">
                 <div className="border-[#000] border-[12px] shadow-black-custom min-h-[130px] h-fit bg-[#9D9FD8] flex justify-center items-center ">
                   <h1 className="text-black text-center  lg:text-[36px] text-xl  lg:px-24  px-2 leading-9">
-                    Buy $gems Token in presale now!
+                    Buy your $gems Token in presale now!
                   </h1>
                 </div>
                 <div className="absolute top-[7rem] lg:left-8 left-0 countdownStyle  ">
@@ -282,16 +282,7 @@ export default function App() {
                   <div className="w-full flex flex-col gap-5">
                     <div className="w-full">
                       <ButtonWithSound
-                        label={"Buy with Card"}
-                        type={"beta"}
-                        soundPath={"/audio/button.mp3"}
-                        className={"bg-[#FF0000]  w-full"}
-                        onClick={openIFrameModal}
-                      />
-                    </div>
-                    <div className="w-full">
-                      <ButtonWithSound
-                        label={"Buy with Crypto"}
+                        label={"Buy GEMS"}
                         type={"beta"}
                         soundPath={"/audio/button.mp3"}
                         className={"bg-[#FF0000]  w-full"}
