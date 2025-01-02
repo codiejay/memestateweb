@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page h-screen overflow-hidden"
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page lg:h-screen  h-full lg:overflow-hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -333,32 +333,40 @@ export default function App() {
           <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
             Presale Rounds
           </h3>
-          <ul className=" grid lg:grid-cols-3 grid-cols-1   lg:flex-nowrap   lg:justify-between  justify-center lg:mt-0 mt-10">
+          <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
             <li>
-              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
-                Round 1
+              <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
+                Stage 1{" "}
+                <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
+                  OnGoing
+                </span>
               </h2>
-              <p className="text-base font-normal text-white lg:text-left text-center ">
-                Lowest $GEM price + <br className="lg:block hidden" /> exclusive
-                bonuses.
+              <p className="text-sm font-normal text-white">
+                Up to 200,000,000 $GEMS up for grabs at 67% discount
               </p>
             </li>
             <li>
-              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
-                Round 2
-              </h2>
-              <p className="text-base font-normal text-white lg:text-left text-center ">
-                Lowest $GEM price + <br className="lg:block hidden" /> exclusive
-                bonuses.
+              <h2 className="text-white text-2xl font-normal">Stage 2</h2>
+              <p className="text-sm font-normal text-white">
+                Up to 300,000,000 $GEMS up for grabs at 50% discount
               </p>
             </li>
             <li>
-              <h2 className="text-white text-[32px] font-normal lg:text-left text-center ">
-                Round 3
-              </h2>
-              <p className="text-base font-normal text-white lg:text-left text-center ">
-                Final chance before <br className="lg:block hidden" /> public
-                launch.
+              <h2 className="text-white text-2xl font-normal">Stage 3</h2>
+              <p className="text-sm font-normal text-white">
+                Up to 400,000,000 $GEMS up for grabs at 33% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 4</h2>
+              <p className="text-sm font-normal text-white">
+                Up to 500,000,000 $GEMS up for grabs at 25% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 5</h2>
+              <p className="text-sm font-normal text-white">
+                Up to 600,000,000 $GEMS up for grabs at 25% discount
               </p>
             </li>
           </ul>
