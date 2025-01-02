@@ -93,14 +93,14 @@ export const links = [
     name: "Roadmap",
     link: "#roadMap",
   },
-  {
-    name: "Docs",
-    link: "https://www.linkedin.com",
-  },
-  {
-    name: "Redeem winnings",
-    link: "https://www.linkedin.com",
-  },
+  // {
+  //   name: "Docs",
+  //   link: "https://www.linkedin.com",
+  // },
+  // {
+  //   name: "Redeem winnings",
+  //   link: "https://www.linkedin.com",
+  // },
 ];
 
 export const socialIcon = [
@@ -130,7 +130,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full absolute bg-transparent top-0 left-0 py-3 px-6 md:px-24 z-[100000]">
+    <header className="w-full  bg-transparent   px-6 md:px-24 z-[100000]">
       <div className="grid grid-cols-3 items-center">
         <div className="flex items-center">
           {/* Hamburger button */}

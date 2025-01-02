@@ -183,3 +183,11 @@ h1 {
     width: 425px !important;
   }
 }
+@media (min-width: 1600px) {
+  .bannerImg {
+    width: 790px;
+  }
+  .bannerContent {
+    gap: 3rem;
+  }
+}

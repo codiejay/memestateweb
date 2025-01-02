@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carouselItems, howToPlay, socialFooterIcon } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
-import { links } from "./component/Navbar/Navbar";
+import Navbar, { links } from "./component/Navbar/Navbar";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
 import RewardSystem from "./component/RewardSystem/RewardSystem";
 import VideoModal from "./component/VideoModal/VideoModal";
@@ -170,19 +170,22 @@ export default function App() {
 
   return (
     <div id="container" ref={container}>
-      <div
-        className="banner bg-[url('/images/bgImage.png')]  bg-cover w-full bg-no-repeat  bg-center relative  2xl:h-[90vh]  h-screen page"
-        ref={sectionRefs[0]}
-      >
-        <section className=" z-50 relative flex  lg:justify-center justify-start lg:pt-0 pt-[35%] items-center flex-col  lg:gap-0  gap-4  h-full">
-          <div className="banner-content">
-            <img src="/images/bannerContent.png" alt="" className="w-[590px]" />
+      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen">
+        <div className="h-full  flex justify-center items-center flex-col pt-8 bannerContent  ">
+          <Navbar />
+
+          <div className="banner-content my-4 ">
+            <img
+              src="/images/bannerContent.png"
+              alt=""
+              className="w-[590px] bannerImg"
+            />
           </div>
           <p className="text-2xl font-bold text-[#EEEFFF] text-center banner-content">
             Unleash the power of memes and earn rewards.
           </p>
 
-          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 lg:absolute relative  lg:bottom-16 ">
+          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 mt-6  ">
             <div className="banner-content">
               <ButtonWithSound
                 type={"beta"}
@@ -197,17 +200,18 @@ export default function App() {
               <Button
                 type={"alpha"}
                 soundPath={"/audio/button2.mp3"}
-                label={"Join $GEMS Pre-sale"}
+                label={"Join Pre-sale"}
                 onClick={openIFrameModal}
               />
             </div>
           </div>
-        </section>
-      </div>
-      <div>
-        <div className="w-full  bg-[#53224D] h-4"></div>
-        <MarqueeComponent />
-      </div>
+          <div className="mt-auto ">
+            {/* <div className="w-full   bg-[#53224D] h-4"></div> */}
+            <MarqueeComponent />
+          </div>
+        </div>
+      </section>
+
       <section
         className="bg-[#27297A] lg:px-24 px-3 py-24 relative page"
         ref={sectionRefs[1]}

@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeComponent = () => {
   return (
-    <Marquee className="pb-4 bg-[#56296f] ">
+    <Marquee className=" py-6 bg-[#56296f] ">
       <div className="mx-5">
         <img src="/images/memestategroup.png " alt="" className="" />
       </div>
