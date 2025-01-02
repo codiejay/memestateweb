@@ -8,7 +8,7 @@ import { IFrameModalProvider } from "./context/IframeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <main className="relative app-container ">
+    <main className="relative app-container " id="container">
       <IFrameModalProvider>
         <ModalProvider>
           <Navbar />

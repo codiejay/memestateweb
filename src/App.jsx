@@ -169,7 +169,7 @@ export default function App() {
   // }, []);
 
   return (
-    <div id="container" ref={container}>
+    <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-x-hidden">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-44  ">
           {/* <Navbar /> */}
