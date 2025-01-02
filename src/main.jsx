@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
     <main className="relative app-container ">
       <IFrameModalProvider>
         <ModalProvider>
-          {/* <Navbar /> */}
+          <Navbar />
           <App />
         </ModalProvider>
       </IFrameModalProvider>

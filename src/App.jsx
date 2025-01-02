@@ -171,10 +171,10 @@ export default function App() {
   return (
     <div id="container" ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen">
-        <div className="h-full  flex justify-center items-center flex-col pt-8 bannerContent  ">
-          <Navbar />
+        <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-44  ">
+          {/* <Navbar /> */}
 
-          <div className="banner-content my-4 ">
+          <div className="banner-content ">
             <img
               src="/images/bannerContent.png"
               alt=""
@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-24 px-3 py-24 relative page"
+        className="bg-[#27297A] lg:px-24 px-3 relative page h-screen overflow-hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
