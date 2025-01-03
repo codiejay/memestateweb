@@ -633,7 +633,7 @@ export default function App() {
             <div className="lg:absolute relative lg:right-16 lg:-bottom-[22.8rem]">
               <RoadMapCard
                 direction={"left"}
-                imgLink={"road1.png"}
+                imgLink={"road5.png"}
                 content={
                   <ul className="px-8 pt-14 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
                     <li>

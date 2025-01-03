@@ -73,8 +73,7 @@ const RewardSystem = () => {
   }, [isLoading]);
 
   useEffect(() => {
-    // Simulate data loading
-    setTimeout(() => setIsLoading(false), 500); // Replace with actual fetch logic
+    setTimeout(() => setIsLoading(false), 500);
   }, []);
   return (
     <div className="h-full">
