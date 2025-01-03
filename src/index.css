@@ -188,4 +188,8 @@ h1 {
   .howItWorks {
     height: 100% !important;
   }
+
+  .aboutuscontent {
+    padding-top: 40vh;
+  }
 }

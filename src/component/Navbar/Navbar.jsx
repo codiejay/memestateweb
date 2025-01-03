@@ -1,123 +1,26 @@
-// const Navbar = () => {
-//   const socialIcon = [
-//     {
-//       name: "X",
-//       icon: "/images/x.svg", // Path or icon name
-//       link: "https://www.twitter.com",
-//     },
-//     {
-//       name: "Tiktok",
-//       icon: "/images/tiktok.svg",
-//       link: "https://www.twitter.com",
-//     },
-//     {
-//       name: "Discord",
-//       icon: "/images/discord.svg",
-//       link: "https://www.linkedin.com",
-//     },
-//     {
-//       name: "Telegram",
-//       icon: "/images/telegram.svg",
-//       link: "https://www.linkedin.com",
-//     },
-//     {
-//       name: "Youtube",
-//       icon: "/images/youtube.svg",
-//       link: "https://www.github.com",
-//     },
-//   ];
-//   const links = [
-//     {
-//       name: "About us",
-//       icon: "/images/x.svg", // Path or icon name
-//       link: "https://www.twitter.com",
-//     },
-//     {
-//       name: "Roadmap",
-//       icon: "/images/tiktok.svg",
-//       link: "https://www.twitter.com",
-//     },
-//     {
-//       name: "Docs",
-//       icon: "/images/discord.svg",
-//       link: "https://www.linkedin.com",
-//     },
-//     {
-//       name: "Redeem winnings",
-//       icon: "/images/telegram.svg",
-//       link: "https://www.linkedin.com",
-//     },
-//   ];
-
-//   return (
-//     <header className="w-full absolute bg-transparent top-0 left-0 py-3 px-24 z-[100000]">
-//       <div className="grid grid-cols-3 ">
-//         <div></div>
-//         <div className="flex justify-center">
-//           <img src="/images/logo.svg" alt="" className="w-[136px]" />
-//         </div>
-//         <div className="flex gap-4 justify-end">
-//           {socialIcon.map((icon, index) => {
-//             return (
-//               <a href={icon.link} key={index}>
-//                 <img src={icon.icon} alt={icon.name} />
-//               </a>
-//             );
-//           })}
-//         </div>
-//       </div>
-//       <nav>
-//         <ul className="flex justify-center my-3 gap-12">
-//           {links.map((link, index) => {
-//             return (
-//               <li key={index} className="text-2xl font-normal  text-white ">
-//                 <a href="">{link.name}</a>
-//               </li>
-//             );
-//           })}
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-
 import { useState } from "react";
-export const links = [
-  {
-    name: "About us",
-    link: "https://www.twitter.com",
-  },
-  {
-    name: "Roadmap",
-    link: "#roadMap",
-  },
-  {
-    name: "pitch deck",
-    link: "https://www.canva.com/design/DAGNpJF53qg/8IbGbX-DQeowe9bsDXJL_g/edit",
-  },
-  {
-    name: "docs",
-    link: "https://coda.io/d/Memestate-Documentation_dXAqkGQes4-/Pitch-deck_suxYHrfT#_lulBjKkD",
-  },
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link"; // Smooth scrolling for internal links
 
-  // {
-  //   name: "Docs",
-  //   link: "https://www.linkedin.com",
-  // },
-  // {
-  //   name: "Redeem winnings",
-  //   link: "https://www.linkedin.com",
-  // },
+// Navigation and Social Links
+export const links = [
+  { name: "Home", path: "/" },
+  { name: "About us", path: "/aboutus" },
+  { name: "Roadmap", path: "/#roadMap" }, // HashLink for internal navigation
+  {
+    name: "Pitch Deck",
+    path: "https://www.canva.com/design/DAGNpJF53qg/8IbGbX-DQeowe9bsDXJL_g/edit",
+    external: true,
+  },
+  {
+    name: "Docs",
+    path: "https://coda.io/d/Memestate-Documentation_dXAqkGQes4-/Pitch-deck_suxYHrfT#_lulBjKkD",
+    external: true,
+  },
 ];
 
-export const socialIcon = [
-  {
-    name: "X",
-    icon: "/images/x.svg",
-    link: "https://x.com/memestate_",
-  },
+const SOCIAL_ICONS = [
+  { name: "X", icon: "/images/x.svg", link: "https://x.com/memestate_" },
   {
     name: "Tiktok",
     icon: "/images/tiktok.svg",
@@ -128,39 +31,58 @@ export const socialIcon = [
     icon: "/images/ig.svg",
     link: "https://www.instagram.com/memestateonbase/",
   },
-
   {
     name: "Youtube",
     icon: "/images/youtube.svg",
     link: "https://www.youtube.com/@memestatep2",
   },
 ];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Toggle mobile menu
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <header className="w-full  bg-transparent absolute top-8  px-6 md:px-24 z-[100000]">
+    <header className="w-full bg-transparent absolute top-8 px-6 md:px-24 z-[100000]">
       <div className="grid grid-cols-3 items-center">
-        <div className="flex items-center">
-          {/* Hamburger button */}
-          <button
-            className="md:hidden text-white text-2xl hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            ☰
-          </button>
-        </div>
+        {/* Hamburger Button */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+        <div></div>
+
+        {/* Logo */}
         <div className="flex justify-center">
-          <img src="/images/logo.svg" alt="" className="w-[136px]" />
+          <img
+            src="/images/logo.svg"
+            alt="Memestate logo"
+            className="w-[136px]"
+          />
         </div>
-        <div className=" gap-4 justify-end lg:flex hidden">
-          {socialIcon.map((icon, index) => (
-            <a href={icon.link} key={index} target="_blank">
+
+        {/* Social Icons */}
+        <div className="gap-4 justify-end lg:flex hidden">
+          {SOCIAL_ICONS.map((icon, index) => (
+            <a
+              href={icon.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow us on ${icon.name}`}
+            >
               <img src={icon.icon} alt={icon.name} />
             </a>
           ))}
         </div>
       </div>
+
+      {/* Navigation Menu */}
       <nav>
         <ul
           className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-16 ${
@@ -168,18 +90,35 @@ const Navbar = () => {
           } md:flex`}
         >
           {links.map((link, index) => (
-            <li
-              key={index}
-              className="text-xl md:text-xl font-normal text-white "
-            >
-              <a
-                href={link.link}
-                className={`text-white`}
-                aria-disabled
-                target={link.name === "Roadmap" ? "_self" : "_blank"}
-              >
-                {link.name}
-              </a>
+            <li key={index} className="text-xl font-normal text-white">
+              {link.external ? (
+                <a
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:underline"
+                  aria-label={link.name}
+                >
+                  {link.name}
+                </a>
+              ) : link.path.includes("#") ? (
+                <HashLink
+                  to={link.path}
+                  smooth
+                  className="text-white hover:underline"
+                  aria-label={link.name}
+                >
+                  {link.name}
+                </HashLink>
+              ) : (
+                <Link
+                  to={link.path}
+                  className="text-white hover:underline"
+                  aria-label={link.name}
+                >
+                  {link.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
