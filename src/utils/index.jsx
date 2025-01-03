@@ -8,7 +8,7 @@ export const carouselItems = [
       </div>
       <h2 className="text-[28px] text-white my-3"> Biggest Discount</h2>
 
-      <p className="lg:text-lg text-base font-normal  text-white my-1">
+      <p className="lg:text-lg text-base font-normal  text-white  mt-3 ">
         Get $GEMS at $0.0001—a massive 67% discount off the TGE price!
       </p>
     </div>
@@ -18,9 +18,9 @@ export const carouselItems = [
       <div>
         <img src="/images/wallet.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[24px] text-white my-1">Early Access, big savings</h2>
+      <h2 className="text-[24px] text-white my-1">Early Access Advantage</h2>
 
-      <p className="lg:text-lg text-base font-normal  text-white ">
+      <p className="lg:text-lg text-base font-normal  text-white  mt-3  ">
         Be among the first to own $GEMS and dominate Memestate’s ecosystem!
       </p>
     </div>
@@ -30,10 +30,10 @@ export const carouselItems = [
       <div>
         <img src="/images/flexedBiceps.png" alt="Image 2" className=" w-28" />
       </div>
-      <h2 className="text-[28px] text-white my-1">Exclusive Rewards</h2>
+      <h2 className="text-[28px] text-white my-1">High Growth Potential</h2>
 
-      <p className="lg:text-lg font-normal  text-white ">
-        Unlock premium in-game items, perks, and unique bonuses.
+      <p className="lg:text-lg font-normal  text-white  mt-3  ">
+        Buy at the lowest price and ride the wave as $GEMS grows in demand.
       </p>
     </div>
   </div>,
@@ -42,10 +42,10 @@ export const carouselItems = [
       <div>
         <img src="/images/flyingMoney.png" alt="Image 1" className=" w-28" />
       </div>
-      <h2 className="text-[28px] text-white my-1">Fund the Future</h2>
-      <p className="lg:text-lg font-normal text-white  ">
-        Your contributions will support game development, marketing, and
-        sustainable rewards for players.
+      <h2 className="text-[28px] text-white my-1">Support the Vision</h2>
+      <p className="lg:text-lg font-normal text-white  mt-3 ">
+        Your investment drives Memestate’s growth, boosting token value and
+        rewards!
       </p>
     </div>
   </div>,

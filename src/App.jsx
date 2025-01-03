@@ -200,7 +200,7 @@ export default function App() {
               <Button
                 type={"alpha"}
                 soundPath={"/audio/button2.mp3"}
-                label={"Join Pre-sale"}
+                label={"Join The Pre-sale"}
                 onClick={openIFrameModal}
               />
             </div>
@@ -213,7 +213,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page lg:h-screen  h-full lg:overflow-hidden"
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -293,34 +293,34 @@ export default function App() {
                     <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
                       Stage 1{" "}
                       <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
-                        OnGoing
+                        Ongoing
                       </span>
                     </h2>
-                    <p className="text-sm font-normal text-white">
+                    <p className="text-sm font-normal text-white font-poppins">
                       Up to 200,000,000 $GEMS up for grabs at 67% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 2</h2>
-                    <p className="text-sm font-normal text-white">
+                    <p className="text-sm font-normal text-white font-poppins">
                       Up to 300,000,000 $GEMS up for grabs at 50% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 3</h2>
-                    <p className="text-sm font-normal text-white">
+                    <p className="text-sm font-normal text-white font-poppins">
                       Up to 400,000,000 $GEMS up for grabs at 33% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 4</h2>
-                    <p className="text-sm font-normal text-white">
+                    <p className="text-sm font-normal text-white font-poppins">
                       Up to 500,000,000 $GEMS up for grabs at 25% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 5</h2>
-                    <p className="text-sm font-normal text-white">
+                    <p className="text-sm font-normal text-white font-poppins">
                       Up to 600,000,000 $GEMS up for grabs at 25% discount
                     </p>
                   </li>
@@ -341,31 +341,31 @@ export default function App() {
                   OnGoing
                 </span>
               </h2>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white font-poppins">
                 Up to 200,000,000 $GEMS up for grabs at 67% discount
               </p>
             </li>
             <li>
               <h2 className="text-white text-2xl font-normal">Stage 2</h2>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white font-poppins">
                 Up to 300,000,000 $GEMS up for grabs at 50% discount
               </p>
             </li>
             <li>
               <h2 className="text-white text-2xl font-normal">Stage 3</h2>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white font-poppins">
                 Up to 400,000,000 $GEMS up for grabs at 33% discount
               </p>
             </li>
             <li>
               <h2 className="text-white text-2xl font-normal">Stage 4</h2>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white font-poppins">
                 Up to 500,000,000 $GEMS up for grabs at 25% discount
               </p>
             </li>
             <li>
               <h2 className="text-white text-2xl font-normal">Stage 5</h2>
-              <p className="text-sm font-normal text-white">
+              <p className="text-sm font-normal text-white font-poppins">
                 Up to 600,000,000 $GEMS up for grabs at 25% discount
               </p>
             </li>

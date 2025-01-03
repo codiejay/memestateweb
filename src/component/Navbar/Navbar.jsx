@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link"; // Smooth scrolling for internal links
+import { useLocation } from "react-router-dom";
 
 // Navigation and Social Links
 export const links = [
@@ -39,13 +40,18 @@ const SOCIAL_ICONS = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  console.log(location.pathname);
   // Toggle mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="w-full bg-transparent absolute top-8 px-6 md:px-24 z-[100000]">
+    <header
+      className={`w-full bg-transparent ${
+        location.pathname === "/about-us" ? "relative " : "absolute top-8"
+      }  px-6 md:px-24 z-[100000]`}
+    >
       <div className="grid grid-cols-3 items-center">
         {/* Hamburger Button */}
         <button
