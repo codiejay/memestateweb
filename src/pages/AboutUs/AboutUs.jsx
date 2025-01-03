@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-x-hidden">
         <div className="h-full  flex justify-center items-center flex-col  aboutuscontent pt-[40vh]  ">
-          <h2 className="text-[96px] font-bold text-[#EEEFFF] text-center banner-content z-50">
+          <h2 className="lg:text-[96px] text-2xl font-bold text-[#EEEFFF] text-center banner-content z-50">
             About Us
           </h2>
 
@@ -84,7 +84,7 @@ const AboutUs = () => {
         style={{ borderTop: "9px solid black" }}
       >
         <div className="flex items-center flex-col  justify-center">
-          <div className=":lg-mt-48  l">
+          <div className="lg:-mt-48  mt-2">
             <img src="/images/HANGINGOURTEAM.png" alt="hanging" />
           </div>
           <div className=" lg:flex  grid md:grid-cols-2  grid-cols-1 justify-center gap-28 mt-12  ">
