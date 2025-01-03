@@ -6,19 +6,7 @@ const AboutUs = () => {
 
   return (
     <div ref={container}>
-      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-x-hidden">
-        <div className="h-full  flex justify-center items-center flex-col  aboutuscontent pt-[40vh]  ">
-          <h2 className="lg:text-[96px] text-3xl font-bold text-[#EEEFFF] text-center banner-content z-50">
-            About Us
-          </h2>
-
-          <div className="mt-auto ">
-            {/* <div className="w-full   bg-[#53224D] h-4"></div> */}
-            <MarqueeComponent />
-          </div>
-        </div>
-      </section>
-      <section className="lg:h-screen lg:px-16 px-8 py-16 w-full ">
+      <section className="h-ful lg:px-16 px-8 py-16 w-full pt-[30vh] ">
         <div className="flex justify-center flex-col items-center gap-8 ">
           <h2 className="text-[36px] font-normal text-white ">Who we are</h2>
           <div className="lg:max-w-[848px]">
