@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-x-hidden">
         <div className="h-full  flex justify-center items-center flex-col  aboutuscontent pt-[40vh]  ">
-          <h2 className="lg:text-[96px] text-2xl font-bold text-[#EEEFFF] text-center banner-content z-50">
+          <h2 className="lg:text-[96px] text-3xl font-bold text-[#EEEFFF] text-center banner-content z-50">
             About Us
           </h2>
 
