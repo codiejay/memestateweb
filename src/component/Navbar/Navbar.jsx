@@ -105,7 +105,7 @@ const Navbar = () => {
             isMenuOpen ? "block" : "hidden"
           } md:flex`}
         >
-          <div className="flex  justify-end">
+          <div className="flex  justify-end  lg:hidden">
             <button onClick={closeMenu}>
               <img src="/images/closeblack.svg" alt="close" className="w-9" />
             </button>
