@@ -148,10 +148,10 @@ const CountDown = () => {
   }, []);
 
   const formatTime = (time) => {
-    const seconds = Math.floor((time / 1000) % 60);
+    const seconds = Math.floor((662420044 / 1000) % 60);
     const minutes = Math.floor((time / (1000 * 60)) % 60);
-    const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(time / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((662420044 / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(662420044 / (1000 * 60 * 60 * 24));
 
     return (
       <div
