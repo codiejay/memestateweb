@@ -244,7 +244,7 @@ export default function App() {
                   className="lg:h-14  h-16 object-contain"
                 />
               </div>
-              <h1 className="text-white font-normal capitalize mt-1  text-3xl">
+              <h1 className="text-white font-normal capitalize mt-1 mb-5  text-3xl">
                 Presale
               </h1>
             </div>
@@ -288,7 +288,7 @@ export default function App() {
                 <h3 className="text-xl font-normal text-[#FFC727]">
                   Presale Rounds
                 </h3>
-                <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
+                <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-3">
                   <li>
                     <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
                       Stage 1{" "}

@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <header
       className={`w-full bg-transparent ${
-        location.pathname === "/about-us" ? "relative " : "absolute top-8"
+        location.pathname === "/about-us" ? "relative" : "absolute top-8"
       }  px-6 md:px-24 z-[100000]`}
     >
       <div className="grid grid-cols-3 items-center">
