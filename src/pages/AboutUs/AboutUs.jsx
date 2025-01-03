@@ -76,9 +76,6 @@ const AboutUs = () => {
           </div>
           <div className=" lg:flex  grid md:grid-cols-2  grid-cols-1 justify-center gap-28 mt-12  ">
             <div className="lg:w-[328px] relative">
-              <div className="absolute -top-10 -right-8">
-                <img src="/images/happyfrog.png" alt="" />
-              </div>
               <div className="border-[9px] border-[#DD7627] rounded-lg shadow-black-custom h-[328px]">
                 <img src="/images/Erikmayer.png" alt="erikmayer" />
               </div>
@@ -88,9 +85,6 @@ const AboutUs = () => {
               <p className="text-xl font-normal my-2 text-center">ceo</p>
             </div>
             <div className="lg:w-[328px] relative">
-              <div className="absolute -top-10 -right-8">
-                <img src="/images/pepe.png" alt="" />
-              </div>
               <div className="border-[9px] border-[#292B83] rounded-lg shadow-black-custom h-[328px]">
                 <img src="/images/yu-kai-chou.png" alt="yu-kai-chou" />
               </div>
@@ -102,9 +96,6 @@ const AboutUs = () => {
               </p>
             </div>{" "}
             <div className="lg:w-[328px] relative">
-              <div className="absolute -top-10 -right-8">
-                <img src="/images/pepe-wolf.png" alt="" />
-              </div>
               <div className="border-[9px] border-[#FF0000] rounded-lg shadow-black-custom h-[328px]">
                 <img src="/images/francesco.png" alt="francesco" />
               </div>
