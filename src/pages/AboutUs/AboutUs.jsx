@@ -1,12 +1,11 @@
 import { useRef } from "react";
-import MarqueeComponent from "../../component/MarqueeComponent/MarqueeComponent";
 
 const AboutUs = () => {
   const container = useRef(null);
 
   return (
     <div ref={container}>
-      <section className="h-ful lg:px-16 px-8 py-16 w-full pt-[30vh] ">
+      <section className="h-ful lg:px-16 px-8 py-16 w-full lg:pt-[30vh] pt-48">
         <div className="flex justify-center flex-col items-center gap-8 ">
           <h2 className="text-[36px] font-normal text-white ">Who we are</h2>
           <div className="lg:max-w-[848px]">
@@ -31,7 +30,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="lg:h-screen lg:px-16 px-8 py-16 w-full">
+      <section className="lg:h-screen lg:px-16 px-8 pt- w-full">
         <div className="flex  lg:flex-row flex-col justify-center items-center w-full gap-8">
           <div className="flex flex-col items-center gap-6">
             <div>
@@ -52,7 +51,7 @@ const AboutUs = () => {
           <div className=" hidden lg:block h-[382px] w-[3px] bg-[#67BEFF]"></div>
           <div className="flex flex-col items-center gap-6">
             <div>
-              <img src="/images/astronut.png" alt="astronut" />
+              <img src="/images/astronut2.png" alt="astronut" />
             </div>
             <div>
               <h2 className="text-3xl font-normal text-white text-center mb-5">
