@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div ref={container}>
       <section className="h-ful lg:px-16 px-8 py-16 w-full lg:pt-[30vh] pt-48">
         <div className="flex justify-center flex-col items-center gap-8 ">
-          <h2 className="text-[36px] font-normal text-white ">Who we are</h2>
+          <h2 className="text-[46px] font-normal text-white ">Who we are</h2>
           <div className="lg:max-w-[848px]">
             <p className="text-center font-normal text-2xl text-white   -tracking-[2.2%] my-8">
               Welcome to Memestate, where gaming meets innovation, fun meets
