@@ -56,6 +56,7 @@ const Navbar = () => {
 
   // Toggle mobile menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header
@@ -99,44 +100,52 @@ const Navbar = () => {
 
       {/* Navigation Menu */}
       <nav>
-        <ul
-          className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-16 ${
+        <div
+          className={`flex flex-col md:flex-row md:justify-center gap-6 md:gap-16 h-screen bg-[#2E3192] py-8 px-5 fixed w-4/5 left-0 top-0 ${
             isMenuOpen ? "block" : "hidden"
           } md:flex`}
         >
-          {links.map((link, index) => (
-            <li key={index} className="text-xl font-normal text-white">
-              {link.external ? (
-                <a
-                  href={link.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:underline"
-                  aria-label={link.name}
-                >
-                  {link.name}
-                </a>
-              ) : link.path.includes("#") ? (
-                <HashLink
-                  to={link.path}
-                  smooth
-                  className="text-white hover:underline"
-                  aria-label={link.name}
-                >
-                  {link.name}
-                </HashLink>
-              ) : (
-                <Link
-                  to={link.path}
-                  className="text-white hover:underline"
-                  aria-label={link.name}
-                >
-                  {link.name}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
+          <div className="flex  justify-end">
+            <button onClick={closeMenu}>
+              <img src="/images/closeblack.svg" alt="close" className="w-9" />
+            </button>
+          </div>
+
+          <ul className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-16">
+            {links.map((link, index) => (
+              <li key={index} className="text-xl font-normal text-white">
+                {link.external ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:underline"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </a>
+                ) : link.path.includes("#") ? (
+                  <HashLink
+                    to={link.path}
+                    smooth
+                    className="text-white hover:underline"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </HashLink>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="text-white hover:underline"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </header>
   );
