@@ -9,10 +9,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import Footer from "./component/Footer/Footer.jsx";
+import ScrollToTop from "./utils/index.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
+      <ScrollToTop />
+
       <main className="relative app-container " id="container">
         <IFrameModalProvider>
           <ModalProvider>

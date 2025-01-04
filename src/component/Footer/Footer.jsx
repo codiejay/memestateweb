@@ -1,6 +1,7 @@
-import React from "react";
 import { socialFooterIcon } from "../../utils";
 import { links } from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -18,12 +19,34 @@ const Footer = () => {
                 key={index}
                 className="text-xl md:text-2xl font-normal text-white"
               >
-                <a
-                  href={link.link}
-                  className="text-white text-shadow-custom text-4xl"
-                >
-                  {link.name}
-                </a>
+                {link.external ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white text-shadow-custom text-4xl"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </a>
+                ) : link.path.includes("#") ? (
+                  <HashLink
+                    to={link.path}
+                    smooth
+                    className="text-white text-shadow-custom text-4xl"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </HashLink>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="text-white text-shadow-custom text-4xl"
+                    aria-label={link.name}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

@@ -67,43 +67,98 @@ const AboutUs = () => {
         </div>
       </section>
       <section
-        className="bg-[#4F7298] lg:px-16 px-8 py-16 relative lg:h-screen  h-full  page"
+        className="bg-[#4F7298] lg:px-16 px-8 py-16 relative   h-full  page"
         style={{ borderTop: "9px solid black" }}
       >
         <div className="flex items-center flex-col  justify-center">
           <div className="lg:-mt-48  mt-2">
             <img src="/images/HANGINGOURTEAM.png" alt="hanging" />
           </div>
-          <div className=" lg:flex  grid md:grid-cols-2  grid-cols-1 justify-center gap-28 mt-12  ">
-            <div className="lg:w-[328px] relative">
+          <div className="   grid lg:grid-cols-4  md:grid-cols-2  sm:grid-cols-2  justify-center gap-9 mt-12  ">
+            <div className=" relative">
               <div className="border-[9px] border-[#DD7627] rounded-lg shadow-black-custom h-[328px]">
-                <img src="/images/Erikmayer.png" alt="erikmayer" />
+                <img
+                  src="/images/Erikmayer.png"
+                  alt="erikmayer"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <p className="text-3xl font-normal -tracking-[2.2%] mt-4 mb-2 text-center ">
                 Erik mayer
               </p>
-              <p className="text-xl font-normal my-2 text-center">ceo</p>
+              <p className="text-[24px] font-semibold my-2 text-center font-poppins">
+                CEO
+              </p>
+              <p className="text-base font-normal my-2 text-center font-poppins">
+                Erik is drawing from his experience founding and raising $32ml
+                for one of the first and biggest Axie play-to-earn guilds UniX
+                Gaming. He now assorted a trusted team that can bring forth his
+                vision of a sustainable, fun, and profitable p2e ecosystem.
+              </p>
             </div>
-            <div className="lg:w-[328px] relative">
+            <div className=" relative">
+              <div className="border-[9px] border-[#17B50F] rounded-lg shadow-black-custom h-[328px]">
+                <img
+                  src="/images/kylefrancis.png"
+                  alt="kylefrancis"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-3xl font-normal -tracking-[2.2%] mt-4 mb-2 text-center ">
+                Kyle Francis
+              </p>
+              <p className="text-[24px] font-semibold my-2 text-center font-poppins">
+                Marketing strategist
+              </p>
+              <p className="text-base font-normal my-2 text-center font-poppins">
+                brings 8 years of crypto expertise and a proven track record of
+                strategic content marketing. As the mastermind behind massive
+                social media growth campaigns, he's driven over 500M views for
+                industry leaders like Tai Lopez, Jim Kwik, and Andrew Tate.
+              </p>
+            </div>
+            <div className=" relative">
               <div className="border-[9px] border-[#292B83] rounded-lg shadow-black-custom h-[328px]">
-                <img src="/images/yu-kai-chou.png" alt="yu-kai-chou" />
+                <img
+                  src="/images/yu-kai-chou.png"
+                  alt="yu-kai-chou"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <p className="text-3xl font-normal -tracking-[2.2%] mt-4 mb-2 text-center ">
                 Yu-kai Chou
               </p>
-              <p className="text-xl font-normal my-2 text-center">
+              <p className="text-[24px] font-semibold my-2 text-center font-poppins">
                 Lead game designer
               </p>
+              <p className="text-base font-normal my-2 text-center font-poppins">
+                Yu-kai Chou is an Author and International Keynote Speaker on
+                Gamification and Behavioral Design working closely with
+                organizations like Harvard, Stanford, Tesla, Google, IDEO LEGO,
+                BCG. His Octalysis Framework will create an engaging and
+                addictive mobile game experience.
+              </p>
             </div>{" "}
-            <div className="lg:w-[328px] relative">
+            <div className=" relative">
               <div className="border-[9px] border-[#FF0000] rounded-lg shadow-black-custom h-[328px]">
-                <img src="/images/francesco.png" alt="francesco" />
+                <img
+                  src="/images/francesco.png"
+                  alt="francesco"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <p className="text-3xl font-normal -tracking-[2.2%] mt-4 mb-2 text-center ">
                 Francesco Ferrazzino
               </p>
-              <p className="text-xl font-normal my-2 text-center">
+              <p className="text-[24px] font-semibold my-2 text-center font-poppins">
                 Lead Game Developer
+              </p>
+              <p className="text-base font-normal my-2 text-center font-poppins">
+                Francesco Ferrazzino, our Game Producer, is a world-renowned
+                mobile game producer and the creator of Father.IO - the first
+                Real Life First Person Shooter for mobile with 10m downloads -
+                and World League Live!, a web3 game fan engagement platform in
+                soft launch with over 600k+ downloads.
               </p>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const carouselItems = [
   <div key="0" className="w-100% my-8 px-4">
@@ -111,27 +112,18 @@ export const socialFooterIcon = [
   {
     name: "X",
     icon: "/images/fX.svg",
-    link: "https://www.twitter.com",
+    link: "https://x.com/memestate_",
   },
-  {
-    name: "Telegram",
-    icon: "/images/fT.svg",
-    link: "https://www.linkedin.com",
-  },
-  {
-    name: "Discord",
-    icon: "/images/fD.svg",
-    link: "https://www.linkedin.com",
-  },
+
   {
     name: "Youtube",
     icon: "/images/fY.svg",
-    link: "https://www.github.com",
+    link: "https://www.youtube.com/@memestatep2",
   },
   {
     name: "Tiktok",
     icon: "/images/fTT.svg",
-    link: "https://www.twitter.com",
+    link: "https://www.tiktok.com/@memestatep2e",
   },
 ];
 export function useWindowSize() {
@@ -237,3 +229,34 @@ export const contentList = [
     image: "/images/meme4.gif",
   },
 ];
+
+// export const ScrollToTop = () => {
+//   const { pathname } = useLocation();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   return null;
+// };
+
+export const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Use a timeout to ensure the scroll happens after rendering
+    const timeout = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto", // Use "smooth" if smooth scrolling is desired
+      });
+    }, 0);
+
+    return () => clearTimeout(timeout);
+  }, [pathname]);
+
+  return null;
+};
+
+export default ScrollToTop;

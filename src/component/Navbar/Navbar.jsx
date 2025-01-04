@@ -101,7 +101,7 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <nav>
         <div
-          className={`flex flex-col md:flex-row md:justify-center gap-6 md:gap-16 lg:h-[unset] h-screen lg:bg-[transparent] bg-[#2E3192] lg:py-2 lg:px-0 py-8 px-5 lg:relative fixed  lg:w-full w-4/5 left-0 top-0 ${
+          className={`flex flex-col md:flex-row md:justify-center gap-6 md:gap-16 md:h-[unset] h-screen md:bg-[transparent] bg-[#2E3192] lg:py-2 md:px-0 py-8 px-5 md:relative fixed  md:w-full  w-4/5 left-0 top-0 ${
             isMenuOpen ? "block" : "hidden"
           } md:flex`}
         >
