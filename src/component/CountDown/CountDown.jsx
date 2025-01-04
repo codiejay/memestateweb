@@ -5,16 +5,23 @@ const CountDown = () => {
 
   useEffect(() => {
     const startCountdown = () => {
-      const now = new Date();
-      // Adding 10 days, 7 hours, 4 minutes, and 30 seconds
-      const futureTime = new Date(
-        now.getTime() +
-          10 * 24 * 60 * 60 * 1000 + // 10 days
-          7 * 60 * 60 * 1000 + // 7 hours
-          4 * 60 * 1000 + // 4 minutes
-          30 * 1000 // 30 seconds
-      );
-      const eventTime = futureTime.getTime();
+      const storedEventTime = localStorage.getItem("eventTime");
+      let eventTime;
+
+      if (storedEventTime) {
+        // Use the stored event time if it exists
+        eventTime = parseInt(storedEventTime, 10);
+      } else {
+        // Define the countdown target time (7 days, 3 hours, 26 minutes, 33 seconds)
+        const countdownTarget =
+          7 * 24 * 60 * 60 * 1000 + // 7 days in ms
+          3 * 60 * 60 * 1000 + // 3 hours in ms
+          26 * 60 * 1000 + // 26 minutes in ms
+          33 * 1000; // 33 seconds in ms
+
+        eventTime = new Date().getTime() + countdownTarget;
+        localStorage.setItem("eventTime", eventTime.toString());
+      }
 
       const countdownInterval = setInterval(() => {
         const currentTime = new Date().getTime();
@@ -28,12 +35,10 @@ const CountDown = () => {
         }
       }, 1000);
 
-      return countdownInterval; // Return the interval ID for cleanup
+      return () => clearInterval(countdownInterval); // Cleanup on component unmount
     };
 
-    const countdownInterval = startCountdown();
-
-    return () => clearInterval(countdownInterval); // Cleanup on component unmount
+    startCountdown();
   }, []);
 
   const formatTime = (time) => {
