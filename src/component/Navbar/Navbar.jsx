@@ -60,9 +60,9 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full bg-transparent ${navbarPosition}  px-6 md:px-24 z-[100000]`}
+      className={`w-full bg-transparent ${navbarPosition}  px-10 md:px-[6rem] z-[100000]`}
     >
-      <div className="grid grid-cols-3 items-center">
+      <div className="grid grid-cols-5 items-center">
         {/* Hamburger Button */}
         <button
           className="md:hidden text-white text-2xl"
@@ -71,10 +71,9 @@ const Navbar = () => {
         >
           ☰
         </button>
-        <div></div>
 
         {/* Logo */}
-        <div className="flex justify-center">
+        <div>
           <img
             src="/images/logo2.png"
             alt="Memestate logo"
@@ -82,8 +81,57 @@ const Navbar = () => {
           />
         </div>
 
+        {/* Navigation Menu */}
+        <nav className="col-span-3">
+          <div
+            className={`flex flex-col md:flex-row md:justify-center gap-6 md:gap-16 md:h-[unset] h-screen md:bg-[transparent] bg-[#2E3192] lg:py-2 md:px-0 py-8 px-5 md:relative fixed  md:w-full  w-4/5 left-0 top-0 ${
+              isMenuOpen ? "block" : "hidden"
+            } md:flex`}
+          >
+            <div className="flex  justify-end  lg:hidden">
+              <button onClick={closeMenu}>
+                <img src="/images/closeblack.svg" alt="close" className="w-9" />
+              </button>
+            </div>
+
+            <ul className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-16">
+              {links.map((link, index) => (
+                <li key={index} className="text-xl font-normal text-white">
+                  {link.external ? (
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:underline"
+                      aria-label={link.name}
+                    >
+                      {link.name}
+                    </a>
+                  ) : link.path.includes("#") ? (
+                    <HashLink
+                      to={link.path}
+                      smooth
+                      className="text-white hover:underline"
+                      aria-label={link.name}
+                    >
+                      {link.name}
+                    </HashLink>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="text-white hover:underline"
+                      aria-label={link.name}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
         {/* Social Icons */}
-        <div className="gap-4 justify-end lg:flex hidden">
+        <div className="gap-4 justify-end lg:flex hidden col-span-1">
           {SOCIAL_ICONS.map((icon, index) => (
             <a
               href={icon.link}
@@ -97,56 +145,6 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-
-      {/* Navigation Menu */}
-      <nav>
-        <div
-          className={`flex flex-col md:flex-row md:justify-center gap-6 md:gap-16 md:h-[unset] h-screen md:bg-[transparent] bg-[#2E3192] lg:py-2 md:px-0 py-8 px-5 md:relative fixed  md:w-full  w-4/5 left-0 top-0 ${
-            isMenuOpen ? "block" : "hidden"
-          } md:flex`}
-        >
-          <div className="flex  justify-end  lg:hidden">
-            <button onClick={closeMenu}>
-              <img src="/images/closeblack.svg" alt="close" className="w-9" />
-            </button>
-          </div>
-
-          <ul className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-16">
-            {links.map((link, index) => (
-              <li key={index} className="text-xl font-normal text-white">
-                {link.external ? (
-                  <a
-                    href={link.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:underline"
-                    aria-label={link.name}
-                  >
-                    {link.name}
-                  </a>
-                ) : link.path.includes("#") ? (
-                  <HashLink
-                    to={link.path}
-                    smooth
-                    className="text-white hover:underline"
-                    aria-label={link.name}
-                  >
-                    {link.name}
-                  </HashLink>
-                ) : (
-                  <Link
-                    to={link.path}
-                    className="text-white hover:underline"
-                    aria-label={link.name}
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
     </header>
   );
 };

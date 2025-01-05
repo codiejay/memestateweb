@@ -49,52 +49,52 @@ const CountDown = () => {
 
     return (
       <div
-        className="countdown-display bg-[#D10000] rounded-[33px] h-[118px] grid grid-cols-4 justify-center items-center gap-6 px-10 py-3"
+        className="countdown-display bg-[#D10000] rounded-[33px] py-4 grid grid-cols-4 justify-center items-center gap-6 px-6 "
         style={{
           boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
         }}
       >
-        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] h-[84px]">
+        <div className="relative flex flex-col  items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <p
             className="lg:text-base text-xs lg:block hidden font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             days
           </p>
-          <span className="lg:text-[58px] text-3xl font-normal text-black">
+          <span className="lg:text-3xl text-lg font-normal text-black">
             {days.toString().padStart(2, "0")}
           </span>
         </div>
-        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] h-[84px]">
+        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
             className="lg:text-base text-xs lg:block hidden font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             Hour
           </span>
-          <span className="lg:text-[58px] text-3xl font-normal text-black">
+          <span className="lg:text-3xl text-lg font-normal text-black">
             {hours.toString().padStart(2, "0")}
           </span>
         </div>
-        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] h-[84px]">
+        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
             className="lg:text-base text-xs lg:block hidden font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             mins
           </span>
-          <span className="lg:text-[58px] text-3xl font-normal text-black">
+          <span className="lg:text-3xl text-lg font-normal text-black">
             {minutes.toString().padStart(2, "0")}
           </span>
         </div>
-        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] h-[84px]">
+        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
             className="lg:text-base text-xs lg:block hidden font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             secs
           </span>
-          <span className="lg:text-[58px] text-3xl font-normal text-black">
+          <span className="lg:text-3xl text-lg font-normal text-black">
             {seconds.toString().padStart(2, "0")}
           </span>
         </div>

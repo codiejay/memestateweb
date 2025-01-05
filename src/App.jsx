@@ -170,41 +170,81 @@ export default function App() {
 
   return (
     <div ref={container}>
-      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-x-hidden">
-        <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-44  ">
-          {/* <Navbar /> */}
+      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-hidden">
+        <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-32  ">
+          <div className="grid lg:grid-cols-2 justify-between items-center px-12 py-10 gap-20">
+            <div className=" flex flex-col  justify-center items-center">
+              <div className="banner-content flex justify-center ">
+                <img
+                  src="/images/bannerContent.png"
+                  alt=""
+                  className="w-[586px] bannerImg"
+                />
+              </div>
+              <p className="text-2xl font-bold text-[#EEEFFF] text-center  banner-content font-poppins">
+                Unleash the power of memes and earn rewards.
+              </p>
 
-          <div className="banner-content ">
-            <img
-              src="/images/bannerContent.png"
-              alt=""
-              className="w-[590px] bannerImg"
-            />
-          </div>
-          <p className="text-2xl font-bold text-[#EEEFFF] text-center banner-content">
-            Unleash the power of memes and earn rewards.
-          </p>
+              <div className="flex lg:flex-row flex-col justify-center   gap-5 mt-6  ">
+                <div className="banner-content">
+                  <ButtonWithSound
+                    type={"beta"}
+                    soundPath={"/audio/button.mp3"}
+                    label={"watch Demo"}
+                    className={"bg-[#FF0000]"}
+                    onClick={openModal}
+                  />
+                </div>
 
-          <div className="flex lg:flex-row flex-col justify-center  items-center gap-5 mt-6  ">
-            <div className="banner-content">
-              <ButtonWithSound
-                type={"beta"}
-                soundPath={"/audio/button.mp3"}
-                label={"watch Demo"}
-                className={"bg-[#FF0000]"}
-                onClick={openModal}
-              />
+                <div className="banner-content">
+                  <Button
+                    type={"alpha"}
+                    soundPath={"/audio/button2.mp3"}
+                    label={"Join The Pre-sale"}
+                    onClick={openIFrameModal}
+                  />
+                </div>
+              </div>
             </div>
+            <div>
+              <div className=" howItWorks flex justify-end ">
+                <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1 xl:w-[80%] lg:w-full ">
+                  <div className="  lg:w-fit  w-full">
+                    <div className=" w-full relative">
+                      <div className="border-[#000] border-[12px] shadow-black-custom  py-4 h-fit bg-[#9D9FD8] flex justify-center items-center ">
+                        <h1 className="text-black text-center  lg:text-[36px] text-xl    px-2 leading-9">
+                          Buy your $gems Token in presale now!
+                        </h1>
+                      </div>
+                      <div className="absolute top-[7rem] left-1/2 -translate-x-1/2  countdownStyle w-[80%]  ">
+                        <CountDown />
+                      </div>
+                      <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-12  h-fit ">
+                        <div className="text-black text-center flex justify-center items-center gap-4 my-6">
+                          <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
+                          <img src="/images/equals.svg" alt="" />
+                          <p className="lg:text-3xl text-2xl">0.001 USDT</p>
+                        </div>
 
-            <div className="banner-content">
-              <Button
-                type={"alpha"}
-                soundPath={"/audio/button2.mp3"}
-                label={"Join The Pre-sale"}
-                onClick={openIFrameModal}
-              />
+                        <div className="w-full flex flex-col gap-5">
+                          <div className="w-full">
+                            <ButtonWithSound
+                              label={"Buy $GEMS"}
+                              type={"beta"}
+                              soundPath={"/audio/button.mp3"}
+                              className={"bg-[#FF0000]  w-full"}
+                              onClick={openIFrameModal}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="mt-auto ">
             {/* <div className="w-full   bg-[#53224D] h-4"></div> */}
             <MarqueeComponent />
@@ -213,7 +253,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full  hidden"
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
