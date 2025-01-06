@@ -66,13 +66,13 @@ export default function App() {
                   className="w-[80%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins">
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8">
                 Secure $GEMS at exclusive presale pricing and maximize your ROI
                 while powering the first sustainable P2E model, merging fun and
                 financial potential.
               </p>
 
-              <div className="flex lg:flex-row flex-col  items-start w-full  gap-5 mt-6  ">
+              <div className="flex lg:flex-row flex-col  items-start w-full  gap-5   ">
                 <div className="banner-content">
                   <ButtonWithSound
                     type={"beta"}
