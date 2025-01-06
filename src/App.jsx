@@ -5,7 +5,7 @@ import HowItWorks from "./component/HowItWorks/HowItWorks";
 import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { carouselItems, howToPlay, socialFooterIcon } from "./utils";
+import { carouselItems, howToPlay } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
