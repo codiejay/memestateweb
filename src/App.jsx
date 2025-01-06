@@ -184,7 +184,7 @@ export default function App() {
                     Presale Stage
                   </h2>
                   <button
-                    className="underline  text-base font-normal"
+                    className="underline  text-lg font-normal"
                     onClick={openPrizeModal}
                   >
                     Why is price on presale different?
@@ -237,7 +237,7 @@ export default function App() {
                     className={"bg-[#FF0000]"}
                   />
                   <button
-                    className="underline  text-base font-normal"
+                    className="underline  text-lg font-normal "
                     onClick={openPrizeModal}
                   >
                     tokenomics and presale details
@@ -246,7 +246,7 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 flex  justify-end ">
+          <div className="w-full overflow-hidden lg:px-0 px-2  col-span-2 flex  justify-end ">
             <HowItWorks items={carouselItems} />
           </div>
         </div>

@@ -1,8 +1,62 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import AboutUsModal from "../../component/AboutUsModal/AboutUsModal";
+import { useAboutUs } from "../../context/AboutUsContext";
 
 const AboutUs = () => {
   const container = useRef(null);
+  const { openModal, isOpen } = useAboutUs();
+  const [aboutUs, setAboutUs] = useState({
+    name: "",
+    content: "",
+    img: "",
+    title: "",
+  });
 
+  const teamMembers = [
+    {
+      name: "Erik Mayer",
+      title: "CEO",
+      image: "/images/Erikmayer.png",
+      borderColor: "#DD7627",
+      content:
+        "Erik is drawing from his experience founding and raising $32ml for one of the first and biggest Axie play-to-earn guilds UniX Gaming. He now assorted a trusted team that can bring forth his vision of a sustainable, fun, and profitable p2e ecosystem.",
+    },
+    {
+      name: "Kyle Francis",
+      title: "Marketing Strategist",
+      image: "/images/kylefrancis.png",
+      borderColor: "#17B50F",
+      content:
+        "Kyle Francis brings a proven track record of strategic content marketing. As the mastermind behind massive social media growth campaigns, he's driven over 500M views for industry leaders like Tai Lopez, Jim Kwik, and Andrew Tate. Kyle's unique blend of content experience and strategic marketing positions him perfectly to drive Memestate's growth and community engagement.",
+    },
+    {
+      name: "Yu-kai Chou",
+      title: "Lead Game Designer",
+      image: "/images/yu-kai-chou.png",
+      borderColor: "#292B83",
+      content:
+        "Yu-kai Chou is an Author and International Keynote Speaker on Gamification and Behavioral Design working closely with organizations like Harvard, Stanford, Tesla, Google, IDEO LEGO, BCG. His Octalysis Framework will create an engaging and addictive mobile game experience. He’ll work closely with our development team to ensure that the game incorporates the most effective gamification techniques to drive user engagement, retention, and loyalty.",
+    },
+    {
+      name: "Francesco Ferrazzino",
+      title: "Lead Game Developer",
+      image: "/images/francesco.png",
+      borderColor: "#FF0000",
+      content:
+        "Francesco Ferrazzino, our Game Producer, is a world-renowned mobile game producer and the creator of Father.IO - the first Real Life First Person Shooter for mobile with 10m downloads - and World League Live!, a web3 game fan engagement platform in soft launch with over 600k+ downloads. Francesco's main expertise is producing, developing, and launching engaging and successful mobile games. In his spare time, he advises other startups as a Techstars Mentor in Torino.",
+    },
+  ];
+
+  const handleOpenModal = (member) => {
+    console.log;
+    openModal();
+    setAboutUs({
+      name: member.name,
+      img: member.image,
+      title: member.title,
+      content: member.content,
+    });
+  };
   return (
     <div ref={container}>
       <section className="h-full  lg:pt-[30vh] "></section>
@@ -15,97 +69,38 @@ const AboutUs = () => {
             <img src="/images/HANGINGOURTEAM.png" alt="hanging" />
           </div>
           <div className="   grid lg:grid-cols-2  md:grid-cols-2  sm:grid-cols-2  justify-center gap-9 mt-12  ">
-            <div className=" relative">
-              <div className="border-[9px] border-[#DD7627] rounded-lg shadow-black-custom md:h-[328px] h-full overflow-y-hidden">
-                <div className="grid md:grid-cols-5  grid-cols-1 h-full">
-                  <div className="md:col-span-2 col-span-1 ">
-                    <img
-                      src="/images/Erikmayer.png"
-                      alt="erikmayer"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col  justify-center px-8 gap-4">
-                    <h1 className="text-[40px] text-[#010101]">Erik Mayer</h1>
-                    <p className="text-2xl text-[#010101] font-poppins font-semibold">
-                      CEO
-                    </p>
-                    <p className="text-2xl text-[#010101] font-normal">
-                      View details
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" relative">
-              <div className="border-[9px] border-[#17B50F] rounded-lg shadow-black-custom md:h-[328px] h-full overflow-y-hidden">
-                <div className="grid md:grid-cols-5  grid-cols-1 h-full">
-                  <div className="md:col-span-2 col-span-1">
-                    <img
-                      src="/images/kylefrancis.png"
-                      alt="kylefrancis"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col  justify-center px-8 gap-4">
-                    <h1 className="text-[40px] text-[#010101]">Kyle Francis</h1>
-                    <p className="text-2xl text-[#010101] font-poppins font-semibold">
-                      Marketing Strategist
-                    </p>
-                    <p className="text-2xl text-[#010101] font-normal">
-                      View details
-                    </p>
+            {teamMembers.map((member, index) => (
+              <div className="relative" key={index}>
+                <div
+                  className="border-[9px] rounded-lg shadow-black-custom md:h-[328px] h-full overflow-y-hidden"
+                  style={{ borderColor: member.borderColor }}
+                >
+                  <div className="grid md:grid-cols-5 grid-cols-1 h-full">
+                    <div className="md:col-span-2 col-span-1">
+                      <img
+                        src={member.image}
+                        alt={member.name.toLowerCase().replace(" ", "-")}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col justify-center px-8 gap-4">
+                      <h1 className="text-[40px] text-[#010101]">
+                        {member.name}
+                      </h1>
+                      <p className="text-2xl text-[#010101] font-poppins font-semibold">
+                        {member.title}
+                      </p>
+                      <button
+                        className="text-2xl text-[#010101] font-normal p-[unset] text-left"
+                        onClick={() => handleOpenModal(member)}
+                      >
+                        View details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className=" relative">
-              <div className="border-[9px] border-[#292B83] rounded-lg shadow-black-custom md:h-[328px] h-full overflow-y-hidden">
-                <div className="grid md:grid-cols-5  grid-cols-1 h-full">
-                  <div className="md:col-span-2 col-span-1">
-                    <img
-                      src="/images/yu-kai-chou.png"
-                      alt="yu-kai-chou"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col  justify-center px-8 gap-4">
-                    <h1 className="text-[40px] text-[#010101]"> Yu-kai Chou</h1>
-                    <p className="text-2xl text-[#010101] font-poppins font-semibold">
-                      Lead game designer
-                    </p>
-                    <p className="text-2xl text-[#010101] font-normal">
-                      View details
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" relative">
-              <div className="border-[9px] border-[#FF0000] rounded-lg shadow-black-custom md:h-[328px] h-full overflow-y-hidden">
-                <div className="grid md:grid-cols-5  grid-cols-1 h-full">
-                  <div className="md:col-span-2 col-span-1">
-                    <img
-                      src="/images/francesco.png"
-                      alt="francesco"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col  justify-center px-8 gap-4">
-                    <h1 className="text-[40px] text-[#010101]">
-                      {" "}
-                      Francesco Ferrazzino
-                    </h1>
-                    <p className="text-2xl text-[#010101] font-poppins font-semibold">
-                      Lead Game Developer
-                    </p>
-                    <p className="text-2xl text-[#010101] font-normal">
-                      View details
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -196,6 +191,15 @@ const AboutUs = () => {
             where your time, skills, and strategies are of real value!
           </p>
         </div>
+        {isOpen && (
+          <AboutUsModal
+            alt={aboutUs.name}
+            img={aboutUs.img}
+            name={aboutUs.name}
+            title={aboutUs.title}
+            content={aboutUs.content}
+          />
+        )}
       </section>
     </div>
   );

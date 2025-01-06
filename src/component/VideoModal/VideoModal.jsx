@@ -4,7 +4,7 @@ const VideoModal = () => {
   const { closeModal } = useModal();
   return (
     <div
-      className="fixed  w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-0 items-center max-w-[1600px] mx-auto"
+      className="fixed  w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-0 left-0 items-center max-w-[1600px] mx-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
     >
       <div className="border-[12px] border-[#282B7F] lg:h-[647px] h-full max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-black">

@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import Footer from "./component/Footer/Footer.jsx";
 import ScrollToTop from "./utils/index.jsx";
 import { WhyIsPriseProvider } from "./context/WhyIsPriceDifferentContext.jsx";
+import { AboutUsProvider } from "./context/AboutUsContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,13 +22,15 @@ createRoot(document.getElementById("root")).render(
         <IFrameModalProvider>
           <WhyIsPriseProvider>
             <ModalProvider>
-              <Navbar />
+              <AboutUsProvider>
+                <Navbar />
 
-              <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/aboutus" element={<AboutUs />} />
-              </Routes>
-              <Footer />
+                <Routes>
+                  <Route path="/" element={<App />} />
+                  <Route path="/aboutus" element={<AboutUs />} />
+                </Routes>
+                <Footer />
+              </AboutUsProvider>
             </ModalProvider>
           </WhyIsPriseProvider>
         </IFrameModalProvider>

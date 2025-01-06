@@ -13,7 +13,7 @@ export const carouselItems = [
       </h2>
 
       <p className="lg:text-2xl text-base font-normal  text-white  mt-3 font-poppins ">
-        To Ensure sufficient liquidity to support smooth trading and token
+        To ensure sufficient liquidity to support smooth trading and token
         utility.
       </p>
     </div>
@@ -201,8 +201,6 @@ export const contentList = [
     title: (
       <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
         The cycle continues progressively
-        <br className="lg:block  hidden" />
-        free players
       </h2>
     ),
 
