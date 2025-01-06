@@ -110,7 +110,7 @@ export default function App() {
                         <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                           <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                           <img src="/images/equals.svg" alt="" />
-                          <p className="lg:text-3xl text-2xl">0.001 USDT</p>
+                          <p className="lg:text-3xl text-2xl">0.0001 USDT</p>
                         </div>
 
                         <div className="w-full flex flex-col gap-5">
