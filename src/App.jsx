@@ -493,7 +493,7 @@ export default function App() {
       >
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-white font-normal capitalize mb-2  lg:text-[48px] text-2xl">
-            How to play
+            Playing
           </h1>
           <div>
             <img
