@@ -114,7 +114,7 @@ const AboutUs = () => {
               <h2 className="lg:text-[64px]  text-2xl font-normal text-white text-center mb-10">
                 Our Mission
               </h2>
-              <p className="text-center font-normal lg:text-4xl text-base text-white  -tracking-[2.2%] lg:max-w-[490px] border-r-2 border-[#67BEFF] lg:px-5 px-2 ">
+              <p className="text-center font-normal lg:text-[32px] text-base text-white  leading-[38px]  tracking-[-2.2%] lg:max-w-[490px] border-r-2 border-[#67BEFF] lg:px-5 px-2 ">
                 To create a gaming ecosystem that blends engaging gameplay with
                 sustainable financial rewards, empowering players to earn real
                 value for their time while fostering a vibrant blockchain
@@ -131,7 +131,7 @@ const AboutUs = () => {
               <h2 className="lg:text-[64px]  text-2xl  font-normal text-white text-center mb-10">
                 Our Vision
               </h2>
-              <p className="text-center font-normal lg:text-4xl text-base text-white  -tracking-[2.2%] lg:px-5 px-2 lg:max-w-[490px]">
+              <p className="text-center font-normal lg:text-[32px]  text-base leading-[38px]  tracking-[-2.2%] text-white lg:px-5 px-2 lg:max-w-[490px]">
                 To set the standard for the future of blockchain gaming by
                 delivering a seamless fusion of fun, strategy, and financial
                 opportunity that engages players worldwide.
@@ -144,19 +144,19 @@ const AboutUs = () => {
         <div className="flex justify-center flex-col items-center gap-8 ">
           <h2 className="text-[46px] font-normal text-white ">Who we are</h2>
           <div className="lg:max-w-[848px]">
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8">
+            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8 leading-[48px]">
               Welcome to Memestate, where gaming meets innovation, fun meets
               strategy, and players meet real-world rewards. Inspired by the
               classic Monopoly, Memestate is a next-generation play-to-earn
               (P2E) blockchain-based game that transforms the world of gaming.
             </p>
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8">
+            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8  leading-[48px]">
               At Memestate, we believe in the combination of high-quality
               gameplay with financial rewards. Here, we’ve designed a dynamic
               and fast-paced gaming experience that not only entertains but also
               rewards players for their time and skills.{" "}
             </p>
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8">
+            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8  leading-[48px]">
               {" "}
               Whether you’re climbing leaderboards, unlocking characters, or
               diving into competitive modes, every move in Memestate holds the

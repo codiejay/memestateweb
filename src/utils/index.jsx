@@ -28,7 +28,7 @@ export const carouselItems = [
       </h2>
 
       <p className="lg:text-2xl text-base font-normal  text-white  mt-3  font-poppins">
-        To Enhance gameplay experience and Integrate advanced gamified mechanics
+        To enhance gameplay experience and Integrate advanced gamified mechanics
         to attract players.
       </p>
     </div>
@@ -206,8 +206,8 @@ export const contentList = [
 
     text: (
       <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        The reward gotten will attract more players, who, in turn, boost
-        engagement and revenue further
+        The rewards attract more players, who in turn, boost engagement and
+        revenue further
       </p>
     ),
     image: "/images/meme4.gif",
