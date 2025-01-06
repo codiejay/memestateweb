@@ -415,11 +415,11 @@ export default function App() {
         </div>
       </section>
       <section
-        className="bg-[#27297A] py-5 pb-24 px-4 lg:px-0 page relative"
+        className="bg-[#27297A] py-5  px-4 lg:px-0 page relative"
         id="roadMap"
       >
         <div className="flex justify-center   ">
-          <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
+          <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-5">
             ROADMAP
           </h1>
         </div>
@@ -430,8 +430,8 @@ export default function App() {
         {isIframeOpen && <IFrameModal />}
         {isOpenPrizeModal && <WhyIsPriceDifferent />}
       </section>
-      <section>
-        <div className="flex justify-center items-center">
+      <section className="h-[40vh] relative lg:block hidden">
+        <div className="flex justify-center items-center h-full pt-10 absolute top-16 w-full">
           <h1 className=" text-[48px] leading-[48.61px] text-center lg:max-w-[665px] ">
             10% of all revenue will be dedicated to supporting those in need...
           </h1>

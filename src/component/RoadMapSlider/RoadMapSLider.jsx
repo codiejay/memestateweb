@@ -95,7 +95,7 @@ const RoadMapSlider = () => {
     ],
   };
   return (
-    <div className="relative lg:px-10 px-3 ">
+    <div className="relative lg:px-0 px-3 ">
       {/* <div className="w-full h-1 bg-[#FF0000] absolute top-52 "></div> */}
 
       <Slider {...settings}>
