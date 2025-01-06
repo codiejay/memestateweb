@@ -107,7 +107,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="lg:px-16 px-8 py-8 w-full">
-        <div className="grid grid-cols-2 justify-center items-start w-full gap-8 px-28">
+        <div className="grid lg:grid-cols-2 grid-cols-1  items-start w-full gap-8 justify-between">
           <div className="flex flex-col items-center gap-6 bg-[#A2A4DF] border-[6px] border-[#000000] rounded-[32px] px-10 py-6">
             <div className="h-[244px]">
               <img src="/images/wheel.png" alt="wheel" />
@@ -143,7 +143,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="h-ful lg:px-16 px-8 py-16 w-full ">
-        <div className="flex justify-center flex-col items-center gap-8 bg-white rounded-[22px] px-10 py-8 ">
+        <div className="flex justify-center flex-col items-center gap-8 bg-white rounded-[22px] border-[6px] border-[#000000]  px-10 py-8 ">
           <h2 className="text-[46px] font-normal text-[#010101] ">
             Who we are
           </h2>
