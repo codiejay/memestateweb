@@ -43,7 +43,7 @@ const HowToPlay = ({ items }) => {
         <div>
           <button
             onClick={handlePrevious}
-            className={` hidden md:flex text-2xl xl:mb-32 lg:mb-5 font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
+            className={` hidden md:flex text-2xl  font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
               clickedPrevious ? "scale-95" : ""
             }`}
             style={{ boxShadow: "8px 8px 0px 0px #000000" }}
@@ -77,7 +77,7 @@ const HowToPlay = ({ items }) => {
         <div>
           <button
             onClick={handleNext}
-            className={` hidden md:flex text-2xl font-normal text-white  xl:mb-32 lg:mb-5 capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  justify-center items-center transition-all transform ${
+            className={` hidden md:flex text-2xl font-normal text-white  capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  justify-center items-center transition-all transform ${
               clicked ? "scale-95" : ""
             }`}
             style={{ boxShadow: "8px 8px 0px 0px #000000" }}

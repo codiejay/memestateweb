@@ -195,7 +195,7 @@ export default function App() {
                   <li>
                     <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
                       Stage 1{" "}
-                      <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
+                      <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins uppercase ">
                         Ongoing
                       </span>
                     </h2>
