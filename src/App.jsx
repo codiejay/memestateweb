@@ -55,8 +55,8 @@ export default function App() {
 
   return (
     <div ref={container}>
-      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-hidden">
-        <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-32  ">
+      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden">
+        <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="grid lg:grid-cols-2 justify-between items-center px-20 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center">
               <div className="banner-content flex w-full ">
@@ -153,176 +153,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full hidden "
-        ref={sectionRefs[1]}
-      >
-        <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
-          <h1 className="text-white font-normal capitalize mb-2 text-3xl">
-            Join the
-          </h1>
-          <div>
-            <img
-              src="/images/memestate.png"
-              alt=""
-              className="lg:h-20  h-16 object-contain"
-            />
-          </div>
-          <h1 className="text-white font-normal capitalize mt-1  text-3xl">
-            Presale
-          </h1>
-        </div>
-        <div className="grid lg:grid-cols-2 flex-col lg:gap-28 gap-9 py-8 justify-center howItWorks ">
-          <div className="w-full overflow-hidden lg:px-0 px-6  lg:order-1 order-2">
-            <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
-              <h1 className="text-white font-normal capitalize mb-2 text-3xl">
-                Join the
-              </h1>
-              <div>
-                <img
-                  src="/images/memestate.png"
-                  alt=""
-                  className="lg:h-14  h-16 object-contain"
-                />
-              </div>
-              <h1 className="text-white font-normal capitalize mt-1 mb-5  text-3xl">
-                Presale
-              </h1>
-            </div>
-            <HowItWorks items={carouselItems} />
-          </div>
-          <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1">
-            <div className="absolute top-[-3rem] -left-28 z-50 lg:block hidden ">
-              <img src="/images/bigDiamond.png" alt="" />
-            </div>
-            <div className="  lg:w-fit  w-full">
-              <div className=" w-full relative">
-                <div className="border-[#000] border-[12px] shadow-black-custom  py-4 h-fit bg-[#9D9FD8] flex justify-center items-center ">
-                  <h1 className="text-black text-center  lg:text-[36px] text-xl    px-2 leading-9">
-                    Buy your $gems Token in presale now!
-                  </h1>
-                </div>
-                <div className="absolute top-[7rem] left-1/2 -translate-x-1/2  countdownStyle w-[80%]  ">
-                  <CountDown />
-                </div>
-                <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-12  h-fit ">
-                  <div className="text-black text-center flex justify-center items-center gap-4 my-6">
-                    <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
-                    <img src="/images/equals.svg" alt="" />
-                    <p className="lg:text-3xl text-2xl">0.001 USDT</p>
-                  </div>
-
-                  <div className="w-full flex flex-col gap-5">
-                    <div className="w-full">
-                      <ButtonWithSound
-                        label={"Buy $GEMS"}
-                        type={"beta"}
-                        soundPath={"/audio/button.mp3"}
-                        className={"bg-[#FF0000]  w-full"}
-                        onClick={openIFrameModal}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-9  lg:block hidden">
-                <h3 className="text-xl font-normal text-[#FFC727]">
-                  Presale Rounds
-                </h3>
-                <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-3">
-                  <li>
-                    <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
-                      Stage 1{" "}
-                      <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
-                        Ongoing
-                      </span>
-                    </h2>
-                    <p className="text-sm font-normal text-white font-poppins">
-                      Up to 200,000,000 $GEMS up for grabs at 67% discount
-                    </p>
-                  </li>
-                  <li>
-                    <h2 className="text-white text-2xl font-normal">Stage 2</h2>
-                    <p className="text-sm font-normal text-white font-poppins">
-                      Up to 300,000,000 $GEMS up for grabs at 50% discount
-                    </p>
-                  </li>
-                  <li>
-                    <h2 className="text-white text-2xl font-normal">Stage 3</h2>
-                    <p className="text-sm font-normal text-white font-poppins">
-                      Up to 400,000,000 $GEMS up for grabs at 33% discount
-                    </p>
-                  </li>
-                  <li>
-                    <h2 className="text-white text-2xl font-normal">Stage 4</h2>
-                    <p className="text-sm font-normal text-white font-poppins">
-                      Up to 500,000,000 $GEMS up for grabs at 25% discount
-                    </p>
-                  </li>
-                  <li>
-                    <h2 className="text-white text-2xl font-normal">Stage 5</h2>
-                    <p className="text-sm font-normal text-white font-poppins">
-                      Up to 600,000,000 $GEMS up for grabs at 25% discount
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="mt-9  lg:hidden block">
-          <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
-            Presale Rounds
-          </h3>
-          <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
-            <li>
-              <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
-                Stage 1{" "}
-                <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
-                  OnGoing
-                </span>
-              </h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 200,000,000 $GEMS up for grabs at 67% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 2</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 300,000,000 $GEMS up for grabs at 50% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 3</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 400,000,000 $GEMS up for grabs at 33% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 4</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 500,000,000 $GEMS up for grabs at 25% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 5</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 600,000,000 $GEMS up for grabs at 25% discount
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div className="absolute lg:bottom-28 bottom-0 right-0  hidden lg:block">
-          <img src="/images/coin.png" alt="" />
-        </div>
-      </section> */}
-
       <section
         className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
         ref={sectionRefs[1]}
         id="nextsection"
       >
-        <div className="grid lg:grid-cols-5 items-center flex-col  gap-9 py-8 justify-center howItWorks ">
+        <div className=" lg:grid lg:grid-cols-5 items-center flex flex-col  gap-9 py-8 justify-center howItWorks ">
           <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 ">
             <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
               <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
@@ -440,9 +276,9 @@ export default function App() {
         </div>
       </section>
       <section className="bg-[#27297A] lg:px-14 px-3  section-2 py-20 relative page   h-full ">
-        <div className="flex justify-center items-center gap-10">
-          <div className="">
-            <h1>
+        <div className="flex  lg:flex-row flex-col justify-between items-center gap-10">
+          <div className="w-full">
+            <h1 className="text-2xl">
               10% of all revenue will be dedicated to supporting those in
               need...
             </h1>
@@ -456,7 +292,7 @@ export default function App() {
               />
             </div>
           </div>
-          <div className="">
+          <div className="w-full flex justify-end">
             <HowItWorks items={carouselItems} />
           </div>
         </div>
@@ -507,7 +343,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative lg:h-screen h-full"
+        className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative  h-full"
         ref={sectionRefs[4]}
       >
         <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
@@ -522,7 +358,7 @@ export default function App() {
               <p className="text-[28px] font-normal  text-white leading-tight lg:mr-24 lg:text-left text-center  ">
                 FAST PACED GAMEPLAY:
               </p>
-              <p className="text-base font-medium mt-4 font-poppins ">
+              <p className="text-xl font-medium mt-4 font-poppins ">
                 Enjoy rapid 5-minute rounds for a fun and manageable experience.
               </p>
             </div>
@@ -533,15 +369,15 @@ export default function App() {
               <p className="text-[28px] font-normal  text-white leading-tight lg:mr-24 lg:text-left text-center  ">
                 CLAIM YOUR REWARD:
               </p>
-              <p className="text-base font-medium mt-4 font-poppins lg:text-left text-center ">
+              <p className="text-xl font-medium mt-4 font-poppins lg:text-left text-center ">
                 Collect reward chests with character shards and gems, and use
                 gems to create and customize your guild, with funny Memechance
                 and Memeopportunity cards adding humor to the game.
               </p>
             </div>
           </div>
-          <div className="col-span-3  justify-center hidden lg:flex">
-            <div>
+          <div className="col-span-3  justify-center items-center  h-full   hidden lg:flex">
+            <div className="mt-28">
               <img src="/images/foxy.png" alt="" className="w-[350px]" />
             </div>
           </div>
@@ -553,7 +389,7 @@ export default function App() {
               <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 lg:text-right text-center">
                 FEEL THE PROGRESSION
               </p>
-              <p className="text-base font-medium mt-4 font-poppins lg:text-right text-center">
+              <p className="text-xl font-medium mt-4 font-poppins lg:text-right text-center">
                 Unlock, level up, and enhance characters with special abilities
                 to gain strategic advantages.
               </p>
@@ -565,7 +401,7 @@ export default function App() {
               <p className="text-[28px] font-normal  text-white leading-tight mt-3 mb-2 lg:ml-24 lg:text-right text-center">
                 BE THE CHAMPION
               </p>
-              <p className="text-base font-medium mt-4 font-poppins lg:text-right text-center">
+              <p className="text-xl font-medium mt-4 font-poppins lg:text-right text-center">
                 Climb leagues and leaderboards to become the Ultimate Memestate
                 Champion.
               </p>

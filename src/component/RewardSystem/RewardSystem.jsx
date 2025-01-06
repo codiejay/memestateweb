@@ -139,8 +139,8 @@ const RewardSystem = () => {
                     <div className="z-40">
                       <div className="masked-div-1 relative lg:w-[924px] w-full">
                         <div className="px-10 pt-4 pb-6">
-                          <h3>{item.title}</h3>
-                          <p>{item.text}</p>
+                          {item.title}
+                          {item.text}
                           <ButtonWithSound
                             label="Learn more"
                             type="beta"
