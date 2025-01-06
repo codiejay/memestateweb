@@ -251,7 +251,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className=" absolute right-0  -bottom-12">
+        <div className=" absolute right-0  -bottom-12 lg:block hidden">
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
