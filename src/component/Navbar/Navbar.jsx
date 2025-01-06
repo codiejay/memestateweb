@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 // Navigation and Social Links
 export const links = [
-  { name: "Home", path: "/" },
   { name: "About us", path: "/aboutus" },
   { name: "Roadmap", path: "/#roadMap" }, // HashLink for internal navigation
   {
@@ -73,13 +72,13 @@ const Navbar = () => {
         </button>
 
         {/* Logo */}
-        <div>
+        <Link to={"/"}>
           <img
             src="/images/logo2.png"
             alt="Memestate logo"
             className="w-[136px]"
           />
-        </div>
+        </Link>
 
         {/* Navigation Menu */}
         <nav className="col-span-3">

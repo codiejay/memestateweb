@@ -38,7 +38,7 @@ const HowToPlay = ({ items }) => {
   }, [items.length]);
 
   return (
-    <div className="carousel-container relative  overflow-hidden ">
+    <div className="carousel-container relative  overflow-hidden my-10 ">
       <div className="flex justify-center items-center lg:gap-14 gap-0">
         <div>
           <button
@@ -51,8 +51,8 @@ const HowToPlay = ({ items }) => {
             <img src="/images/carouselButton.png" alt="" />
           </button>
         </div>
-        <div className="relative overflow-hidden">
-          <div className="absolute top-[12%] w-full lg:h-[300px] h-[unset] ">
+        <div className="relative  flex justify-center overflow-hidden">
+          <div className="absolute top-[7%]  lg:h-full h-[unset] rounded-[41px] w-[91%] overflow-hidden ">
             <div
               className={`carousel-items flex transition-transform duration-500 ease-in-out w-full ${
                 direction === "next" ? "transform translate-x-[-100%]" : ""

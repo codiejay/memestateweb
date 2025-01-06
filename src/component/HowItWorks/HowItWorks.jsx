@@ -30,10 +30,10 @@ const HowItWorks = ({ items }) => {
 
   return (
     <div
-      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000] lg:h-[500px] h-full  lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
+      className="carousel-container relative  overflow-hidden  border-[8px] border-[#000] lg:h-[550px] h-full  lg:w-[453px] w-full bg-[#FF0000]   py-8 flex flex-col"
       style={{ boxShadow: " 0px 4px 4px 0px #00000040" }}
     >
-      <h2 className="text-2xl text-[#FFC727]  px-4">Why Invest</h2>
+      <h2 className="text-2xl text-[#FFC727]  px-4">Where we invest in </h2>
       {/* Carousel Items */}
       <div
         className={`carousel-items flex transition-transform duration-500 ease-in-out w-full ${

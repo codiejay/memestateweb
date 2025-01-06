@@ -4,31 +4,31 @@ const MarqueeComponent = () => {
   return (
     <Marquee className=" py-4 bg-[#56296f] ">
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>{" "}
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>{" "}
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>{" "}
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>{" "}
       <div className="mx-5">
-        <img src="/images/memestategroup.png " alt="" className="w-[236px]" />
+        <img src="/images/marquee.png " alt="" className="w-[1000px]" />
       </div>
     </Marquee>
   );

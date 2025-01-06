@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <section className="min-h-screen bg-[#27297A]  ">
       <div className="bg-[url('/images/footer.png')] bg-no-repeat w-full bg-cover h-full flex justify-center items-center pt-20 footer overflow-hidden flex-col bg-[#27297A]">
-        <div className="mt-[16rem]">
+        <Link to={"/"} className="mt-[16rem]">
           <img src="/images/memeanddice.png" alt="" />
-        </div>
+        </Link>
         <nav>
           <ul
             className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-12  md:flex`}

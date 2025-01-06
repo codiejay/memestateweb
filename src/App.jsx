@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carouselItems, howToPlay, socialFooterIcon } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
-import Navbar, { links } from "./component/Navbar/Navbar";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
 import RewardSystem from "./component/RewardSystem/RewardSystem";
 import VideoModal from "./component/VideoModal/VideoModal";
@@ -16,12 +15,18 @@ import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
 import IFrameModal from "./component/IFrameModal/IFrameModal";
 import { useIframeModal } from "./context/IframeContext";
+import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
+import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
+
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const { openModal, isOpen } = useModal();
   const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
+  const { openModal: openPrizeModal, isOpen: isOpenPrizeModal } =
+    useDifferentPrize();
   const container = useRef(null);
   const sectionRefs = [
     useRef(null),
@@ -33,60 +38,6 @@ export default function App() {
     useRef(null),
   ];
 
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [isScrolling, setIsScrolling] = useState(false);
-
-  // const isDesktop = () => window.innerWidth > 1024;
-
-  // const scrollToSection = (direction) => {
-  //   const nextIndex = currentIndex + direction;
-
-  //   // Allow free scrolling for out-of-bound or non-referenced sections
-  //   if (nextIndex < 0 || nextIndex >= sectionRefs.length) {
-  //     setCurrentIndex(nextIndex);
-  //     return;
-  //   }
-
-  //   const nextSection = sectionRefs[nextIndex].current;
-
-  //   if (nextSection) {
-  //     setIsScrolling(true);
-  //     nextSection.scrollIntoView({ behavior: "smooth" });
-
-  //     // Delay updating the index until scrolling completes
-  //     setTimeout(() => {
-  //       setCurrentIndex(nextIndex);
-  //       setIsScrolling(false);
-  //     }, 600); // Match smooth scrolling duration
-  //   }
-  // };
-
-  // const handleScroll = (e) => {
-  //   if (isScrolling || !isDesktop()) return; // Skip if already scrolling or on mobile/tablet
-
-  //   const direction = e.deltaY > 0 ? 1 : -1;
-  //   scrollToSection(direction);
-  // };
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (!isDesktop()) {
-  //       // Reset state for regular scrolling on mobile/tablet
-  //       setCurrentIndex(0);
-  //       setIsScrolling(false);
-  //     }
-  //   };
-
-  //   const handleWheel = (e) => handleScroll(e);
-
-  //   window.addEventListener("wheel", handleWheel, { passive: false });
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("wheel", handleWheel);
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, [currentIndex, isScrolling]);
   useEffect(() => {
     // GSAP animation for banner content
     gsap.fromTo(
@@ -102,97 +53,33 @@ export default function App() {
     );
   }, []);
 
-  // useEffect(() => {
-  //   const animateCards = () => {
-  //     // Select all cards
-  //     const cards = document.querySelectorAll(".masked-div-1, .masked-div-2");
-
-  //     cards.forEach((card) => {
-  //       const isLeft = card.classList.contains("masked-div-1");
-  //       const text = card.querySelectorAll("h2, p"); // Text elements
-  //       const image = card.querySelector("img"); // Image elements
-
-  //       // Animation timeline for each card
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: card,
-  //           start: "top 80%", // Start animation when card is 80% visible
-  //           end: "bottom 20%", // End animation when card is almost out of view
-  //           toggleActions: "play none none reverse", // Play forward on enter, reverse on leave
-  //         },
-  //       });
-
-  //       // Add animations
-  //       tl.fromTo(
-  //         card,
-  //         {
-  //           x: isLeft ? -200 : 200, // Slide left or right based on class
-  //           opacity: 0,
-  //         },
-  //         {
-  //           x: 0,
-  //           opacity: 1,
-  //           duration: 1,
-  //           ease: "power3.out",
-  //         }
-  //       )
-  //         .fromTo(
-  //           image,
-  //           {
-  //             scale: 0,
-  //           },
-  //           {
-  //             scale: 1,
-  //             duration: 0.8,
-  //             ease: "power3.inOut",
-  //           },
-  //           "<" // Start at the same time as the previous animation
-  //         )
-  //         .fromTo(
-  //           text,
-  //           {
-  //             y: -50,
-  //             opacity: 0,
-  //           },
-  //           {
-  //             y: 0,
-  //             opacity: 1,
-  //             duration: 0.8,
-  //             stagger: 0.2, // Animate each text element with a slight delay
-  //           },
-  //           "-=0.5" // Overlap the text fade-in with image scaling
-  //         );
-  //     });
-  //   };
-
-  //   animateCards();
-  // }, []);
-
   return (
     <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative h-screen overflow-hidden">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent pt-32  ">
-          <div className="grid lg:grid-cols-2 justify-between items-center px-12 py-10 gap-20">
+          <div className="grid lg:grid-cols-2 justify-between items-center px-20 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center">
-              <div className="banner-content flex justify-center ">
+              <div className="banner-content flex w-full ">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
-                  className="w-[586px] bannerImg"
+                  className="w-[80%] bannerImg"
                 />
               </div>
-              <p className="text-2xl font-bold text-[#EEEFFF] text-center  banner-content font-poppins">
-                Unleash the power of memes and earn rewards.
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins">
+                Secure $GEMS at exclusive presale pricing and maximize your ROI
+                while powering the first sustainable P2E model, merging fun and
+                financial potential.
               </p>
 
-              <div className="flex lg:flex-row flex-col justify-center   gap-5 mt-6  ">
+              <div className="flex lg:flex-row flex-col  items-start w-full  gap-5 mt-6  ">
                 <div className="banner-content">
                   <ButtonWithSound
                     type={"beta"}
                     soundPath={"/audio/button.mp3"}
-                    label={"watch Demo"}
+                    label={"Join the Presale now"}
                     className={"bg-[#FF0000]"}
-                    onClick={openModal}
+                    onClick={openIFrameModal}
                   />
                 </div>
 
@@ -200,8 +87,8 @@ export default function App() {
                   <Button
                     type={"alpha"}
                     soundPath={"/audio/button2.mp3"}
-                    label={"Join The Pre-sale"}
-                    onClick={openIFrameModal}
+                    label={"Founder’s Explainer"}
+                    onClick={openModal}
                   />
                 </div>
               </div>
@@ -243,6 +130,12 @@ export default function App() {
                 </div>
               </div>
             </div>
+            {/* <div className="col-2">
+              <a href="#nextsection">
+                <p>Scroll down for more info</p>
+                <img src="/images/CaretDown.png" alt="CaretDown" />
+              </a>
+            </div> */}
           </div>
 
           <div className="mt-auto ">
@@ -252,8 +145,8 @@ export default function App() {
         </div>
       </section>
 
-      <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full  hidden"
+      {/* <section
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full hidden "
         ref={sectionRefs[1]}
       >
         <div className=" flex-col mb-4   items-center lg:items-start justify-start flex lg:hidden pt-14">
@@ -414,8 +307,151 @@ export default function App() {
         <div className="absolute lg:bottom-28 bottom-0 right-0  hidden lg:block">
           <img src="/images/coin.png" alt="" />
         </div>
-      </section>
+      </section> */}
 
+      <section
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
+        ref={sectionRefs[1]}
+      >
+        <div className="grid lg:grid-cols-5 items-center flex-col  gap-9 py-8 justify-center howItWorks ">
+          <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 ">
+            <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
+              <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
+                Join the
+              </h1>
+              <div>
+                <img src="/images/memestate.png" alt="" />
+              </div>
+              <h1 className="text-white font-normal capitalize mt-1 mb-5  text-[48px]">
+                Presale
+              </h1>
+            </div>
+          </div>
+
+          <div className="relative  justify-between lg:mt-0 mt-4 w-full col-span-3 ">
+            <div className="    w-full ">
+              <div className="mt-9  lg:block hidden">
+                <div className="flex items-center gap-5 mt-12">
+                  <h2 className="text-2xl font-normal text-[#FFC727]">
+                    Presale Stage
+                  </h2>
+                  <button
+                    className="underline  text-base font-normal"
+                    onClick={openPrizeModal}
+                  >
+                    Why is price on presale different?
+                  </button>
+                </div>
+
+                <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-10">
+                  <li>
+                    <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
+                      Stage 1{" "}
+                      <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
+                        Ongoing
+                      </span>
+                    </h2>
+                    <p className="text-2xl font-normal text-white font-poppins">
+                      Up to 200,000,000 $GEMS up for grabs at 67% gain
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 2</h2>
+                    <p className="text-2xl font-normal text-white font-poppins">
+                      Up to 300,000,000 $GEMS up for grabs at 50% gain
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 3</h2>
+                    <p className="text-2xl font-normal text-white font-poppins">
+                      Up to 400,000,000 $GEMS up for grabs at 33% gain
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 4</h2>
+                    <p className="text-2xl font-normal text-white font-poppins">
+                      Up to 500,000,000 $GEMS up for grabs at 25% gain
+                    </p>
+                  </li>
+                  <li>
+                    <h2 className="text-white text-2xl font-normal">Stage 5</h2>
+                    <p className="text-2xl font-normal text-white font-poppins">
+                      Up to 600,000,000 $GEMS up for grabs at 25% gain
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="mt-9  lg:hidden block">
+          <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
+            Presale Rounds
+          </h3>
+          <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
+            <li>
+              <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
+                Stage 1{" "}
+                <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
+                  OnGoing
+                </span>
+              </h2>
+              <p className="text-sm font-normal text-white font-poppins">
+                Up to 200,000,000 $GEMS up for grabs at 67% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 2</h2>
+              <p className="text-sm font-normal text-white font-poppins">
+                Up to 300,000,000 $GEMS up for grabs at 50% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 3</h2>
+              <p className="text-sm font-normal text-white font-poppins">
+                Up to 400,000,000 $GEMS up for grabs at 33% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 4</h2>
+              <p className="text-sm font-normal text-white font-poppins">
+                Up to 500,000,000 $GEMS up for grabs at 25% discount
+              </p>
+            </li>
+            <li>
+              <h2 className="text-white text-2xl font-normal">Stage 5</h2>
+              <p className="text-sm font-normal text-white font-poppins">
+                Up to 600,000,000 $GEMS up for grabs at 25% discount
+              </p>
+            </li>
+          </ul>
+        </div> */}
+        <div className=" absolute right-0  -bottom-12">
+          <img src="/images/coin.png" alt="" />
+        </div>
+      </section>
+      <section className="bg-[#27297A] lg:px-14 px-3  section-2 py-20 relative page   h-full ">
+        <div className="flex justify-center items-center gap-10">
+          <div className="">
+            <h1>
+              10% of all revenue will be dedicated to supporting those in
+              need...
+            </h1>
+            <div className="mt-12">
+              <Button
+                type={"beta"}
+                soundPath={"/audio/button2.mp3"}
+                label={"Join The Pre-sale"}
+                onClick={openIFrameModal}
+                className={"bg-[#FF0000]"}
+              />
+            </div>
+          </div>
+          <div className="">
+            <HowItWorks items={carouselItems} />
+          </div>
+        </div>
+      </section>
       <section
         className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page"
         ref={sectionRefs[2]}
@@ -694,6 +730,7 @@ export default function App() {
         </div>
         {isOpen && <VideoModal />}
         {isIframeOpen && <IFrameModal />}
+        {isOpenPrizeModal && <WhyIsPriceDifferent />}
       </section>
     </div>
   );

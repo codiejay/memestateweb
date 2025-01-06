@@ -4,28 +4,25 @@ const CountDown = () => {
   const [timeRemaining, setTimeRemaining] = useState(0);
 
   useEffect(() => {
+    const calculateNextFriday = () => {
+      const now = new Date();
+      const dayOfWeek = now.getDay(); // Sunday = 0, Monday = 1, ..., Saturday = 6
+      const daysUntilFriday = (6 - dayOfWeek + 7) % 7 || 7; // Days until next Friday (handles today being Friday)
+
+      // Calculate next Friday at 12:00 PM
+      const nextFriday = new Date(now);
+      nextFriday.setDate(now.getDate() + daysUntilFriday);
+      nextFriday.setHours(12, 0, 0, 0); // Set time to 12:00 PM
+
+      return nextFriday.getTime();
+    };
+
     const startCountdown = () => {
-      const storedEventTime = localStorage.getItem("eventTime");
-      let eventTime;
-
-      if (storedEventTime) {
-        // Use the stored event time if it exists
-        eventTime = parseInt(storedEventTime, 10);
-      } else {
-        // Define the countdown target time (7 days, 3 hours, 26 minutes, 33 seconds)
-        const countdownTarget =
-          7 * 24 * 60 * 60 * 1000 + // 7 days in ms
-          3 * 60 * 60 * 1000 + // 3 hours in ms
-          26 * 60 * 1000 + // 26 minutes in ms
-          33 * 1000; // 33 seconds in ms
-
-        eventTime = new Date().getTime() + countdownTarget;
-        localStorage.setItem("eventTime", eventTime.toString());
-      }
+      const eventTime = calculateNextFriday();
 
       const countdownInterval = setInterval(() => {
-        const currentTime = new Date().getTime();
-        const remainingTime = Math.max(eventTime - currentTime, 0);
+        const now = new Date().getTime();
+        const remainingTime = Math.max(eventTime - now, 0);
 
         setTimeRemaining(remainingTime);
 
