@@ -278,7 +278,7 @@ export default function App() {
       <section className="bg-[#27297A] lg:px-14 px-3  section-2 py-20 relative page   h-full ">
         <div className="flex  lg:flex-row flex-col justify-between items-center gap-10">
           <div className="w-full">
-            <h1 className="text-2xl">
+            <h1 className=" lg:text-[48px]  text-2xl">
               10% of all revenue will be dedicated to supporting those in
               need...
             </h1>
