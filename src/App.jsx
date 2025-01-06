@@ -106,7 +106,7 @@ export default function App() {
                       <div className="absolute top-[7rem] left-1/2 -translate-x-1/2  countdownStyle w-[80%]  ">
                         <CountDown />
                       </div>
-                      <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-12  h-fit ">
+                      <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-6  h-fit ">
                         <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                           <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                           <img src="/images/equals.svg" alt="" />
@@ -124,18 +124,26 @@ export default function App() {
                             />
                           </div>
                         </div>
+                        <div className="col-2 mt-10  ">
+                          <a
+                            href="#nextsection"
+                            className="flex items-center gap-2 "
+                          >
+                            <p className="text-black gap-1 text-xl">
+                              Scroll down for more info
+                            </p>
+                            <img
+                              src="/images/CaretDownBlack.png"
+                              alt="CaretDownBlack"
+                            />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* <div className="col-2">
-              <a href="#nextsection">
-                <p>Scroll down for more info</p>
-                <img src="/images/CaretDown.png" alt="CaretDown" />
-              </a>
-            </div> */}
           </div>
 
           <div className="mt-auto ">
@@ -312,6 +320,7 @@ export default function App() {
       <section
         className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
         ref={sectionRefs[1]}
+        id="nextsection"
       >
         <div className="grid lg:grid-cols-5 items-center flex-col  gap-9 py-8 justify-center howItWorks ">
           <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 ">

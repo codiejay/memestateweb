@@ -43,8 +43,8 @@ export const carouselItems = [
       </h2>
 
       <p className="lg:text-2xl font-normal  text-white  mt-3  font-poppins ">
-        to Drive awareness and adoption through targeted campaigns, onboarding
-        players/investors into the ecosystem.
+        To drive awareness and adoption through targeted campaigns to onboard
+        more players/investors into the ecosystem.
       </p>
     </div>
   </div>,
