@@ -1,7 +1,7 @@
 const GlassCard = ({ maxWidth, image, content }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5  ">
-      <div>
+    <div className="flex flex-col items-center justify-center   ">
+      <div className="-mb-10 z-50">
         <img src={`/images/${image}`} alt="road1" className="h-[107px]" />
       </div>
 
