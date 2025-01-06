@@ -10,6 +10,7 @@ const AboutUs = () => {
     content: "",
     img: "",
     title: "",
+    borderColor: "",
   });
 
   const teamMembers = [
@@ -55,6 +56,7 @@ const AboutUs = () => {
       img: member.image,
       title: member.title,
       content: member.content,
+      borderColor: member.borderColor,
     });
   };
   return (
@@ -91,7 +93,7 @@ const AboutUs = () => {
                         {member.title}
                       </p>
                       <button
-                        className="text-2xl text-[#010101] font-normal p-[unset] text-left"
+                        className="text-2xl text-[#010101] font-normal p-[unset] text-left underline"
                         onClick={() => handleOpenModal(member)}
                       >
                         View details
@@ -105,16 +107,16 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="lg:px-16 px-8 py-8 w-full">
-        <div className="flex  lg:flex-row flex-col justify-center items-start w-full gap-8 px-28">
-          <div className="flex flex-col items-center gap-6">
-            <div className="h-[334px]">
+        <div className="grid grid-cols-2 justify-center items-start w-full gap-8 px-28">
+          <div className="flex flex-col items-center gap-6 bg-[#A2A4DF] border-[6px] border-[#000000] rounded-[32px] px-10 py-6">
+            <div className="h-[244px]">
               <img src="/images/wheel.png" alt="wheel" />
             </div>
             <div>
-              <h2 className="lg:text-[64px]  text-2xl font-normal text-white text-center mb-10">
+              <h2 className="lg:text-[54px]  text-2xl font-normal text-black text-center mb-10">
                 Our Mission
               </h2>
-              <p className="text-center font-normal lg:text-[32px] text-base text-white  leading-[38px]  tracking-[-2.2%] lg:max-w-[490px] border-r-2 border-[#67BEFF] lg:px-5 px-2 ">
+              <p className="text-center font-medium lg:text-[24px] text-base text-black font-poppins  leading-[38px]  tracking-[-2.2%]    ">
                 To create a gaming ecosystem that blends engaging gameplay with
                 sustainable financial rewards, empowering players to earn real
                 value for their time while fostering a vibrant blockchain
@@ -123,15 +125,15 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-6">
-            <div className="h-[334px]">
-              <img src="/images/astronut2.png" alt="astronut" />
+          <div className="flex flex-col items-center gap-6 bg-[#FF0000] border-[6px] border-[#000000] rounded-[32px] px-10 py-6 h-full">
+            <div className="h-[244px] mb-2">
+              <img src="/images/astronut.png" alt="wheel" />
             </div>
             <div>
-              <h2 className="lg:text-[64px]  text-2xl  font-normal text-white text-center mb-10">
+              <h2 className="lg:text-[54px]  text-2xl font-normal text-white text-center mb-10">
                 Our Vision
               </h2>
-              <p className="text-center font-normal lg:text-[32px]  text-base leading-[38px]  tracking-[-2.2%] text-white lg:px-5 px-2 lg:max-w-[490px]">
+              <p className="text-center font-medium lg:text-[24px] text-base text-white font-poppins  leading-[38px]  tracking-[-2.2%]    ">
                 To set the standard for the future of blockchain gaming by
                 delivering a seamless fusion of fun, strategy, and financial
                 opportunity that engages players worldwide.
@@ -141,22 +143,24 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="h-ful lg:px-16 px-8 py-16 w-full ">
-        <div className="flex justify-center flex-col items-center gap-8 ">
-          <h2 className="text-[46px] font-normal text-white ">Who we are</h2>
-          <div className="lg:max-w-[848px]">
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8 leading-[48px]">
+        <div className="flex justify-center flex-col items-center gap-8 bg-white rounded-[22px] px-10 py-8 ">
+          <h2 className="text-[46px] font-normal text-[#010101] ">
+            Who we are
+          </h2>
+          <div>
+            <p className="text-center font-normal text-3xl text-[#010101]   -tracking-[2.2%] my-4 leading-[48px] font-poppins">
               Welcome to Memestate, where gaming meets innovation, fun meets
               strategy, and players meet real-world rewards. Inspired by the
               classic Monopoly, Memestate is a next-generation play-to-earn
               (P2E) blockchain-based game that transforms the world of gaming.
             </p>
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8  leading-[48px]">
+            <p className="text-center font-normal text-3xl text-[#010101]   -tracking-[2.2%] my-4  leading-[48px] font-poppins">
               At Memestate, we believe in the combination of high-quality
               gameplay with financial rewards. Here, we’ve designed a dynamic
               and fast-paced gaming experience that not only entertains but also
               rewards players for their time and skills.{" "}
             </p>
-            <p className="text-center font-normal text-4xl text-white   -tracking-[2.2%] my-8  leading-[48px]">
+            <p className="text-center font-normal text-3xl text-[#010101]   -tracking-[2.2%] my-4  leading-[48px] font-poppins">
               {" "}
               Whether you’re climbing leaderboards, unlocking characters, or
               diving into competitive modes, every move in Memestate holds the
@@ -198,6 +202,7 @@ const AboutUs = () => {
             name={aboutUs.name}
             title={aboutUs.title}
             content={aboutUs.content}
+            borderColor={aboutUs.borderColor}
           />
         )}
       </section>
