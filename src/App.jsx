@@ -59,7 +59,7 @@ export default function App() {
     <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
-          <div className="grid lg:grid-cols-2 justify-between items-center px-20 py-10 gap-20">
+          <div className="grid lg:grid-cols-2 justify-between items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center">
               <div className="banner-content flex w-full ">
                 <img
@@ -162,8 +162,8 @@ export default function App() {
       >
         <div className=" lg:grid lg:grid-cols-5 items-center flex flex-col  gap-9 py-8 justify-center howItWorks ">
           <div className="relative  justify-between lg:mt-0 mt-4 w-full col-span-3 ">
-            <div className="    w-full ">
-              <div className="mt-9  lg:block hidden">
+            <div className="w-full ">
+              <div className="mt-9  ">
                 <div className="  mb-4  items-center justify-start hidden lg:flex  gap-5">
                   <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
                     Join the
@@ -365,7 +365,7 @@ export default function App() {
         </div>
       </section>
       <section
-        className="bg-[#27297A] px-16 py-2 relative overflow-hidden page"
+        className="bg-[#27297A] lg:px-16 px-4 py-2 relative overflow-hidden page"
         ref={sectionRefs[5]}
       >
         <div className="flex flex-col justify-center items-center my-10 ">
@@ -385,7 +385,7 @@ export default function App() {
         <AdvertisementSlick />
       </section>
       <section
-        className="bg-[#27297A] px-16 py-16 relative overflow-hidden  page"
+        className="bg-[#27297A] lg:px-16 px-4 py-16 relative overflow-hidden  page"
         ref={sectionRefs[6]}
       >
         <div className="flex justify-center ">
@@ -411,7 +411,7 @@ export default function App() {
         </div>
       </section>
       <section
-        className="bg-[#27297A] py-5 pb-24 px-8 lg:px-0 page relative"
+        className="bg-[#27297A] py-5 pb-24 px-4 lg:px-0 page relative"
         id="roadMap"
       >
         <div className="flex justify-center   ">

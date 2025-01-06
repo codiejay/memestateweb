@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full bg-transparent ${navbarPosition}  px-10 md:px-[6rem] z-[100000]`}
+      className={`w-full bg-transparent ${navbarPosition}  px-1 md:px-[6rem] z-[100000]`}
     >
       <div className="grid grid-cols-5 items-center">
         {/* Hamburger Button */}

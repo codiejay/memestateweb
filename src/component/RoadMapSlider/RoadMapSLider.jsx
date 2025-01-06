@@ -73,35 +73,35 @@ const RoadMapSlider = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+
           variableWidth: false,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 2,
-          initialSlide: 2,
+          variableWidth: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
     ],
   };
   return (
-    <div className="relative px-10 ">
+    <div className="relative lg:px-10 px-3 ">
       {/* <div className="w-full h-1 bg-[#FF0000] absolute top-52 "></div> */}
 
       <Slider {...settings}>
         <GlassCard
           content={
-            <ul className="px-10 py-10 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
               <li className="text-xl font-normal">
                 Developed a gamified design strategy and structured ongoing game
                 integration.
@@ -122,7 +122,7 @@ const RoadMapSlider = () => {
 
         <GlassCard
           content={
-            <ul className="px-10 py-10 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
               <li className="text-xl font-normal">
                 Developed a multiplayer MVP with all game mechanics such
                 property management, building renting and bankruptcy.
@@ -146,7 +146,7 @@ const RoadMapSlider = () => {
         />
         <GlassCard
           content={
-            <ul className="px-10 py-10 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
               <li className="text-xl font-normal">
                 Game Soft Launch on Webgl and Mobile
               </li>
@@ -164,7 +164,7 @@ const RoadMapSlider = () => {
 
         <GlassCard
           content={
-            <ul className="px-10 py-10 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
               <li className="text-xl font-normal">
                 Launch of AR/VR characters with Gen AI and community-led growth
                 strategies.
