@@ -165,13 +165,17 @@ export default function App() {
             <div className="w-full ">
               <div className="mt-9  ">
                 <div className="  mb-4  items-center justify-start hidden lg:flex  gap-5">
-                  <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
+                  <h1 className="text-white font-normal capitalize  text-[48px]">
                     Join the
                   </h1>
                   <div>
-                    <img src="/images/memestate.png" alt="" />
+                    <img
+                      src="/images/memestate.png"
+                      alt=""
+                      className="h-[70px]"
+                    />
                   </div>
-                  <h1 className="text-white font-normal capitalize mt-1 mb-5  text-[48px]">
+                  <h1 className="text-white font-normal capitalize   text-[48px]">
                     Presale
                   </h1>
                 </div>
