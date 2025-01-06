@@ -172,8 +172,9 @@ export const contentList = [
 
     text: (
       <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Drive ad demand with targeted placements tied to user activity and
-        community engagement.
+        Maximize ad revenue through strategic placements and gamified
+        promotions. Increase game earnings with play-to-earn mechanics and
+        in-game purchases.
       </p>
     ),
     image: "/images/meme2.gif",
@@ -199,7 +200,7 @@ export const contentList = [
   {
     title: (
       <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
-        bigger rewards pool for
+        The cycle continues progressively
         <br className="lg:block  hidden" />
         free players
       </h2>
@@ -207,9 +208,8 @@ export const contentList = [
 
     text: (
       <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Unlock bigger rewards for free players with community-driven prize
-        pools. Boost participation through play-to-earn opportunities and token
-        incentives.
+        The reward gotten will attract more players, who, in turn, boost
+        engagement and revenue further
       </p>
     ),
     image: "/images/meme4.gif",

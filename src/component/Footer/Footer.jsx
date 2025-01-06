@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
-    <section className="min-h-screen bg-[#27297A]  ">
+    <section className="h-full bg-[#27297A]  ">
       <div className="bg-[url('/images/footer.png')] bg-no-repeat w-full bg-cover h-full flex justify-center items-center pt-20 footer overflow-hidden flex-col bg-[#27297A]">
         <Link to={"/"} className="mt-[16rem]">
           <img src="/images/memeanddice.png" alt="" />

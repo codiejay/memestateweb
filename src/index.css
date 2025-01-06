@@ -160,6 +160,19 @@ h1 {
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -1px 2px rgba(0, 0, 0, 0.25);
 }
 
+.roadMapCard {
+
+  background: radial-gradient(ellipse at 0.9% 8.98%, rgb(194 195 214 / 40%) 0%, rgb(174 47 47 / 0%) 100%);
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 45px;
+}
+
+
 @media (max-width: 1086px) {
   .slick-slider .button1 {
     left: unset;

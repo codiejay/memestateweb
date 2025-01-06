@@ -17,6 +17,8 @@ import IFrameModal from "./component/IFrameModal/IFrameModal";
 import { useIframeModal } from "./context/IframeContext";
 import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
 import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
+import GlassCard from "./component/GlassCard/GlassCard";
+import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,23 +161,20 @@ export default function App() {
         id="nextsection"
       >
         <div className=" lg:grid lg:grid-cols-5 items-center flex flex-col  gap-9 py-8 justify-center howItWorks ">
-          <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 ">
-            <div className=" flex-col mb-4   items-center lg:items-start justify-start hidden lg:flex">
-              <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
-                Join the
-              </h1>
-              <div>
-                <img src="/images/memestate.png" alt="" />
-              </div>
-              <h1 className="text-white font-normal capitalize mt-1 mb-5  text-[48px]">
-                Presale
-              </h1>
-            </div>
-          </div>
-
           <div className="relative  justify-between lg:mt-0 mt-4 w-full col-span-3 ">
             <div className="    w-full ">
               <div className="mt-9  lg:block hidden">
+                <div className="  mb-4  items-center justify-start hidden lg:flex  gap-5">
+                  <h1 className="text-white font-normal capitalize mb-2 text-[36px]">
+                    Join the
+                  </h1>
+                  <div>
+                    <img src="/images/memestate.png" alt="" />
+                  </div>
+                  <h1 className="text-white font-normal capitalize mt-1 mb-5  text-[48px]">
+                    Presale
+                  </h1>
+                </div>
                 <div className="flex items-center gap-5 mt-12">
                   <h2 className="text-2xl font-normal text-[#FFC727]">
                     Presale Stage
@@ -197,106 +196,62 @@ export default function App() {
                       </span>
                     </h2>
                     <p className="text-2xl font-normal text-white font-poppins">
-                      Up to 200,000,000 $GEMS up for grabs at 67% gain
+                      Up to 200,000,000 $GEMS up for grabs at 67% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 2</h2>
                     <p className="text-2xl font-normal text-white font-poppins">
-                      Up to 300,000,000 $GEMS up for grabs at 50% gain
+                      Up to 300,000,000 $GEMS up for grabs at 50% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 3</h2>
                     <p className="text-2xl font-normal text-white font-poppins">
-                      Up to 400,000,000 $GEMS up for grabs at 33% gain
+                      Up to 400,000,000 $GEMS up for grabs at 33% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 4</h2>
                     <p className="text-2xl font-normal text-white font-poppins">
-                      Up to 500,000,000 $GEMS up for grabs at 25% gain
+                      Up to 500,000,000 $GEMS up for grabs at 23% discount
                     </p>
                   </li>
                   <li>
                     <h2 className="text-white text-2xl font-normal">Stage 5</h2>
                     <p className="text-2xl font-normal text-white font-poppins">
-                      Up to 600,000,000 $GEMS up for grabs at 25% gain
+                      Up to 600,000,000 $GEMS up for grabs at 13% discount
                     </p>
                   </li>
                 </ul>
+                <div className="flex items-center gap-5 mt-12">
+                  <Button
+                    type={"beta"}
+                    soundPath={"/audio/button2.mp3"}
+                    label={"Join The Pre-sale Now"}
+                    onClick={openIFrameModal}
+                    className={"bg-[#FF0000]"}
+                  />
+                  <button
+                    className="underline  text-base font-normal"
+                    onClick={openPrizeModal}
+                  >
+                    tokenomics and presale details
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+          <div className="w-full overflow-hidden lg:px-0 px-6  col-span-2 flex  justify-end ">
+            <HowItWorks items={carouselItems} />
+          </div>
         </div>
-        {/* <div className="mt-9  lg:hidden block">
-          <h3 className="text-2xl font-normal text-[#FFC727] lg:text-left text-center">
-            Presale Rounds
-          </h3>
-          <ul className=" grid lg:grid-cols-3 grid-cols-1  gap-5 lg:flex-nowrap   justify-between lg:mt-0 mt-10">
-            <li>
-              <h2 className="text-2xl font-normal text-[#E5B323] flex items-center gap-3">
-                Stage 1{" "}
-                <span className=" w-[64px] bg-[#FF0000] rounded-[13px] text-xs px-1 py-[1px] text-white font-poppins ">
-                  OnGoing
-                </span>
-              </h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 200,000,000 $GEMS up for grabs at 67% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 2</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 300,000,000 $GEMS up for grabs at 50% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 3</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 400,000,000 $GEMS up for grabs at 33% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 4</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 500,000,000 $GEMS up for grabs at 25% discount
-              </p>
-            </li>
-            <li>
-              <h2 className="text-white text-2xl font-normal">Stage 5</h2>
-              <p className="text-sm font-normal text-white font-poppins">
-                Up to 600,000,000 $GEMS up for grabs at 25% discount
-              </p>
-            </li>
-          </ul>
-        </div> */}
+
         <div className=" absolute right-0  -bottom-12">
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
-      <section className="bg-[#27297A] lg:px-14 px-3  section-2 py-20 relative page   h-full ">
-        <div className="flex  lg:flex-row flex-col justify-between items-center gap-10">
-          <div className="w-full">
-            <h1>
-              10% of all revenue will be dedicated to supporting those in
-              need...
-            </h1>
-            <div className="mt-12">
-              <Button
-                type={"beta"}
-                soundPath={"/audio/button2.mp3"}
-                label={"Join The Pre-sale"}
-                onClick={openIFrameModal}
-                className={"bg-[#FF0000]"}
-              />
-            </div>
-          </div>
-          <div className="w-full flex justify-end">
-            <HowItWorks items={carouselItems} />
-          </div>
-        </div>
-      </section>
+
       <section
         className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page"
         ref={sectionRefs[2]}
@@ -455,127 +410,28 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section className="bg-[#27297A] py-5 px-8 lg:px-0 page" id="roadMap">
-        <div className="flex justify-center  ">
+      <section
+        className="bg-[#27297A] py-5 pb-24 px-8 lg:px-0 page relative"
+        id="roadMap"
+      >
+        <div className="flex justify-center   ">
           <h1 className="lg:text-[100px] text-5xl font-normal text-white mb-16">
             ROADMAP
           </h1>
         </div>
-        <div className="flex justify-center ">
-          <div className="flex  lg:flex-row flex-col justify-center items-center w-[1200px] relative lg:h-[1685px] lg:pt-[20.4rem] pt-3  lg:gap-0 gap-6">
-            <div className="lg:absolute relative lg:left-[6.9rem] lg:top-0">
-              <RoadMapCard
-                direction={"right"}
-                imgLink={"road1.png"}
-                content={
-                  <ul className="px-8 py-6 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-                    <li>
-                      Developed a gamified design strategy and structured
-                      ongoing game integration.
-                    </li>
-                    <li>
-                      Brainstormed and designed new game concepts using the
-                      Octalysis Framework.
-                    </li>
-                    <li>
-                      Defined and visualized game structure, including meta-game
-                      features and game loops.
-                    </li>
-                  </ul>
-                }
-              />
-            </div>
 
-            <div className="lg:absolute relative lg:left-[6.9rem] lg:top-[54%]">
-              <RoadMapCard
-                direction={"right"}
-                small={true}
-                imgLink={"road2.png"}
-                content={
-                  <ul className="px-8 py-6 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-                    <li>Game Soft Launch on Webgl and Mobile</li>
-                    <li>Token airdrop, community sale, and IDO</li>
-                    <li>
-                      Introduction of revenue-generating features like
-                      advertising.
-                    </li>
-                  </ul>
-                }
-              />
-            </div>
-            <div className="w-[5px]  bg-[#FF0000] lg:relative h-full  ">
-              <div className="w-[122px] h-[122px] bg-[#FF0000] rounded-full absolute left-1/2 -translate-x-1/2 top-48  justify-center items-center hidden lg:flex">
-                <div>
-                  <img src="/images/M.png" alt="" />
-                </div>
-              </div>
-              <div className="w-[122px] h-[122px] bg-[#FF0000] rounded-full absolute left-1/2 -translate-x-1/2 top-[45%] hidden lg:flex justify-center items-center">
-                <div>
-                  <img src="/images/M.png" alt="" />
-                </div>
-              </div>
+        <RoadMapSlider />
 
-              <div className="w-[122px] h-[122px] bg-[#FF0000] rounded-full absolute left-1/2 -translate-x-1/2 bottom-36 hidden lg:flex justify-center items-center">
-                <div>
-                  <img src="/images/M.png" alt="" />
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:absolute relative lg:right-16 lg:top-[25%]">
-              <RoadMapCard
-                direction={"left"}
-                large={true}
-                imgLink={"road3.png"}
-                content={
-                  <ul className="px-8 py-6 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-                    <li>
-                      {" "}
-                      Developed a multiplayer MVP with all game mechanics such
-                      property management, building renting and bankruptcy.
-                    </li>
-                    <li>
-                      Established the foundation for UX/UI design and game
-                      economy balance and P2E sustainability
-                    </li>
-                    <li>
-                      Created concept art for characters, board game, and city
-                      environments.
-                    </li>
-                    <li>
-                      3d modelling, rigging & animation of characters and board
-                      & environments modelling.
-                    </li>
-                  </ul>
-                }
-              />
-            </div>
-
-            <div className="lg:absolute relative lg:right-16 lg:-bottom-[22.8rem]">
-              <RoadMapCard
-                direction={"left"}
-                imgLink={"road5.png"}
-                content={
-                  <ul className="px-8 pt-14 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-                    <li>
-                      {" "}
-                      Launch of AR/VR characters with Gen AI and community-led
-                      growth strategies.
-                    </li>
-                    <li>
-                      Rollout of guilds, real estate features, and co-ownership
-                      of luxury properties for top players
-                    </li>
-                    <li>New special arenas and sponsored eSports events.</li>
-                  </ul>
-                }
-              />
-            </div>
-          </div>
-        </div>
         {isOpen && <VideoModal />}
         {isIframeOpen && <IFrameModal />}
         {isOpenPrizeModal && <WhyIsPriceDifferent />}
+      </section>
+      <section>
+        <div className="flex justify-center items-center">
+          <h1 className=" text-[48px] leading-[48.61px] text-center lg:max-w-[665px] ">
+            10% of all revenue will be dedicated to supporting those in need...
+          </h1>
+        </div>
       </section>
     </div>
   );
