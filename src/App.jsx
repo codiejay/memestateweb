@@ -61,20 +61,20 @@ export default function App() {
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="grid lg:grid-cols-2 justify-between items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center">
-              <div className="banner-content flex w-full ">
+              <div className="banner-content flex w-full lg:justify-start justify-center ">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
                   className="w-[80%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8">
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8 lg:text-start text-center">
                 Secure $GEMS at exclusive presale pricing and maximize your ROI
                 while powering the first sustainable P2E model, merging fun and
                 financial potential.
               </p>
 
-              <div className="flex lg:flex-row flex-col  items-start w-full  gap-5   ">
+              <div className="flex lg:flex-row flex-col  lg:items-start items-center w-full  gap-5   ">
                 <div className="banner-content">
                   <ButtonWithSound
                     type={"beta"}
