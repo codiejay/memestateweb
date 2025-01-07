@@ -107,7 +107,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="lg:px-16 px-8 py-8 w-full">
-        <div className="grid lg:grid-cols-2 grid-cols-1  items-start w-full gap-8 justify-between">
+        <div className="grid lg:grid-cols-2 grid-cols-1  items-start w-full gap-8 justify-between pt-16">
           <div className="flex flex-col items-center gap-6 bg-[#A2A4DF] border-[6px] border-[#000000] rounded-[32px] px-10 py-6">
             <div className="h-[244px]">
               <img src="/images/wheel.png" alt="wheel" />
