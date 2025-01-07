@@ -476,33 +476,25 @@ export default function App() {
                       <h2 className="text-xl text-[#FF0000] font-normal">
                         Token Supply
                       </h2>
-                      <p className="text-xl text-[#1F1F1F] font-poppins ">
-                        10,000,000,000
-                      </p>
+                      <p className="text-xl text-[#1F1F1F]  ">10,000,000,000</p>
                     </div>
                     <div className="flex gap-4 items-center">
                       <h2 className="text-xl text-[#FF0000] font-normal">
                         Fully Diluted Value (US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F] font-poppins ">
-                        3,000,000.00
-                      </p>
+                      <p className="text-xl text-[#1F1F1F]  ">3,000,000.00</p>
                     </div>
                     <div className="flex gap-4 items-center">
                       <h2 className="text-xl text-[#FF0000] font-normal">
                         Listing price (US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F] font-poppins ">
-                        0.0003
-                      </p>
+                      <p className="text-xl text-[#1F1F1F]  ">0.0003</p>
                     </div>
                     <div className="flex gap-4 items-center">
                       <h2 className="text-xl text-[#FF0000] font-normal">
                         Initial Market Cap(US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F] font-poppins ">
-                        420,000.00
-                      </p>
+                      <p className="text-xl text-[#1F1F1F]  ">420,000.00</p>
                     </div>
                   </div>
                   <div className="mt-8">
