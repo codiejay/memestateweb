@@ -90,7 +90,7 @@ const RoadMapSlider = () => {
             </ul>
           }
           image={"road1.png"}
-          maxWidth={"334px"}
+          maxWidth={"534px"}
         />
 
         <GlassCard

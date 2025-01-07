@@ -7,7 +7,7 @@ const GlassCard = ({ maxWidth, image, content }) => {
 
       <div>
         <div
-          className={`roadMapCard h-[600px]  lg:px-0 px-5  lg:py-0 py-8 glassCardContent`}
+          className={`roadMapCard h-[540px]  lg:px-0 px-5  lg:py-0 py-8 glassCardContent`}
           style={{ maxWidth: maxWidth }}
         >
           {content}
