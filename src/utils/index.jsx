@@ -129,83 +129,99 @@ export function useWindowSize() {
 export const contentList = [
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
-        Growing User <br className="lg:block  hidden" /> Base
+      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+        Growing User Base
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Join the growing Memestate community and turn every dice roll into a
-        thrilling experience!
+      <p className="max-w-2xl font-poppins my-5  text-base lg:text-left text-center">
+        As more players join the Memestate community, the ecosystem grows
+        stronger. Every new player adds to the excitement and engagement,
+        creating a vibrant and competitive environment. A larger user base means
+        more activity across the platform, driving interaction, retention, and
+        overall value for both players and the ecosystem.
       </p>
     ),
     image: "/images/meme00.gif",
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
-        increased advertisement
-        <br className="lg:block  hidden" />
-        demand and prize table volume
+      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+        increased advertisement demand and prize table volume
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Drive ad demand with targeted placements tied to user activity and
-        community engagement.
+      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+        The reward pool is directly funded by 100% of advertising revenue and
+        50% of prize table revenue. As the user base grows, demand for ad
+        placements increases, since advertisers target a more engaged and active
+        audience. Additionally, free players who earn rewards are incentivized
+        to use their winnings to participate in the prize table, which drives up
+        prize table volume and generates even more revenue. This dynamic creates
+        a cycle where player engagement fuels both ad demand and prize table
+        growth.
       </p>
     ),
     image: "/images/meme1.gif",
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
-        increased advertisement
-        <br className="lg:block  hidden" />
-        AND GAME REVENUE
+      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+        increased advertisement AND GAME REVENUE
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Maximize ad revenue through strategic placements and gamified
-        promotions. Increase game earnings with play-to-earn mechanics and
-        in-game purchases.
+      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+        The integration of strategic ad placements ensures higher ad revenue as
+        the user base grows. These ads are seamlessly tied to gameplay and
+        community activity, making them relevant and engaging. At the same time,
+        the game itself generates revenue through play-to-earn mechanics,
+        in-game purchases, and participation fees for the prize table. This
+        dual-revenue system ensures that both the game and the ecosystem remain
+        profitable and sustainable while continuing to grow.
       </p>
     ),
     image: "/images/meme2.gif",
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
-        bigger rewards pool for
-        <br className="lg:block  hidden" />
-        free players
+      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+        Bigger Rewards Pool for Free Player
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        Unlock bigger rewards for free players with community-driven prize
-        pools. Boost participation through play-to-earn opportunities and token
-        incentives.
+      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+        With 100% of advertising revenue and 50% of prize table revenue feeding
+        the reward pool, free players benefit from progressively larger rewards
+        as the system grows. These increased rewards encourage participation, as
+        free players are drawn to the opportunity to earn and reinvest their
+        winnings. By using their rewards to compete on the prize table, they
+        further boost prize table volume, which in turn increases overall
+        revenue and feeds back into the reward system.
       </p>
     ),
     image: "/images/meme3.gif",
   },
   {
     title: (
-      <h2 className="lg:text-[64px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-5 mt-16 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
         The cycle continues progressively
       </h2>
     ),
 
     text: (
-      <p className="max-w-md font-poppins my-5 lg:text-2xl text-base lg:text-left text-center">
-        The rewards attract more players, who in turn, boost engagement and
-        revenue further
+      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+        The reward system is designed to be self-reinforcing. Increased rewards
+        attract more players, who boost engagement and revenue through ad views,
+        prize table participation, and in-game purchases. This additional
+        revenue feeds back into the reward pool, creating bigger prizes and
+        greater incentives for new and existing players. This cycle of growth
+        and reinvestment leads to a continuous upward spiral, driving the
+        Memestate ecosystem to new heights.
       </p>
     ),
     image: "/images/meme4.gif",
