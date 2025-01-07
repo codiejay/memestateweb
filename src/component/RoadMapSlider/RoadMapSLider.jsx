@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
@@ -56,63 +56,36 @@ function SamplePrevArrow(props) {
 }
 
 const RoadMapSlider = () => {
-  const settings = {
-    dots: false,
-    infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    variableWidth: true,
-
-    // cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-
-          variableWidth: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
-          variableWidth: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
     <div className="relative lg:px-0 px-3 ">
-      {/* <div className="w-full h-1 bg-[#FF0000] absolute top-52 "></div> */}
-
-      <Slider {...settings}>
+      <div className="flex lg:flex-row flex-col justify-center lg:items-start gap-9 items-center ">
         <GlassCard
           content={
-            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-              <li className="text-xl font-normal">
-                Developed a gamified design strategy and structured ongoing game
-                integration.
+            <ul className="lg:px-6 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+              <li className="text-base font-normal">
+                Designed gamified strategies and integrated ongoing game
+                features.
               </li>
-              <li className="text-xl font-normal">
-                Brainstormed and designed new game concepts using the Octalysis
-                Framework.
+              <li className="text-base font-normal">
+                Developed new game concepts using the Octalysis Framework.
               </li>
-              <li className="text-xl font-normal">
-                Defined and visualized game structure, including meta-game
-                features and game loops.
+              <li className="text-base font-normal">
+                Defined game structure, meta-game features, and loops.
+              </li>
+              <li className="text-base font-normal">
+                Built a multiplayer MVP with mechanics like property management
+                and bankruptcy.
+              </li>
+              <li className="text-base font-normal">
+                Established UX/UI design, game economy balance, and P2E
+                sustainability.
+              </li>
+              <li className="text-base font-normal">
+                Created concept art for characters, board, and environments.
+              </li>
+              <li className="text-base font-normal">
+                {" "}
+                Modeled, rigged, and animated 3D characters and environments.
               </li>
             </ul>
           }
@@ -123,65 +96,43 @@ const RoadMapSlider = () => {
         <GlassCard
           content={
             <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-              <li className="text-xl font-normal">
-                Developed a multiplayer MVP with all game mechanics such
-                property management, building renting and bankruptcy.
+              <li className="text-base font-normal">
+                Presale Token launch Game Soft Launch on Webgl and Mobile
               </li>
-              <li className="text-xl font-normal">
-                Established the foundation for UX/UI design and game economy
-                balance and P2E sustainability
-              </li>
-              <li className="text-xl font-normal">
-                Created concept art for characters, board game, and city
-                environments.
-              </li>
-              <li className="text-xl font-normal">
-                3d modelling, rigging & animation of characters and board &
-                environments modelling.
+              <li className="text-base font-normal">
+                Introduction of revenue-generating features like advertising and
+                prize table model
               </li>
             </ul>
           }
           image={"road3.png"}
           maxWidth={"523px"}
         />
-        <GlassCard
-          content={
-            <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-              <li className="text-xl font-normal">
-                Game Soft Launch on Webgl and Mobile
-              </li>
-              <li className="text-xl font-normal">
-                Token airdrop, community sale, and IDO
-              </li>
-              <li className="text-xl font-normal">
-                Introduction of revenue-generating features like advertising.
-              </li>
-            </ul>
-          }
-          image={"road2.png"}
-          maxWidth={"334px"}
-        />
 
         <GlassCard
           content={
             <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
-              <li className="text-xl font-normal">
-                Launch of AR/VR characters with Gen AI and community-led growth
-                strategies.
+              <li className="text-base font-normal">
+                AR/VR characters powered by Gen AI - bring your meme to life!
               </li>
-              <li className="text-xl font-normal">
-                Rollout of guilds, real estate features, and co-ownership of
-                luxury properties for top players
+              <li className="text-base font-normal">
+                Implement community-led growth game strategies
               </li>
-              <li className="text-xl font-normal">
-                New special arenas and sponsored eSports events.
+              <li className="text-base font-normal">
+                Guild & Real Estate roll out Co-ownership of “luxury properties”
+                for Top-performing players
               </li>
+              <li className="text-base font-normal">
+                New special arenas where players can compete using unique
+                collaterals Sponsored Esports events
+              </li>
+              <li>Sponsored Esports events</li>
             </ul>
           }
           image={"road4.png"}
           maxWidth={"334px"}
         />
-      </Slider>
+      </div>
       <div className="h-24"></div>
     </div>
   );

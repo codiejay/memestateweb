@@ -19,6 +19,7 @@ import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDiffe
 import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
 import GlassCard from "./component/GlassCard/GlassCard";
 import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,12 +96,17 @@ export default function App() {
                 </div>
 
                 <div className="banner-content">
-                  <Button
-                    type={"alpha"}
-                    soundPath={"/audio/button2.mp3"}
-                    label={"Founder’s Explainer"}
-                    onClick={openModal}
-                  />
+                  <a
+                    href="https://www.loom.com/share/6ed0ec4b93ab4245b91dc65cf0891579"
+                    target="_blank"
+                  >
+                    <Button
+                      type={"alpha"}
+                      soundPath={"/audio/button2.mp3"}
+                      label={"Founder’s Explainer"}
+                      // onClick={openModal}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -464,36 +470,43 @@ export default function App() {
                   </p>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 mt-10 gap-6">
-                  <div>
-                    <h2 className="text-3xl text-[#FF0000] font-normal">
-                      Early Adopter Incentives
-                    </h2>
-                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
-                      Investors in earlier stages enjoy a significant gains
-                      compared to later stages or public listing. This rewards
-                      those who show confidence in the project early on.
-                    </p>
+                <div>
+                  <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-6">
+                    <div className="flex gap-4 items-center">
+                      <h2 className="text-xl text-[#FF0000] font-normal">
+                        Token Supply
+                      </h2>
+                      <p className="text-xl text-[#1F1F1F] font-poppins ">
+                        10,000,000,000
+                      </p>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                      <h2 className="text-xl text-[#FF0000] font-normal">
+                        Fully Diluted Value (US$)
+                      </h2>
+                      <p className="text-xl text-[#1F1F1F] font-poppins ">
+                        3,000,000.00
+                      </p>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                      <h2 className="text-xl text-[#FF0000] font-normal">
+                        Listing price (US$)
+                      </h2>
+                      <p className="text-xl text-[#1F1F1F] font-poppins ">
+                        0.0003
+                      </p>
+                    </div>
+                    <div className="flex gap-4 items-center">
+                      <h2 className="text-xl text-[#FF0000] font-normal">
+                        Initial Market Cap(US$)
+                      </h2>
+                      <p className="text-xl text-[#1F1F1F] font-poppins ">
+                        420,000.00
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="text-3xl text-[#FF0000] font-normal">
-                      Sustainable Token Economics
-                    </h2>
-                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
-                      The pricing model in stages ensures a healthy distribution
-                      of tokens and generates funds to support development,
-                      marketing, and liquidity.
-                    </p>
-                  </div>
-                  <div>
-                    <h2 className="text-3xl text-[#FF0000] font-normal">
-                      Risk-Reward Balance
-                    </h2>
-                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
-                      We realize that early investors take on more risk as the
-                      project is in its infancy. To balance this, they receive
-                      tokens at a lower price.
-                    </p>
+                  <div className="mt-8">
+                    <img src="/images/table.png" alt="" />
                   </div>
                 </div>
               )
