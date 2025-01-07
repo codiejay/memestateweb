@@ -20,7 +20,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
               <img src="/images/closeblack.svg" alt="" className="h-14" />
             </button>
           </div>
-          <div className="flex gap-2">
+          <div className="flex lg:flex-row flex-col items-center gap-2">
             <div className="w-[185px] h-[172px] rounded-[10px] overflow-hidden">
               <img src={img} alt={alt} />
             </div>

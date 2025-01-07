@@ -4,7 +4,7 @@ const WhyIsPriceDifferent = ({ title, content }) => {
   const { closeModal } = useDifferentPrize();
   return (
     <div
-      className="fixed  w-screen z-[9999999] justify-center flex  h-screen    top-0 items-center max-w-[1600px] mx-auto"
+      className="fixed  w-screen z-[9999999] justify-center flex  h-screen  left-0   top-0 items-center max-w-[1600px] mx-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
     >
       <div className="border-[12px] border-[#282B7F]   h-fit max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-white ">

@@ -95,7 +95,11 @@ const Navbar = () => {
 
             <ul className="flex flex-col md:flex-row md:justify-center gap-6 md:gap-16">
               {links.map((link, index) => (
-                <li key={index} className="text-xl font-normal text-white">
+                <li
+                  key={index}
+                  className="text-xl font-normal text-white"
+                  onClick={closeMenu}
+                >
                   {link.external ? (
                     <a
                       href={link.path}
@@ -112,6 +116,7 @@ const Navbar = () => {
                       smooth
                       className="text-white hover:underline"
                       aria-label={link.name}
+                      onClick={closeMenu}
                     >
                       {link.name}
                     </HashLink>
@@ -120,6 +125,7 @@ const Navbar = () => {
                       to={link.path}
                       className="text-white hover:underline"
                       aria-label={link.name}
+                      onClick={closeMenu}
                     >
                       {link.name}
                     </Link>
