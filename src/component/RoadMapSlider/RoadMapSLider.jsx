@@ -57,8 +57,8 @@ function SamplePrevArrow(props) {
 
 const RoadMapSlider = () => {
   return (
-    <div className="relative lg:px-0 px-3 ">
-      <div className="flex lg:flex-row flex-col justify-center lg:items-start gap-9 items-center ">
+    <div className="relative lg:px-0 px-3  h-full">
+      <div className="flex lg:flex-row flex-col justify-center lg:items-start gap-9 items-center  h-full">
         <GlassCard
           content={
             <ul className="lg:px-6 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
@@ -106,7 +106,7 @@ const RoadMapSlider = () => {
             </ul>
           }
           image={"road3.png"}
-          maxWidth={"523px"}
+          maxWidth={"334px"}
         />
 
         <GlassCard
@@ -126,7 +126,9 @@ const RoadMapSlider = () => {
                 New special arenas where players can compete using unique
                 collaterals Sponsored Esports events
               </li>
-              <li>Sponsored Esports events</li>
+              <li className="text-base font-normal">
+                Sponsored Esports events
+              </li>
             </ul>
           }
           image={"road4.png"}
