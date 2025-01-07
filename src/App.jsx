@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./component/Button/Button";
 import CountDown from "./component/CountDown/CountDown";
 import HowItWorks from "./component/HowItWorks/HowItWorks";
@@ -26,6 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const { openModal, isOpen } = useModal();
+  const [selectedModal, setSelectedModal] = useState("");
   const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
   const { openModal: openPrizeModal, isOpen: isOpenPrizeModal } =
     useDifferentPrize();
@@ -54,6 +55,14 @@ export default function App() {
       }
     );
   }, []);
+  const handleExplanationModal = () => {
+    setSelectedModal("explanation");
+    openPrizeModal();
+  };
+  const handleTokenoMics = () => {
+    setSelectedModal("tikenomic");
+    openPrizeModal();
+  };
 
   return (
     <div ref={container}>
@@ -185,9 +194,9 @@ export default function App() {
                   </h2>
                   <button
                     className="underline  text-lg font-normal"
-                    onClick={openPrizeModal}
+                    onClick={handleExplanationModal}
                   >
-                    Why is price on presale different?
+                    Why does the presale price show $0.001 instead of $0.0001?
                   </button>
                 </div>
 
@@ -238,7 +247,7 @@ export default function App() {
                   />
                   <button
                     className="underline  text-lg font-normal "
-                    onClick={openPrizeModal}
+                    onClick={handleTokenoMics}
                   >
                     tokenomics and presale details
                   </button>
@@ -428,7 +437,69 @@ export default function App() {
 
         {isOpen && <VideoModal />}
         {isIframeOpen && <IFrameModal />}
-        {isOpenPrizeModal && <WhyIsPriceDifferent />}
+        {isOpenPrizeModal && (
+          <WhyIsPriceDifferent
+            title={
+              selectedModal === "explanation"
+                ? "Why does the presale price show $0.001 instead of $0.0001?"
+                : "Tokenomics and presale"
+            }
+            content={
+              selectedModal === "explanation" ? (
+                <div className="mt-10 ">
+                  <p className="text-[24px] font-normal text-[#1F1F1F] mb-8 font-poppins">
+                    Don’t worry, you’re still getting your tokens at $0.0001.
+                    Here’s why:
+                  </p>
+                  <p className="text-[24px] font-normal text-[#1F1F1F] my-4 font-poppins">
+                    The $0.001 price reflects the 10% of tokens that will be
+                    unlocked at the Token Generation Event (TGE), as outlined in
+                    the tokenomics. The remaining 90% will be sent to you
+                    manually later.
+                  </p>
+                  <p className="text-[24px] font-normal text-[#1F1F1F] my-4 font-poppins">
+                    The higher price is due to technical limitations in the
+                    presale software, which doesn’t support vesting. Rest
+                    assured, the total cost matches the tokenomics plan.
+                  </p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 mt-10 gap-6">
+                  <div>
+                    <h2 className="text-3xl text-[#FF0000] font-normal">
+                      Early Adopter Incentives
+                    </h2>
+                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
+                      Investors in earlier stages enjoy a significant gains
+                      compared to later stages or public listing. This rewards
+                      those who show confidence in the project early on.
+                    </p>
+                  </div>
+                  <div>
+                    <h2 className="text-3xl text-[#FF0000] font-normal">
+                      Sustainable Token Economics
+                    </h2>
+                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
+                      The pricing model in stages ensures a healthy distribution
+                      of tokens and generates funds to support development,
+                      marketing, and liquidity.
+                    </p>
+                  </div>
+                  <div>
+                    <h2 className="text-3xl text-[#FF0000] font-normal">
+                      Risk-Reward Balance
+                    </h2>
+                    <p className="text-2xl text-[#1F1F1F] font-poppins pt-6">
+                      We realize that early investors take on more risk as the
+                      project is in its infancy. To balance this, they receive
+                      tokens at a lower price.
+                    </p>
+                  </div>
+                </div>
+              )
+            }
+          />
+        )}
       </section>
       <section className="h-[40vh] relative lg:block hidden">
         <div className="flex justify-center items-center h-full pt-10 absolute top-16 w-full">

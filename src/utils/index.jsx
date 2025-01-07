@@ -13,8 +13,8 @@ export const carouselItems = [
       </h2>
 
       <p className="lg:text-2xl text-base font-normal  text-white  mt-3 font-poppins ">
-        To ensure sufficient liquidity to support smooth trading and token
-        utility.
+         $210,000 of the $416,000 raised will be allocated to the initial
+        liquidity pool to ensure smooth trading and token stability.
       </p>
     </div>
   </div>,
@@ -28,8 +28,8 @@ export const carouselItems = [
       </h2>
 
       <p className="lg:text-2xl text-base font-normal  text-white  mt-3  font-poppins">
-        To enhance gameplay experience and Integrate advanced gamified mechanics
-        to attract players.
+        Over $150,000 will be used to complete game development, with 50% of the
+        work already finished and paid for.
       </p>
     </div>
   </div>,
@@ -38,13 +38,11 @@ export const carouselItems = [
       <div>
         <img src="/images/wallet.png" alt="Image 2" className=" h-[78px]" />
       </div>
-      <h2 className="text-[32px] text-white my-1">
-        Marketing and User Acquisition
-      </h2>
+      <h2 className="text-[32px] text-white my-1">Marketing and Growth</h2>
 
       <p className="lg:text-2xl font-normal  text-white  mt-3  font-poppins ">
-        To drive awareness and adoption through targeted campaigns to onboard
-        more players/investors into the ecosystem.
+        The rest of the funds will be used for marketing campaigns to boost
+        awareness, attract players and investors, and grow the ecosystem.
       </p>
     </div>
   </div>,
