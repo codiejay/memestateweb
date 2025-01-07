@@ -142,7 +142,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="h-ful lg:px-16 px-8 py-16 w-full ">
+      <section className="h-ful lg:px-16 px-8 py-16 w-full  hidden">
         <div className="flex justify-center flex-col items-center gap-8 bg-white rounded-[22px] border-[6px] border-[#000000]  px-10 py-8 ">
           <h2 className="text-[46px] font-normal text-[#010101] ">
             Who we are
@@ -170,7 +170,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className=" lg:px-16 px-8 py-16 relative h-[90vh]   page">
+      <section className=" lg:px-16 px-8 py-16 relative h-[90vh]   page hidden">
         <div className=" flex-col mb-4   items-center  justify-center flex  pt-14">
           <h1 className="text-white font-normal capitalize mb-2 text-[64px]">
             Join the
