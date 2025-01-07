@@ -10,7 +10,7 @@ export const links = [
   { name: "Roadmap", path: "/#roadMap" }, // HashLink for internal navigation
   {
     name: "Pitch Deck",
-    path: "/pdf/pitchdeck.pdf",
+    path: "/pdf/Memestate Pitchdeck.pdf",
     external: true,
   },
   {
