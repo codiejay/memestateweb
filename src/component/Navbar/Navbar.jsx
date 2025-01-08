@@ -20,7 +20,7 @@ export const links = [
   },
 ];
 
-const SOCIAL_ICONS = [
+export const SOCIAL_ICONS = [
   { name: "X", icon: "/images/x.svg", link: "https://x.com/memestate_" },
   {
     name: "Tiktok",

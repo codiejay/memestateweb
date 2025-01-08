@@ -1,5 +1,5 @@
 import { socialFooterIcon } from "../../utils";
-import { links } from "../Navbar/Navbar";
+import { links, SOCIAL_ICONS } from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -52,7 +52,7 @@ const Footer = () => {
           </ul>
         </nav>
         <div className="flex gap-4 justify-center my-3">
-          {socialFooterIcon.map((icon, index) => (
+          {SOCIAL_ICONS.map((icon, index) => (
             <a href={icon.link} key={index}>
               <img src={icon.icon} alt={icon.name} />
             </a>
