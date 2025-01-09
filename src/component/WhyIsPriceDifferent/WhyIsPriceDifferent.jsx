@@ -14,8 +14,8 @@ const WhyIsPriceDifferent = ({ title, content }) => {
               <img src="/images/closeblack.svg" alt="" className="h-14" />
             </button>
           </div>
-          <div className="py-6 px-10">
-            <h1 className="text-black text-5xl">{title}</h1>
+          <div className="py-6 ">
+            <h1 className="text-black text-5xl px-10">{title}</h1>
             {content}
           </div>
         </div>

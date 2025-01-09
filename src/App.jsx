@@ -471,7 +471,7 @@ export default function App() {
                 </div>
               ) : (
                 <div>
-                  <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-6">
+                  <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-6 px-10">
                     <div className="flex gap-4 items-center">
                       <h2 className="text-xl text-[#FF0000] font-normal">
                         Token Supply
@@ -497,8 +497,15 @@ export default function App() {
                       <p className="text-xl text-[#1F1F1F]  ">420,000.00</p>
                     </div>
                   </div>
-                  <div className="mt-8">
-                    <img src="/images/table.png" alt="" />
+                  <div className=" relative">
+                    <div className="absolute left-0">
+                      <img src="./images/liveRightNow.png" alt="" />
+                    </div>
+                  </div>
+                  <div className="px-10">
+                    <div className="mt-12">
+                      <img src="/images/table.png" alt="" />
+                    </div>
                   </div>
                 </div>
               )
