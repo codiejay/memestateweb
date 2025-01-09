@@ -498,8 +498,12 @@ export default function App() {
                     </div>
                   </div>
                   <div className=" relative">
-                    <div className="absolute left-0">
-                      <img src="./images/liveRightNow.png" alt="" />
+                    <div className="absolute left-0 mt-1 mr-5">
+                      <img
+                        src="./images/liveRightNow.png"
+                        alt=" "
+                        className="w-56"
+                      />
                     </div>
                   </div>
                   <div className="px-10">
