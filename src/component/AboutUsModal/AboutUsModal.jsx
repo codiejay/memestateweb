@@ -10,7 +10,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
     >
       <div
         className={
-          "border-[12px]  lg:min-h-[470px] min-h-full h-fit max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-[#FFFDF1] px-6 py-8"
+          "border-[12px]  lg:min-h-[470px] min-h-full lg:h-fit  h-full max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-[#FFFDF1] px-6 py-8"
         }
         style={{ borderColor: `${borderColor}` }}
       >
