@@ -29,7 +29,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
               <img src={img} alt={alt} />
             </div>
             <div>
-              <h2 className="lg:text-[64px] text-2xl text-black font-normal lg:text-left text-center">
+              <h2 className="lg:text-[64px] text-2xl text-black font-normal lg:text-left text-center mb-6">
                 {name}
               </h2>
               <p className="lg:text-[40px] text-xl text-[#FF0000] lg:text-left text-center">
@@ -37,7 +37,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
               </p>
             </div>
           </div>
-          <p className="lg:text-[26px] text-3lg font-normal text-black font-poppins overflow-auto h-[20vh]   mt-4">
+          <p className="lg:text-[26px] text-3lg font-normal text-black font-poppins overflow-auto lg:h-[unset] h-[20vh]   mt-4">
             {content}
           </p>
         </div>
