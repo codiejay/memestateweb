@@ -11,11 +11,17 @@ const WhyIsPriceDifferent = ({ title, content }) => {
         <div className="w-full border-[10px] border-white h-full relative">
           <div className="absolute right-4 z-50">
             <button onClick={closeModal}>
-              <img src="/images/closeblack.svg" alt="" className="h-14" />
+              <img
+                src="/images/closeblack.svg"
+                alt=""
+                className="lg:h-14 h-8"
+              />
             </button>
           </div>
           <div className="py-6 ">
-            <h1 className="text-black text-4xl px-10">{title}</h1>
+            <h1 className="text-black lg:text-4xl text-xl lg:px-10 px-2">
+              {title}
+            </h1>
             {content}
           </div>
         </div>
