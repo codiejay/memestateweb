@@ -452,18 +452,18 @@ export default function App() {
             }
             content={
               selectedModal === "explanation" ? (
-                <div className="mt-10 px-10 ">
+                <div className="mt-10 lg:px-10 px-4">
                   <p className="lg:text-[24px] text-base font-normal text-[#1F1F1F] mb-8 font-poppins">
                     Don’t worry, you’re still getting your tokens at $0.0001.
                     Here’s why:
                   </p>
-                  <p className="text-[24px] font-normal text-[#1F1F1F] my-4 font-poppins">
+                  <p className="lg:text-[24px] text-2xl font-normal text-[#1F1F1F] my-4 font-poppins">
                     The $0.001 price reflects the 10% of tokens that will be
                     unlocked at the Token Generation Event (TGE), as outlined in
                     the tokenomics. The remaining 90% will be sent to you
                     manually later.
                   </p>
-                  <p className="text-[24px] font-normal text-[#1F1F1F] my-4 font-poppins">
+                  <p className="lg:text-[24px] text-2xl font-normal text-[#1F1F1F] my-4 font-poppins">
                     The higher price is due to technical limitations in the
                     presale software, which doesn’t support vesting. Rest
                     assured, the total cost matches the tokenomics plan.
