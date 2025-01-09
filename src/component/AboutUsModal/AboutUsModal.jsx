@@ -5,7 +5,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
 
   return (
     <div
-      className=" fixed w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-0 left-0 items-center max-w-[1600px] mx-auto"
+      className=" fixed w-screen z-[9999999] justify-center flex  lg:h-screen h-full top-0 left-0 items-center max-w-[1600px] mx-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
     >
       <div
