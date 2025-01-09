@@ -56,7 +56,7 @@ const HowItWorks = ({ items }) => {
       {/* Carousel Navigation */}
 
       {/* Carousel Counter */}
-      <div className="absolute lg:bottom-8  bottom-1 flex  text-white text-xl items-center justify-between w-[80%]  px-4">
+      <div className="lg:absolute relative lg:bottom-8  flex  text-white text-xl items-center justify-between w-[80%]  px-4">
         <div className=" flex gap-6  items-center">
           <button
             onClick={handlePrevious}

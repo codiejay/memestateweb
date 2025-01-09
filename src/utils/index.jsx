@@ -169,7 +169,8 @@ export const contentList = [
   {
     title: (
       <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
-        increased advertisement AND GAME REVENUE
+        increased advertisement AND <br className="lg:block hidden" /> GAME
+        REVENUE
       </h2>
     ),
 

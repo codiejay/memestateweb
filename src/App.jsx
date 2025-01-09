@@ -194,12 +194,12 @@ export default function App() {
                     Presale
                   </h1>
                 </div>
-                <div className="flex items-center gap-5 mt-12">
+                <div className="flex lg:flex-row flex-col items-center gap-5 mt-12">
                   <h2 className="text-2xl font-normal text-[#FFC727]">
                     Presale Stage
                   </h2>
                   <button
-                    className="underline  text-lg font-normal"
+                    className="underline  text-lg font-normal lg:mb-0 mb-7"
                     onClick={handleExplanationModal}
                   >
                     Why does the presale price show $0.001 instead of $0.0001?
@@ -243,7 +243,7 @@ export default function App() {
                     </p>
                   </li>
                 </ul>
-                <div className="flex items-center gap-5 mt-12">
+                <div className="flex lg:flex-row flex-col items-center gap-5 mt-12">
                   <Button
                     type={"beta"}
                     soundPath={"/audio/button2.mp3"}
@@ -284,7 +284,7 @@ export default function App() {
               <h1 className="text-white font-normal capitalize mb-2 text-3xl text-center">
                 Memestate sustainable
               </h1>
-              <div>
+              <div className="lg:mb-0 mb-6">
                 <img src="/images/rewardSystem.png" alt="" />
               </div>
             </div>
@@ -323,20 +323,20 @@ export default function App() {
         <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
-        <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10justify-center items-end">
-          <div className="col-span-2 ">
-            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center">
+        <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10 justify-center items-end   ">
+          <div className="col-span-2  ">
+            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center lg:my-0 my-9">
               <div className="flex flex-col justify-start items-start my-6 ">
                 <img src="/images/rocket.png" alt="" />
               </div>
               <p className="text-[28px] font-normal  text-white leading-tight lg:mr-24 lg:text-left text-center  ">
                 FAST PACED GAMEPLAY:
               </p>
-              <p className="text-xl font-medium mt-4 font-poppins ">
+              <p className="text-xl font-medium mt-4 font-poppins  lg:text-left text-center">
                 Enjoy rapid 5-minute rounds for a fun and manageable experience.
               </p>
             </div>
-            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center">
+            <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center lg:my-0 my-9">
               <div className="flex flex-col lg:justify-start lg:items-start justify-center items-center  my-6">
                 <img src="/images/gold.png" alt="" />
               </div>
@@ -356,7 +356,7 @@ export default function App() {
             </div>
           </div>
           <div className="col-span-2">
-            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center">
+            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center lg:my-0 my-9">
               <div className="my-6">
                 <img src="/images/flash.png" alt="" />
               </div>
@@ -368,7 +368,7 @@ export default function App() {
                 to gain strategic advantages.
               </p>
             </div>
-            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center mt-10">
+            <div className="flex flex-col lg:justify-end  justify-center lg:items-end items-center lg:mt-10 lg:my-0 my-9">
               <div className="my-6">
                 <img src="/images/cup.png" alt="" />
               </div>
