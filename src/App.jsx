@@ -472,7 +472,7 @@ export default function App() {
               ) : (
                 <div>
                   <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-6 px-10">
-                    <div className="flex gap-4 items-center">
+                    <div className="flex lg:flex-row flex-col   lg:gap-4 gap-2 items-center">
                       <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Token Supply
                       </h2>
@@ -480,7 +480,7 @@ export default function App() {
                         10,000,000,000
                       </p>
                     </div>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex lg:flex-row flex-col   lg:gap-4 gap-2 items-center">
                       <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Fully Diluted Value (US$)
                       </h2>
@@ -488,7 +488,7 @@ export default function App() {
                         3,000,000.00
                       </p>
                     </div>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex lg:flex-row flex-col   lg:gap-4 gap-2 items-center">
                       <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Listing price (US$)
                       </h2>
@@ -496,7 +496,7 @@ export default function App() {
                         0.0003
                       </p>
                     </div>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex lg:flex-row flex-col   lg:gap-4 gap-2 items-center">
                       <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Initial Market Cap(US$)
                       </h2>
