@@ -473,31 +473,39 @@ export default function App() {
                 <div>
                   <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 gap-6 px-10">
                     <div className="flex gap-4 items-center">
-                      <h2 className="text-xl text-[#FF0000] font-normal">
+                      <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Token Supply
                       </h2>
-                      <p className="text-xl text-[#1F1F1F]  ">10,000,000,000</p>
+                      <p className="lg:text-xl text-base text-[#1F1F1F]  ">
+                        10,000,000,000
+                      </p>
                     </div>
                     <div className="flex gap-4 items-center">
-                      <h2 className="text-xl text-[#FF0000] font-normal">
+                      <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Fully Diluted Value (US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F]  ">3,000,000.00</p>
+                      <p className="lg:text-xl text-base text-[#1F1F1F]  ">
+                        3,000,000.00
+                      </p>
                     </div>
                     <div className="flex gap-4 items-center">
-                      <h2 className="text-xl text-[#FF0000] font-normal">
+                      <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Listing price (US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F]  ">0.0003</p>
+                      <p className="lg:text-xl text-base text-[#1F1F1F]  ">
+                        0.0003
+                      </p>
                     </div>
                     <div className="flex gap-4 items-center">
-                      <h2 className="text-xl text-[#FF0000] font-normal">
+                      <h2 className="lg:text-xl text-base text-[#FF0000] font-normal">
                         Initial Market Cap(US$)
                       </h2>
-                      <p className="text-xl text-[#1F1F1F]  ">420,000.00</p>
+                      <p className="lg:text-xl text-base text-[#1F1F1F]  ">
+                        420,000.00
+                      </p>
                     </div>
                   </div>
-                  <div className=" relative">
+                  <div className=" relative lg:block hidden">
                     <div className="absolute left-0 pl-[21px] pt-[8px] ">
                       <img
                         src="./images/liveRightNow.png"
