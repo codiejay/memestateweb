@@ -15,9 +15,13 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
         style={{ borderColor: `${borderColor}` }}
       >
         <div className="w-full  h-full relative">
-          <div className="absolute right-4 z-50">
+          <div className="absolute lg:right-4 right-0 z-50">
             <button onClick={closeModal}>
-              <img src="/images/closeblack.svg" alt="" className="h-14" />
+              <img
+                src="/images/closeblack.svg"
+                alt=""
+                className="lg:h-14 h-8"
+              />
             </button>
           </div>
           <div className="flex lg:flex-row flex-col items-center gap-2">
