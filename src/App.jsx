@@ -120,7 +120,7 @@ export default function App() {
                           Buy your $gems Token in presale now!
                         </h1>
                       </div>
-                      <div className="absolute top-[7rem] left-1/2 -translate-x-1/2  countdownStyle w-[82%]  ">
+                      <div className="lg:absolute relative  lg:top-[7rem] lg:left-1/2 lg:-translate-x-1/2  countdownStyle lg:w-[82%] w-full lg:mt-0 mt-8 ">
                         <CountDown />
                       </div>
                       <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-6  h-fit ">

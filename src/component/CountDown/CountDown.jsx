@@ -40,45 +40,45 @@ const CountDown = () => {
       >
         <div className="relative flex flex-col  items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <p
-            className="lg:text-base text-xs lg:block hidden font-normal uppercase"
+            className="lg:text-base text-xs  font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             days
           </p>
-          <span className="lg:text-3xl text-lg font-normal text-black">
+          <span className="text-3xl font-normal text-black">
             {days.toString().padStart(2, "0")}
           </span>
         </div>
         <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
-            className="lg:text-base text-xs lg:block hidden font-normal uppercase"
+            className="lg:text-base text-xs font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             Hour
           </span>
-          <span className="lg:text-3xl text-lg font-normal text-black">
+          <span className="text-3xl font-normal text-black">
             {hours.toString().padStart(2, "0")}
           </span>
         </div>
         <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
-            className="lg:text-base text-xs lg:block hidden font-normal uppercase"
+            className="lg:text-base text-xs  font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             mins
           </span>
-          <span className="lg:text-3xl text-lg font-normal text-black">
+          <span className="text-3xl font-normal text-black">
             {minutes.toString().padStart(2, "0")}
           </span>
         </div>
         <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <span
-            className="lg:text-base text-xs lg:block hidden font-normal uppercase"
+            className="lg:text-base text-xs  font-normal uppercase"
             style={{ color: "#2C2F8B" }}
           >
             secs
           </span>
-          <span className="lg:text-3xl text-lg font-normal text-black">
+          <span className="text-3xl font-normal text-black">
             {seconds.toString().padStart(2, "0")}
           </span>
         </div>
