@@ -49,7 +49,6 @@ const AboutUs = () => {
   ];
 
   const handleOpenModal = (member) => {
-    console.log;
     openModal();
     setAboutUs({
       name: member.name,
@@ -169,6 +168,16 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      {isOpen && (
+        <AboutUsModal
+          alt={aboutUs.name}
+          img={aboutUs.img}
+          name={aboutUs.name}
+          title={aboutUs.title}
+          content={aboutUs.content}
+          borderColor={aboutUs.borderColor}
+        />
+      )}
 
       <section className=" lg:px-16 px-8 py-16 relative h-[90vh]   page hidden">
         <div className=" flex-col mb-4   items-center  justify-center flex  pt-14">
@@ -195,16 +204,6 @@ const AboutUs = () => {
             where your time, skills, and strategies are of real value!
           </p>
         </div>
-        {isOpen && (
-          <AboutUsModal
-            alt={aboutUs.name}
-            img={aboutUs.img}
-            name={aboutUs.name}
-            title={aboutUs.title}
-            content={aboutUs.content}
-            borderColor={aboutUs.borderColor}
-          />
-        )}
       </section>
     </div>
   );

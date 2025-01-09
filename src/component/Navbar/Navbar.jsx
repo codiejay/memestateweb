@@ -89,7 +89,7 @@ const Navbar = () => {
           >
             <div className="flex  justify-end  lg:hidden">
               <button onClick={closeMenu}>
-                <img src="/images/closeblack.svg" alt="close" className="w-9" />
+                <img src="/images/cancel.png" alt="close" className="w-9" />
               </button>
             </div>
 

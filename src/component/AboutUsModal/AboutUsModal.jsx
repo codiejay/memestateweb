@@ -5,12 +5,12 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
 
   return (
     <div
-      className="fixed  w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-0 left-0 items-center max-w-[1600px] mx-auto"
+      className=" fixed w-screen z-[9999999] justify-center flex  lg:h-screen h-fit top-0 left-0 items-center max-w-[1600px] mx-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
     >
       <div
         className={
-          "border-[12px]  min-h-[470px] h-fit max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-[#FFFDF1] px-6 py-8"
+          "border-[12px]  lg:min-h-[470px] min-h-full h-fit max-w-[1102px] rounded-[32px] overflow-hidden w-full bg-[#FFFDF1] px-6 py-8"
         }
         style={{ borderColor: `${borderColor}` }}
       >
@@ -29,7 +29,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
               <p className="text-[40px] text-[#FF0000]">{title}</p>
             </div>
           </div>
-          <p className="text-[26px] font-normal text-black font-poppins   mt-4">
+          <p className="lg:text-[26px] text-lg font-normal text-black font-poppins   mt-4">
             {content}
           </p>
         </div>
