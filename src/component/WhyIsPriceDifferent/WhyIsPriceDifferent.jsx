@@ -7,7 +7,7 @@ const WhyIsPriceDifferent = ({ title, content }) => {
       className="fixed  w-screen z-[9999999] justify-center flex  h-screen  left-0   top-0 items-center max-w-[1600px] mx-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
     >
-      <div className="border-[12px] border-[#282B7F]   h-full max-w-[1102px] rounded-[32px] overflow-hidden  w-full bg-white ">
+      <div className="border-[12px] border-[#282B7F]  lg:h-fit h-full max-w-[1102px] rounded-[32px] overflow-hidden  w-full bg-white ">
         <div className="w-full border-[10px] border-white h-full relative">
           <div className="absolute right-4 z-50">
             <button onClick={closeModal}>
