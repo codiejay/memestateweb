@@ -15,7 +15,7 @@ const WhyIsPriceDifferent = ({ title, content }) => {
             </button>
           </div>
           <div className="py-6 ">
-            <h1 className="text-black text-5xl px-10">{title}</h1>
+            <h1 className="text-black text-4xl px-10">{title}</h1>
             {content}
           </div>
         </div>
