@@ -135,7 +135,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-2xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-2xl font-poppins my-5  text-[14px] lg:text-left text-center">
         As more players join the Memestate community, the ecosystem grows
         stronger. Every new player adds to the excitement and engagement,
         creating a vibrant and competitive environment. A larger user base means
@@ -153,7 +153,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         The reward pool is directly funded by 100% of advertising revenue and
         50% of prize table revenue. As the user base grows, demand for ad
         placements increases, since advertisers target a more engaged and active
@@ -175,7 +175,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         The integration of strategic ad placements ensures higher ad revenue as
         the user base grows. These ads are seamlessly tied to gameplay and
         community activity, making them relevant and engaging. At the same time,
@@ -195,7 +195,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         With 100% of advertising revenue and 50% of prize table revenue feeding
         the reward pool, free players benefit from progressively larger rewards
         as the system grows. These increased rewards encourage participation, as
@@ -215,7 +215,7 @@ export const contentList = [
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         The reward system is designed to be self-reinforcing. Increased rewards
         attract more players, who boost engagement and revenue through ad views,
         prize table participation, and in-game purchases. This additional
