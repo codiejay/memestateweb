@@ -78,39 +78,52 @@ const RewardSystem = () => {
   return (
     <div className="h-full">
       {width <= 988 ? (
-        <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
-          {contentList.map((item, index) => {
-            return (
-              <div
-                className="h-full w-full shadow-black-custom relative "
-                key={index}
-              >
-                <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
-                  {item.title}
+        <div
+          id="box-container"
+          className="flex justify-center h-screen"
+          ref={containerRef}
+        >
+          <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
+            {contentList.map((item, index) => {
+              const zIndex = 50 - index; // Higher index -> higher z-index
 
-                  {item.text}
+              return (
+                <div
+                  className="h-fit w-full shadow-black-custom absolute stack-box "
+                  style={{
+                    // top: `${topPosition}px`,
+                    zIndex: zIndex,
+                    // left: `${leftPosition}px`,
+                  }}
+                  key={index}
+                >
+                  <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
+                    {item.title}
 
-                  <ButtonWithSound
-                    label={"Learn more"}
-                    type={"beta"}
-                    soundPath={"/audio/button.mp3"}
-                    className={"bg-[#2C2F8C]  hidden"}
-                  />
-                </div>
-                <div className="flex justify-between absolute top-[43%] w-full">
-                  <div className=" ">
-                    <img src="/images/KNOTm.png" alt="" />
+                    {item.text}
+
+                    <ButtonWithSound
+                      label={"Learn more"}
+                      type={"beta"}
+                      soundPath={"/audio/button.mp3"}
+                      className={"bg-[#2C2F8C]  hidden"}
+                    />
                   </div>
-                  <div className="">
-                    <img src="/images/KNOTm1.png" alt="" />
+                  <div className="flex justify-between absolute top-[43%] w-full">
+                    <div className=" ">
+                      <img src="/images/KNOTm.png" alt="" />
+                    </div>
+                    <div className="">
+                      <img src="/images/KNOTm1.png" alt="" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       ) : (
         <div
@@ -127,7 +140,7 @@ const RewardSystem = () => {
               return (
                 <div
                   key={index}
-                  className="absolute w-full  stack-box"
+                  className="absolute w-full left-0 top-0  stack-box"
                   style={{
                     top: `${topPosition}px`,
                     zIndex: zIndex,
