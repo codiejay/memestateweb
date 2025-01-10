@@ -38,12 +38,61 @@ const HowToPlay = ({ items }) => {
   }, [items.length]);
 
   return (
-    <div className="carousel-container relative  overflow-hidden my-10 ">
-      <div className="flex justify-center items-center lg:gap-14 gap-0">
+    <div>
+      <div className="carousel-container relative  overflow-hidden my-10 ">
+        <div className="flex justify-center items-center lg:gap-14 gap-0">
+          <div>
+            <button
+              onClick={handlePrevious}
+              className={` hidden md:flex text-2xl  font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
+                clickedPrevious ? "scale-95" : ""
+              }`}
+              style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+            >
+              <img src="/images/carouselButton.png" alt="" />
+            </button>
+          </div>
+          <div className="relative  flex justify-center overflow-hidden">
+            <div className="absolute top-[7%]  lg:h-full h-[unset] rounded-[41px] w-[91%] overflow-hidden ">
+              <div
+                className={`carousel-items flex transition-transform duration-500 ease-in-out w-full ${
+                  direction === "next" ? "transform translate-x-[-100%]" : ""
+                }`}
+                style={{
+                  transform: `translateX(-${currentIndex * 100}%)`, // This moves the content by 100% of the container width
+                }}
+              >
+                {items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="carousel-item flex-shrink-0 w-full overflow-hidden"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <img src="/images/device.png" alt="" />
+          </div>
+          <div>
+            <button
+              onClick={handleNext}
+              className={` hidden md:flex text-2xl font-normal text-white  capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  justify-center items-center transition-all transform ${
+                clicked ? "scale-95" : ""
+              }`}
+              style={{ boxShadow: "8px 8px 0px 0px #000000" }}
+            >
+              <img src="/images/carouselButton2.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="lg:hidden flex justify-center items-center gap-4">
         <div>
           <button
             onClick={handlePrevious}
-            className={` hidden md:flex text-2xl  font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
+            className={` flex text-2xl  font-normal text-white capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]   justify-center items-center transition-all transform ${
               clickedPrevious ? "scale-95" : ""
             }`}
             style={{ boxShadow: "8px 8px 0px 0px #000000" }}
@@ -51,33 +100,10 @@ const HowToPlay = ({ items }) => {
             <img src="/images/carouselButton.png" alt="" />
           </button>
         </div>
-        <div className="relative  flex justify-center overflow-hidden">
-          <div className="absolute top-[7%]  lg:h-full h-[unset] rounded-[41px] w-[91%] overflow-hidden ">
-            <div
-              className={`carousel-items flex transition-transform duration-500 ease-in-out w-full ${
-                direction === "next" ? "transform translate-x-[-100%]" : ""
-              }`}
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`, // This moves the content by 100% of the container width
-              }}
-            >
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className="carousel-item flex-shrink-0 w-full overflow-hidden"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <img src="/images/device.png" alt="" />
-        </div>
         <div>
           <button
             onClick={handleNext}
-            className={` hidden md:flex text-2xl font-normal text-white  capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  justify-center items-center transition-all transform ${
+            className={` flex text-2xl font-normal text-white  capitalize bg-[#FF0000] border-[3px] border-black  rounded-full w-[58px] h-[58px]  justify-center items-center transition-all transform ${
               clicked ? "scale-95" : ""
             }`}
             style={{ boxShadow: "8px 8px 0px 0px #000000" }}
