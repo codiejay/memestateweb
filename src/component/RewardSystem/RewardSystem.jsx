@@ -76,24 +76,17 @@ const RewardSystem = () => {
     setTimeout(() => setIsLoading(false), 500);
   }, []);
   return (
-    <div className="">
+    <div className="h-full">
       {width <= 988 ? (
-        <div className="  h-[900px] overflow-y-auto relative ">
+        <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
           {contentList.map((item, index) => {
             return (
               <div
-                className="h-full w-full shadow-black-custom sticky top-11  "
+                className="h-full w-full shadow-black-custom relative "
                 key={index}
-                style={{
-                  boxShadow: "0 -5px 10px black,0 5px 10px black",
-                }}
               >
-                <div className="bg-[#A3A5E1] h-[200px]  overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-full h-full object-contain"
-                  />
+                <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
+                  <img src={item.image} alt="" />
                 </div>
                 <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
                   {item.title}
@@ -107,7 +100,7 @@ const RewardSystem = () => {
                     className={"bg-[#2C2F8C]  hidden"}
                   />
                 </div>
-                <div className="flex justify-between absolute top-[43%] w-full hidden">
+                <div className="flex justify-between absolute top-[43%] w-full">
                   <div className=" ">
                     <img src="/images/KNOTm.png" alt="" />
                   </div>

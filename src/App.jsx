@@ -20,6 +20,7 @@ import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
 import GlassCard from "./component/GlassCard/GlassCard";
 import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
 import { Link } from "react-router-dom";
+import CardScrollEffect from "./component/StackCard/StackCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -272,7 +273,7 @@ export default function App() {
       </section>
 
       <section
-        className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page"
+        className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page lg:block hidden"
         ref={sectionRefs[2]}
       >
         <div className="flex justify-center relative ">
@@ -296,7 +297,27 @@ export default function App() {
 
         <RewardSystem />
       </section>
-
+      <section className="bg-[#27297A] lg:px-0  px-2  lg:pt-20 h-full pt-24 pb-10 relative lg:hidden block">
+        <div className="flex justify-center relative ">
+          <div className="w-fit flex justify-center relative">
+            <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
+              <img src="/images/titleDiamond.png" alt="" />
+            </div>
+            <div className="flex flex-col justify-center items-center relative ">
+              <h1 className="text-white font-normal capitalize mb-2 text-3xl text-center">
+                Memestate sustainable
+              </h1>
+              <div className="lg:mb-0 mb-6">
+                <img src="/images/rewardSystem.png" alt="" />
+              </div>
+            </div>
+            <div className=" absolute -right-16 -bottom-8 lg:block  hidden">
+              <img src="/images/dice.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <CardScrollEffect />
+      </section>
       <section
         className="bg-[#27297A] lg:px-14 px-0 py-16 relative overflow-hidden  page  "
         ref={sectionRefs[3]}
