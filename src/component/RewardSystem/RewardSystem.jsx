@@ -55,85 +55,62 @@ const RewardSystem = () => {
         },
       });
 
-      // Define the `y` value conditionally based on screen width
-      const yValue = width <= 988 ? 0 : 50;
-
-      // GSAP animations for boxes
-      tl.from(boxes, { y: yValue, stagger: 0.3 });
+      tl.from(boxes, { y: 50, stagger: 0.3 });
       boxes.forEach((box, index) => {
         tl.to(
           box,
           {
             zIndex: boxes.length - index, // Ensure higher cards appear on top
-            opacity: 1,
+            // opacity: 1,
             y: 0,
             duration: 0.5,
           },
           index * 0.3 // Staggered effect
         );
       });
-
       ScrollTrigger.refresh();
     }
-  }, [isLoading, width]);
+  }, [isLoading]);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500);
   }, []);
-
   return (
     <div className="h-full">
       {width <= 988 ? (
-        <div
-          id="box-container"
-          className="flex justify-center h-screen"
-          ref={containerRef}
-        >
-          <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
-            {contentList.map((item, index) => {
-              const zIndex = 50 - index; // Higher index -> higher z-index
+        <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
+          {contentList.map((item, index) => {
+            return (
+              <div
+                className="h-full w-full shadow-black-custom relative "
+                key={index}
+              >
+                <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
+                  {item.title}
 
-              return (
-                <div
-                  className="h-fit w-full shadow-black-custom absolute stack-box "
-                  style={{
-                    // top: `${topPosition}px`,
-                    zIndex: zIndex,
-                    // left: `${leftPosition}px`,
-                  }}
-                  key={index}
-                >
-                  <div className="bg-[#A3A5E1] h-[201px] overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt=""
-                      className="w-full h-full object-contain"
-                    />
+                  {item.text}
+
+                  <ButtonWithSound
+                    label={"Learn more"}
+                    type={"beta"}
+                    soundPath={"/audio/button.mp3"}
+                    className={"bg-[#2C2F8C]  hidden"}
+                  />
+                </div>
+                <div className="flex justify-between absolute top-[43%] w-full">
+                  <div className=" ">
+                    <img src="/images/KNOTm.png" alt="" />
                   </div>
-                  <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
-                    {item.title}
-
-                    {item.text}
-
-                    <ButtonWithSound
-                      label={"Learn more"}
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      className={"bg-[#2C2F8C]  hidden"}
-                    />
-                  </div>
-                  <div className=" justify-between absolute top-[43%] w-full hidden">
-                    <div className=" ">
-                      <img src="/images/KNOTm.png" alt="" />
-                    </div>
-                    <div className="">
-                      <img src="/images/KNOTm1.png" alt="" />
-                    </div>
+                  <div className="">
+                    <img src="/images/KNOTm1.png" alt="" />
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       ) : (
         <div
@@ -150,7 +127,7 @@ const RewardSystem = () => {
               return (
                 <div
                   key={index}
-                  className="absolute w-full left-0 top-0  stack-box"
+                  className="absolute w-full  stack-box"
                   style={{
                     top: `${topPosition}px`,
                     zIndex: zIndex,
