@@ -37,7 +37,7 @@ const Footer = () => {
                   <HashLink
                     to={link.path}
                     smooth
-                    className="text-white text-shadow-custom text-4xl"
+                    className="text-white text-shadow-custom lg:text-4xl text-xl"
                     aria-label={link.name}
                   >
                     {link.name}
@@ -45,7 +45,7 @@ const Footer = () => {
                 ) : (
                   <Link
                     to={link.path}
-                    className="text-white text-shadow-custom text-4xl"
+                    className="text-white text-shadow-custom lg:text-4xl text-xl"
                     aria-label={link.name}
                   >
                     {link.name}
