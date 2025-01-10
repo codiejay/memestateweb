@@ -47,7 +47,7 @@ const RewardSystem = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "bottom bottom",
+          start: "top top",
           end: `${window.innerHeight * boxes.length} top`,
           scrub: true,
           pin: true,
