@@ -32,10 +32,12 @@ const Card = ({ card, index, totalCards }) => {
 
   return (
     <div
-      className="card"
+      className="card rounded-[unset] shadow-black-custom"
       data-index={index}
       ref={ref}
-      style={{ paddingTop: `${20 + index * 20}px` }}
+      style={{
+        paddingTop: `${20 + index * 20}px`,
+      }}
     >
       <div
         className="card__inner"
@@ -44,7 +46,12 @@ const Card = ({ card, index, totalCards }) => {
           transition: "transform 0.3s, filter 0.3s",
         }}
       >
-        <div className="bg-[#A3A5E1] h-[141px] overflow-hidden">
+        <div
+          className="bg-[#A3A5E1] h-full overflow-hidden "
+          style={{
+            boxShadow: "0 -5px 10px black,0 5px 10px black",
+          }}
+        >
           <img
             src={card.image}
             alt="reward system"
