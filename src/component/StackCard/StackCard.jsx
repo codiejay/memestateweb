@@ -44,14 +44,14 @@ const Card = ({ card, index, totalCards }) => {
           transition: "transform 0.3s, filter 0.3s",
         }}
       >
-        <div className="bg-[#A3A5E1] h-[201px] overflow-hidden">
+        <div className="bg-[#A3A5E1] h-[141px] overflow-hidden">
           <img
             src={card.image}
             alt="reward system"
             className="w-full h-full object-contain"
           />
         </div>
-        <div className="card__content h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
+        <div className=" h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
           {card.title}
           {card.text}
         </div>

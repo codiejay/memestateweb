@@ -129,13 +129,13 @@ export function useWindowSize() {
 export const contentList = [
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 lg:  lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3 lg:  lg:text-left text-center">
         Growing User Base
       </h2>
     ),
 
     text: (
-      <p className="max-w-2xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="max-w-2xl font-poppins my-5  text-[14px] lg:text-left text-center">
         As more players join the Memestate community, the ecosystem grows
         stronger. Every new player adds to the excitement and engagement,
         creating a vibrant and competitive environment. A larger user base means
@@ -147,13 +147,13 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         increased advertisement demand and prize table volume
       </h2>
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="lg:max-w-xl font-poppins my-5  text-base lg:text-left text-center">
         The reward pool is directly funded by 100% of advertising revenue and
         50% of prize table revenue. As the user base grows, demand for ad
         placements increases, since advertisers target a more engaged and active
@@ -168,14 +168,14 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         increased advertisement AND <br className="lg:block hidden" /> GAME
         REVENUE
       </h2>
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="lg:max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         The integration of strategic ad placements ensures higher ad revenue as
         the user base grows. These ads are seamlessly tied to gameplay and
         community activity, making them relevant and engaging. At the same time,
@@ -189,13 +189,13 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         Bigger Rewards Pool for Free Player
       </h2>
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="lg:max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         With 100% of advertising revenue and 50% of prize table revenue feeding
         the reward pool, free players benefit from progressively larger rewards
         as the system grows. These increased rewards encourage participation, as
@@ -209,13 +209,13 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         A Continuous Upward Spiral
       </h2>
     ),
 
     text: (
-      <p className="max-w-xl font-poppins my-5  text-base lg:text-left text-center">
+      <p className="lg:max-w-xl font-poppins my-5  text-[14px] lg:text-left text-center">
         The reward system is designed to be self-reinforcing. Increased rewards
         attract more players, who boost engagement and revenue through ad views,
         prize table participation, and in-game purchases. This additional
