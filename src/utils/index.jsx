@@ -129,7 +129,7 @@ export function useWindowSize() {
 export const contentList = [
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 lg:mt-16 mt-28 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3 lg:mt-16  lg:text-left text-center">
         Growing User Base
       </h2>
     ),
@@ -147,7 +147,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         increased advertisement demand and prize table volume
       </h2>
     ),
@@ -168,7 +168,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         increased advertisement AND <br className="lg:block hidden" /> GAME
         REVENUE
       </h2>
@@ -189,7 +189,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         Bigger Rewards Pool for Free Player
       </h2>
     ),
@@ -209,7 +209,7 @@ export const contentList = [
   },
   {
     title: (
-      <h2 className="lg:text-[48px] text-3xl font-normal text-white lg:leading-[4rem] lg:my-3 mt-16 lg:text-left text-center">
+      <h2 className="lg:text-[48px] text-xl font-normal text-white lg:leading-[4rem] lg:my-3  lg:text-left text-center">
         A Continuous Upward Spiral
       </h2>
     ),

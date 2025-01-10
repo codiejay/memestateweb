@@ -55,26 +55,32 @@ const RewardSystem = () => {
         },
       });
 
-      tl.from(boxes, { y: 50, stagger: 0.3 });
+      // Define the `y` value conditionally based on screen width
+      const yValue = width <= 988 ? 0 : 50;
+
+      // GSAP animations for boxes
+      tl.from(boxes, { y: yValue, stagger: 0.3 });
       boxes.forEach((box, index) => {
         tl.to(
           box,
           {
             zIndex: boxes.length - index, // Ensure higher cards appear on top
-            // opacity: 1,
+            opacity: 1,
             y: 0,
             duration: 0.5,
           },
           index * 0.3 // Staggered effect
         );
       });
+
       ScrollTrigger.refresh();
     }
-  }, [isLoading]);
+  }, [isLoading, width]);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500);
   }, []);
+
   return (
     <div className="h-full">
       {width <= 988 ? (
@@ -97,8 +103,12 @@ const RewardSystem = () => {
                   }}
                   key={index}
                 >
-                  <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
-                    <img src={item.image} alt="" />
+                  <div className="bg-[#A3A5E1] h-[201px] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
                     {item.title}
@@ -112,7 +122,7 @@ const RewardSystem = () => {
                       className={"bg-[#2C2F8C]  hidden"}
                     />
                   </div>
-                  <div className="flex justify-between absolute top-[43%] w-full">
+                  <div className=" justify-between absolute top-[43%] w-full hidden">
                     <div className=" ">
                       <img src="/images/KNOTm.png" alt="" />
                     </div>
