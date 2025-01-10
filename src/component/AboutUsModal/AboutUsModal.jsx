@@ -37,7 +37,7 @@ const AboutUsModal = ({ img, alt, name, title, content, borderColor }) => {
               </p>
             </div>
           </div>
-          <p className="lg:text-[26px] text-base font-normal text-black font-poppins overflow-auto lg:h-[unset] h-[50vh]   mt-4">
+          <p className="lg:text-[24px] text-[14px] font-normal text-black font-poppins lg:overflow-visible lg:leading-8 leading-[unset] overflow-auto lg:h-full h-[70%]   mt-4">
             {content}
           </p>
         </div>

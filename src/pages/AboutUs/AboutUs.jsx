@@ -84,7 +84,7 @@ const AboutUs = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col justify-center px-8 gap-4">
+                    <div className="md:col-span-3 col-span-1 bg-[#d5d5d5] flex flex-col justify-center px-8 lg:gap-4 gap-2">
                       <h1 className="lg:text-[40px] text-3xl text-[#010101]">
                         {member.name}
                       </h1>
