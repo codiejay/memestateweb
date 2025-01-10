@@ -23,7 +23,7 @@ const CardScrollEffect = () => {
 
 const Card = ({ card, index, totalCards }) => {
   const [ref, inView] = useInView({
-    threshold: 0.1, // Adjust this to control when the animation triggers
+    threshold: 0.8, // Adjust this to control when the animation triggers
   });
 
   // Calculate the scale and brightness dynamically
