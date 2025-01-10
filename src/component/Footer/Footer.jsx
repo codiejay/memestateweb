@@ -5,14 +5,18 @@ import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
-    <section className="h-full bg-[#27297A]  ">
-      <div className="bg-[url('/images/footer.png')] bg-no-repeat w-full bg-cover h-full flex justify-center items-center pt-20 footer overflow-hidden flex-col bg-[#27297A]">
-        <Link to={"/"} className="mt-[16rem]">
-          <img src="/images/memeanddice.png" alt="" />
+    <section className="h-full bg-[#27297A] lg:border-t-0 lg:overflow-visible overflow-hidden border-t-2 border-[white]  rounded-[133px]">
+      <div className="lg:bg-[url('/images/footer.png')]  bg-none bg-no-repeat w-full bg-cover h-full flex justify-center items-center pt-20 footer overflow-hidden flex-col bg-[#27297A]">
+        <Link to={"/"} className="lg:mt-[16rem] ">
+          <img
+            src="/images/memeanddice.png"
+            alt=""
+            className="lg:w-full w-28"
+          />
         </Link>
         <nav>
           <ul
-            className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-12  md:flex`}
+            className={`flex flex-col md:flex-row md:justify-center my-3 gap-6 md:gap-12  md:flex text-center`}
           >
             {links.map((link, index) => (
               <li
@@ -24,7 +28,7 @@ const Footer = () => {
                     href={link.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white text-shadow-custom text-4xl"
+                    className="text-white text-shadow-custom lg:text-4xl text-xl"
                     aria-label={link.name}
                   >
                     {link.name}
