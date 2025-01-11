@@ -15,7 +15,6 @@ const CountDown = () => {
 
         if (remainingTime === 0) {
           clearInterval(countdownInterval);
-          alert("Countdown complete!");
         }
       }, 1000);
 
