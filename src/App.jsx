@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "./component/Button/Button";
 import CountDown from "./component/CountDown/CountDown";
-import HowItWorks from "./component/HowItWorks/HowItWorks";
+// import HowItWorks from "./component/HowItWorks/HowItWorks";
 import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { carouselItems, howToPlay } from "./utils";
+import { howToPlay } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
-import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
+// import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
 import RewardSystem from "./component/RewardSystem/RewardSystem";
 import VideoModal from "./component/VideoModal/VideoModal";
@@ -15,11 +15,11 @@ import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
 import IFrameModal from "./component/IFrameModal/IFrameModal";
 import { useIframeModal } from "./context/IframeContext";
-import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
+// import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
 import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
-import GlassCard from "./component/GlassCard/GlassCard";
+// import GlassCard from "./component/GlassCard/GlassCard";
 import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CardScrollEffect from "./component/StackCard/StackCard";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,10 +28,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const { openModal, isOpen } = useModal();
-  const [selectedModal, setSelectedModal] = useState("");
+  // const [selectedModal, setSelectedModal] = useState("");
   const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
-  const { openModal: openPrizeModal, isOpen: isOpenPrizeModal } =
-    useDifferentPrize();
+  // const { isOpen: isOpenPrizeModal } = useDifferentPrize();
   const container = useRef(null);
   const sectionRefs = [
     useRef(null),
@@ -57,14 +56,14 @@ export default function App() {
       }
     );
   }, []);
-  const handleExplanationModal = () => {
-    setSelectedModal("explanation");
-    openPrizeModal();
-  };
-  const handleTokenoMics = () => {
-    setSelectedModal("tikenomic");
-    openPrizeModal();
-  };
+  // const handleExplanationModal = () => {
+  //   setSelectedModal("explanation");
+  //   openPrizeModal();
+  // };
+  // const handleTokenoMics = () => {
+  //   setSelectedModal("tikenomic");
+  //   openPrizeModal();
+  // };
 
   return (
     <div ref={container}>
@@ -171,8 +170,8 @@ export default function App() {
         </div>
       </section>
 
-      <section
-        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full "
+      {/* <section
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full hidden  "
         ref={sectionRefs[1]}
         id="nextsection"
       >
@@ -270,7 +269,7 @@ export default function App() {
         <div className=" absolute right-0  -bottom-12 lg:block hidden">
           <img src="/images/coin.png" alt="" />
         </div>
-      </section>
+      </section> */}
 
       <section
         className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page lg:block hidden"
@@ -464,7 +463,7 @@ export default function App() {
 
         {isOpen && <VideoModal />}
         {isIframeOpen && <IFrameModal />}
-        {isOpenPrizeModal && (
+        {/* {isOpenPrizeModal && (
           <WhyIsPriceDifferent
             title={
               selectedModal === "explanation"
@@ -544,7 +543,7 @@ export default function App() {
               )
             }
           />
-        )}
+        )} */}
       </section>
       <section className="h-[40vh] relative lg:block hidden">
         <div className="flex justify-center items-center h-full pt-10 absolute top-16 w-full">
