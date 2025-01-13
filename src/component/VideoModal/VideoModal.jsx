@@ -15,7 +15,7 @@ const VideoModal = () => {
             </button>
           </div>
           <video
-            src="/video/memestate.mp4"
+            src="/videos/memestate.mp4"
             className="object-contain w-full"
             controls
           ></video>

@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Button from "./component/Button/Button";
-import CountDown from "./component/CountDown/CountDown";
+// import CountDown from "./component/CountDown/CountDown";
 // import HowItWorks from "./component/HowItWorks/HowItWorks";
 import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
@@ -13,10 +13,10 @@ import RewardSystem from "./component/RewardSystem/RewardSystem";
 import VideoModal from "./component/VideoModal/VideoModal";
 import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
-import IFrameModal from "./component/IFrameModal/IFrameModal";
-import { useIframeModal } from "./context/IframeContext";
+// import IFrameModal from "./component/IFrameModal/IFrameModal";
+// import { useIframeModal } from "./context/IframeContext";
 // import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
-import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
+// import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
 // import GlassCard from "./component/GlassCard/GlassCard";
 import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
 // import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
   const { openModal, isOpen } = useModal();
   // const [selectedModal, setSelectedModal] = useState("");
-  const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
+  // const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
   // const { isOpen: isOpenPrizeModal } = useDifferentPrize();
   const container = useRef(null);
   const sectionRefs = [
@@ -67,31 +67,31 @@ export default function App() {
 
   return (
     <div ref={container}>
-      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden">
+      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden pb-5">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
-          <div className="grid lg:grid-cols-2 justify-between items-center lg:px-20 px-4 py-10 gap-20">
-            <div className=" flex flex-col  justify-center items-center">
-              <div className="banner-content flex w-full lg:justify-start justify-center ">
+          <div className="flex justify-center items-center lg:px-20 px-4 py-10 gap-20">
+            <div className=" flex flex-col  justify-center items-center ">
+              <div className="banner-content flex w-full justify-center ">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
                   className="w-[80%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8 lg:text-start text-center">
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px]">
                 Secure $GEMS at exclusive presale pricing and maximize your ROI
-                while powering the first sustainable P2E model, merging fun and
+                while Powering the first sustainable P2E model, merging fun and
                 financial potential.
               </p>
 
-              <div className="flex lg:flex-row flex-col  lg:items-start items-center w-full  gap-5   ">
+              <div className="flex lg:flex-row flex-col  justify-center  items-center w-full  gap-5   ">
                 <div className="banner-content">
                   <ButtonWithSound
                     type={"beta"}
                     soundPath={"/audio/button.mp3"}
-                    label={"Join the Presale now"}
+                    label={"Watch Demo"}
                     className={"bg-[#FF0000]"}
-                    onClick={openIFrameModal}
+                    onClick={openModal}
                   />
                 </div>
 
@@ -110,7 +110,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className=" howItWorks flex justify-end ">
                 <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1 xl:w-[80%] lg:w-full ">
                   <div className="  lg:w-fit  w-full">
@@ -160,7 +160,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="mt-auto ">
@@ -462,7 +462,7 @@ export default function App() {
         <RoadMapSlider />
 
         {isOpen && <VideoModal />}
-        {isIframeOpen && <IFrameModal />}
+        {/* {isIframeOpen && <IFrameModal />} */}
         {/* {isOpenPrizeModal && (
           <WhyIsPriceDifferent
             title={
