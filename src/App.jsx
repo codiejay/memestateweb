@@ -78,10 +78,9 @@ export default function App() {
                   className="w-[80%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px]">
-                Secure $GEMS at exclusive presale pricing and maximize your ROI
-                while Powering the first sustainable P2E model, merging fun and
-                financial potential.
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px] capitalize">
+                earn, play, and thrive by combining sustainable gaming with
+                real-world rewards powered by $GEMS..
               </p>
 
               <div className="flex lg:flex-row flex-col  justify-center  items-center w-full  gap-5   ">
@@ -95,7 +94,7 @@ export default function App() {
                   />
                 </div>
 
-                <div className="banner-content">
+                <div className="banner-content hidden">
                   <a
                     href="https://www.loom.com/share/6ed0ec4b93ab4245b91dc65cf0891579"
                     target="_blank"
