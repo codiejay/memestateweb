@@ -67,7 +67,7 @@ export default function App() {
 
   return (
     <div ref={container}>
-      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden pb-5">
+      <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden ">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="flex justify-center items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center ">
@@ -75,13 +75,13 @@ export default function App() {
                 <img
                   src="/images/bannerContent.png"
                   alt=""
-                  className="w-[80%] bannerImg"
+                  className="w-[100%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px] capitalize">
+              {/* <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px] capitalize">
                 earn, play, and thrive by combining sustainable gaming with
                 real-world rewards powered by $GEMS..
-              </p>
+              </p> */}
 
               <div className="flex lg:flex-row flex-col  justify-center  items-center w-full  gap-5   ">
                 <div className="banner-content">
