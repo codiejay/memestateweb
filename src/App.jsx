@@ -72,7 +72,7 @@ export default function App() {
     <div ref={container}>
       <section className=" z-50    banner bg-[url('/images/bgImage.png')]  bg-cover  w-full bg-no-repeat  bg-center relative lg:h-screen  h-full overflow-hidden ">
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
-          <div className="flex justify-center items-center lg:px-20 px-4 py-10 gap-20">
+          <div className="flex justify-center lg:flex-row flex-col items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center ">
               <div className="banner-content flex w-full justify-center ">
                 <img
