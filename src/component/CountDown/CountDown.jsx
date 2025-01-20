@@ -32,12 +32,12 @@ const CountDown = () => {
 
     return (
       <div
-        className="countdown-display bg-[#D10000] rounded-[33px] py-4 grid grid-cols-4 justify-center items-center gap-6 px-6 "
+        className="countdown-display bg-[#D10000] rounded-[33px] py-4 grid grid-cols-4 justify-center items-center lg:gap-6 lg:px-6 px-3 "
         style={{
           boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
         }}
       >
-        <div className="relative flex flex-col  items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
+        <div className="relative flex flex-col gap-1 items-center justify-center border-[4px] border-black px-3 shadow-inset-custom bg-[#BFBFBF] ">
           <p
             className="lg:text-base text-xs  font-normal uppercase"
             style={{ color: "#2C2F8B" }}
