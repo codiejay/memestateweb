@@ -294,7 +294,7 @@ export default function App() {
             Where we invest
           </h2>
 
-          <div className="grid grid-cols-3 ">
+          <div className="grid lg:grid-cols-3  grid-cols-1">
             {carouselItems?.map((project, index) => {
               return <div key={index}>{project}</div>;
             })}

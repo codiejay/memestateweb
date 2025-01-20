@@ -20,7 +20,7 @@ export const carouselItems = [
   </div>,
   <div
     key="1"
-    className="w-100% my-8 px-4 flex flex-col items-center justify-center border-x"
+    className="w-100% my-8 px-4 flex flex-col items-center justify-center lg:border-x border-none"
   >
     <div className="flex flex-col items-center justify-center gap-6">
       <div className="flex justify-center">
