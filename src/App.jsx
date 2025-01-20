@@ -74,39 +74,39 @@ export default function App() {
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="flex justify-center lg:flex-row flex-col items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center ">
-              <div className="banner-content flex w-full justify-center ">
+              <div className="banner-content flex w-full  lg:justify-start justify-center ">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
-                  className="w-[100%] bannerImg"
+                  className="w-[70%] bannerImg"
                 />
               </div>
-              {/* <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-8  text-center max-w-[702px] capitalize">
-                earn, play, and thrive by combining sustainable gaming with
-                real-world rewards powered by $GEMS..
-              </p> */}
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-3  lg:text-left text-center max-w-[702px] capitalize">
+                Secure your $GEMS today at exclusive presale pricing and
+                maximize your potential ROI while powering the first sustainable
+                P2E model, combining fun and potential real-world earnings
+              </p>
 
-              <div className="flex lg:flex-row flex-col  justify-center  items-center w-full  gap-5   ">
+              <div className="flex lg:flex-row flex-col  lg:justify-start justify-center  items-center w-full  gap-5   ">
                 <div className="banner-content">
                   <ButtonWithSound
                     type={"beta"}
                     soundPath={"/audio/button.mp3"}
-                    label={"Watch Demo"}
+                    label={"Join the Presale now"}
                     className={"bg-[#FF0000] "}
-                    onClick={openModal}
+                    onClick={openIFrameModal}
                   />
                 </div>
 
-                <div className="banner-content hidden">
+                <div className="banner-content ">
                   <a
-                    href="https://tokentool.bitbond.com/tokensale/0x3730Aa2a33a1f0704d5ac6634e64E4B14253Dad3?chainId=8453"
+                    href="https://www.loom.com/share/6ed0ec4b93ab4245b91dc65cf0891579"
                     target="_blank"
                   >
                     <ButtonWithSound
                       type={"alpha"}
                       soundPath={"/audio/button2.mp3"}
                       label={"Founder’s Explainer"}
-                      // onClick={openModal}
                     />
                   </a>
                 </div>
