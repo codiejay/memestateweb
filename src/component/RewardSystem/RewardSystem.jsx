@@ -77,103 +77,66 @@ const RewardSystem = () => {
   }, []);
   return (
     <div className="h-full">
-      {width <= 988 ? (
-        <div className="my-6 flex flex-col gap-14 items-center justify-center stack">
+      <div
+        id="box-container"
+        className="flex justify-center h-screen"
+        ref={containerRef}
+      >
+        <div className="flex justify-center flex-col mt-8 max-w-[1200px] w-full  relative h-full">
           {contentList.map((item, index) => {
+            const zIndex = 50 - index; // Higher index -> higher z-index
+            const topPosition = index * 20; // Adjust as needed
+            const leftPosition = index * 20; // Adjust as needed
+
             return (
               <div
-                className="h-full w-full shadow-black-custom relative "
                 key={index}
+                className="absolute w-full  stack-box"
+                style={{
+                  top: `${topPosition}px`,
+                  zIndex: zIndex,
+                  left: `${leftPosition}px`,
+                }}
               >
-                <div className="bg-[#A3A5E1] h-[381px] overflow-hidden">
-                  <img src={item.image} alt="" />
-                </div>
-                <div className="h-full bg-[#FF0000] flex  flex-col items-center gap-3 py-1">
-                  {item.title}
-
-                  {item.text}
-
-                  <ButtonWithSound
-                    label={"Learn more"}
-                    type={"beta"}
-                    soundPath={"/audio/button.mp3"}
-                    className={"bg-[#2C2F8C]  hidden"}
-                  />
-                </div>
-                <div className="flex justify-between absolute top-[43%] w-full">
-                  <div className=" ">
-                    <img src="/images/KNOTm.png" alt="" />
+                <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 relative justify-center w-full">
+                  {/* Left Section */}
+                  <div className="z-40">
+                    <div className="masked-div-1 relative lg:w-[924px] w-full">
+                      <div className="px-10 pt-4 pb-6">
+                        {item.title}
+                        {item.text}
+                        <ButtonWithSound
+                          label="Learn more"
+                          type="beta"
+                          soundPath="/audio/button.mp3"
+                          className="bg-[#2C2F8C] hidden"
+                        />
+                      </div>
+                      {/* Decorative Images */}
+                      <div className="absolute right-[1%] top-8 lg:block hidden">
+                        <img src="/images/KNOT.png" alt="Knot decoration" />
+                      </div>
+                      <div className="absolute right-[22%] bottom-10 lg:block hidden">
+                        <img src="/images/KNOT.png" alt="Knot decoration" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="">
-                    <img src="/images/KNOTm1.png" alt="" />
+                  {/* Right Section */}
+                  <div className="-ml-40 z-30 mt-6 relative lg:block">
+                    <div className="masked-div-2">
+                      <div className="py-4 flex justify-end items-center">
+                        <div className="w-[400px] mt-6">
+                          <img src={item.image} alt={item.title} />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-      ) : (
-        <div
-          id="box-container"
-          className="flex justify-center h-screen"
-          ref={containerRef}
-        >
-          <div className="flex justify-center flex-col mt-8 max-w-[1200px] w-full  relative h-full">
-            {contentList.map((item, index) => {
-              const zIndex = 50 - index; // Higher index -> higher z-index
-              const topPosition = index * 20; // Adjust as needed
-              const leftPosition = index * 20; // Adjust as needed
-
-              return (
-                <div
-                  key={index}
-                  className="absolute w-full  stack-box"
-                  style={{
-                    top: `${topPosition}px`,
-                    zIndex: zIndex,
-                    left: `${leftPosition}px`,
-                  }}
-                >
-                  <div className="grid lg:grid-cols-2 grid-cols-1 mt-10 relative justify-center w-full">
-                    {/* Left Section */}
-                    <div className="z-40">
-                      <div className="masked-div-1 relative lg:w-[924px] w-full">
-                        <div className="px-10 pt-4 pb-6">
-                          {item.title}
-                          {item.text}
-                          <ButtonWithSound
-                            label="Learn more"
-                            type="beta"
-                            soundPath="/audio/button.mp3"
-                            className="bg-[#2C2F8C] hidden"
-                          />
-                        </div>
-                        {/* Decorative Images */}
-                        <div className="absolute right-[1%] top-8 lg:block hidden">
-                          <img src="/images/KNOT.png" alt="Knot decoration" />
-                        </div>
-                        <div className="absolute right-[22%] bottom-10 lg:block hidden">
-                          <img src="/images/KNOT.png" alt="Knot decoration" />
-                        </div>
-                      </div>
-                    </div>
-                    {/* Right Section */}
-                    <div className="-ml-40 z-30 mt-6 relative lg:block">
-                      <div className="masked-div-2">
-                        <div className="py-4 flex justify-end items-center">
-                          <div className="w-[400px] mt-6">
-                            <img src={item.image} alt={item.title} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 };
