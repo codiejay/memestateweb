@@ -96,8 +96,9 @@ const RoadMapSlider = () => {
         <GlassCard
           content={
             <ul className="lg:px-10 lg:py-10 px-3 flex flex-col gap-6 font-poppins text-lg font-normal list-disc">
+              <li className="text-base font-normal">PresaleToken launch</li>
               <li className="text-base font-normal">
-                Presale Token launch Game Soft Launch on Webgl and Mobile
+                Game Soft Launch on Webgl and Mobile
               </li>
               <li className="text-base font-normal">
                 Introduction of revenue-generating features like advertising and

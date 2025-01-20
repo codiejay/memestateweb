@@ -4,7 +4,7 @@ const CountDown = () => {
   const [timeRemaining, setTimeRemaining] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date("2025-01-11T14:30:00").getTime(); // Specific end date and time
+    const targetDate = new Date("2025-05-10 19:15:00").getTime(); // Specific end date and time
 
     const startCountdown = () => {
       const countdownInterval = setInterval(() => {

@@ -3,44 +3,52 @@ import { useLocation } from "react-router-dom";
 
 export const carouselItems = [
   <div key="0" className="w-100% my-8 px-4">
-    <div className="flex flex-col">
-      <div>
+    <div className="flex flex-col items-center justify-center gap-6 ">
+      <div className="flex justify-center">
         <img src="/images/Tag.png" alt="Image 1" className=" h-[78px]" />
       </div>
-      <h2 className="text-[32px] text-white my-3">
+      <h2 className="text-[32px] text-white my-3 text-center">
         {" "}
         Liquidity and Token Stability
       </h2>
 
-      <p className="lg:text-2xl text-base font-normal  text-white  mt-3 font-poppins ">
+      <p className="lg:text-2xl text-base font-normal  text-white  mt-auto font-poppins text-center ">
          $210,000 of the $416,000 raised will be allocated to the initial
         liquidity pool to ensure smooth trading and token stability.
       </p>
     </div>
   </div>,
-  <div key="1" className="w-100% my-8 px-4">
-    <div className="flex flex-col">
-      <div>
+  <div
+    key="1"
+    className="w-100% my-8 px-4 flex flex-col items-center justify-center border-x"
+  >
+    <div className="flex flex-col items-center justify-center gap-6">
+      <div className="flex justify-center">
         <img src="/images/gamedice.png" alt="Image 1" className=" h-[78px]" />
       </div>
-      <h2 className="text-[32px] text-white my-1">
+      <h2 className="text-[32px] text-white my-1 text-center">
         Game Development and Expansion
       </h2>
 
-      <p className="lg:text-2xl text-base font-normal  text-white  mt-3  font-poppins">
+      <p className="lg:text-2xl text-base font-normal  text-white    font-poppins text-center mt-auto">
         Over $150,000 will be used to complete game development, with 50% of the
         work already finished and paid for.
       </p>
     </div>
   </div>,
-  <div key="2" className="w-100% my-8  px-4">
-    <div className="flex flex-col">
-      <div>
+  <div
+    key="2"
+    className="w-100% my-8  px-4 flex flex-col items-center justify-center "
+  >
+    <div className="flex flex-col items-center justify-center gap-6">
+      <div className="flex justify-center">
         <img src="/images/wallet.png" alt="Image 2" className=" h-[78px]" />
       </div>
-      <h2 className="text-[32px] text-white my-1">Marketing and Growth</h2>
+      <h2 className="text-[32px] text-white text-center my-1">
+        Marketing and <br /> Growth
+      </h2>
 
-      <p className="lg:text-2xl font-normal  text-white  mt-3  font-poppins ">
+      <p className="lg:text-2xl font-normal  text-white mt-auto text-center  font-poppins ">
         The rest of the funds will be used for marketing campaigns to boost
         awareness, attract players and investors, and grow the ecosystem.
       </p>

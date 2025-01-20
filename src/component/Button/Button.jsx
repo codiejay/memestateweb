@@ -17,9 +17,9 @@ const ButtonWithSound = ({ label, soundPath, type, className, onClick }) => {
   // Button styles based on the type
   const getButtonStyles = (type) => {
     if (type === "alpha") {
-      return "text-lg font-normal text-white capitalize bg-transparent border-[2px] border-white py-3 px-4 rounded-[79px] tracking-wide";
+      return "text-xl font-normal text-white capitalize bg-transparent border-[2px] border-white py-3 px-4 rounded-[79px] tracking-wide";
     } else if (type === "beta") {
-      return "text-lg font-normal text-white capitalize  border-[3px] border-black py-3 px-4 rounded-[79px] tracking-wide";
+      return "text-xl font-normal text-white capitalize  border-[3px] border-black py-3 px-4 rounded-[79px] tracking-wide";
     }
     return ""; // default styles (if any)
   };

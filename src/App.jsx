@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./component/Button/Button";
-// import CountDown from "./component/CountDown/CountDown";
+import CountDown from "./component/CountDown/CountDown";
 // import HowItWorks from "./component/HowItWorks/HowItWorks";
 import MarqueeComponent from "./component/MarqueeComponent/MarqueeComponent";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { howToPlay } from "./utils";
+import { carouselItems, howToPlay } from "./utils";
 import HowToPlay from "./component/HowToPlay/HowToPlay";
 // import RoadMapCard from "./component/RoadMapCard/RoadMapCard";
 import AdvertisementSlick from "./component/AdvertismentSlick/AdvertismentSlick";
@@ -13,14 +13,16 @@ import RewardSystem from "./component/RewardSystem/RewardSystem";
 import VideoModal from "./component/VideoModal/VideoModal";
 import { useModal } from "./context/VideoContext";
 import ButtonWithSound from "./component/Button/Button";
-// import IFrameModal from "./component/IFrameModal/IFrameModal";
+import IFrameModal from "./component/IFrameModal/IFrameModal";
 // import { useIframeModal } from "./context/IframeContext";
-// import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
+import WhyIsPriceDifferent from "./component/WhyIsPriceDifferent/WhyIsPriceDifferent";
 // import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
 // import GlassCard from "./component/GlassCard/GlassCard";
 import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
 // import { Link } from "react-router-dom";
 import CardScrollEffect from "./component/StackCard/StackCard";
+import { useIframeModal } from "./context/IframeContext";
+import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,9 +30,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const { openModal, isOpen } = useModal();
-  // const [selectedModal, setSelectedModal] = useState("");
-  // const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
-  // const { isOpen: isOpenPrizeModal } = useDifferentPrize();
+  const [selectedModal, setSelectedModal] = useState("");
+  const { openModal: openIFrameModal, isOpen: isIframeOpen } = useIframeModal();
+  const { isOpen: isOpenPrizeModal, toggleModal: openPrizeModal } =
+    useDifferentPrize();
   const container = useRef(null);
   const sectionRefs = [
     useRef(null),
@@ -56,14 +59,14 @@ export default function App() {
       }
     );
   }, []);
-  // const handleExplanationModal = () => {
-  //   setSelectedModal("explanation");
-  //   openPrizeModal();
-  // };
-  // const handleTokenoMics = () => {
-  //   setSelectedModal("tikenomic");
-  //   openPrizeModal();
-  // };
+  const handleExplanationModal = () => {
+    setSelectedModal("explanation");
+    openPrizeModal();
+  };
+  const handleTokenoMics = () => {
+    setSelectedModal("tikenomic");
+    openPrizeModal();
+  };
 
   return (
     <div ref={container}>
@@ -89,17 +92,17 @@ export default function App() {
                     type={"beta"}
                     soundPath={"/audio/button.mp3"}
                     label={"Watch Demo"}
-                    className={"bg-[#FF0000]"}
+                    className={"bg-[#FF0000] "}
                     onClick={openModal}
                   />
                 </div>
 
                 <div className="banner-content hidden">
                   <a
-                    href="https://www.loom.com/share/6ed0ec4b93ab4245b91dc65cf0891579"
+                    href="https://tokentool.bitbond.com/tokensale/0x3730Aa2a33a1f0704d5ac6634e64E4B14253Dad3?chainId=8453"
                     target="_blank"
                   >
-                    <Button
+                    <ButtonWithSound
                       type={"alpha"}
                       soundPath={"/audio/button2.mp3"}
                       label={"Founder’s Explainer"}
@@ -109,7 +112,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-            {/* <div>
+            <div>
               <div className=" howItWorks flex justify-end ">
                 <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1 xl:w-[80%] lg:w-full ">
                   <div className="  lg:w-fit  w-full">
@@ -130,12 +133,12 @@ export default function App() {
                         </div>
 
                         <div className="w-full flex flex-col gap-5">
-                          <div className="w-full">
+                          <div className="w-full flex justify-center">
                             <ButtonWithSound
                               label={"Buy $GEMS"}
                               type={"beta"}
                               soundPath={"/audio/button.mp3"}
-                              className={"bg-[#FF0000]  w-full"}
+                              className={"bg-[#FF0000]  w-[80%]"}
                               onClick={openIFrameModal}
                             />
                           </div>
@@ -159,7 +162,7 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
 
           <div className="mt-auto ">
@@ -169,7 +172,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* <section
+      <section
         className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full hidden  "
         ref={sectionRefs[1]}
         id="nextsection"
@@ -260,16 +263,67 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="w-full overflow-hidden lg:px-0 px-2  col-span-2 flex  justify-end ">
+          {/* <div className="w-full overflow-hidden lg:px-0 px-2  col-span-2 flex  justify-end ">
             <HowItWorks items={carouselItems} />
-          </div>
+          </div> */}
         </div>
 
         <div className=" absolute right-0  -bottom-12 lg:block hidden">
           <img src="/images/coin.png" alt="" />
         </div>
-      </section> */}
+      </section>
+      <section
+        className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full   "
+        ref={sectionRefs[1]}
+        id="nextsection"
+      >
+        <div>
+          <div className="  mb-4  items-center justify-center  lg:flex-row flex-col flex mt-5  gap-5">
+            <h1 className="text-white font-normal capitalize  text-[48px]">
+              Join the
+            </h1>
+            <div>
+              <img src="/images/memestate.png" alt="" className="h-[70px]" />
+            </div>
+            <h1 className="text-white font-normal capitalize   text-[48px]">
+              Presale
+            </h1>
+          </div>
 
+          <h2 className="text-center text-[32px] font-normal text-[#FFC727] my-10">
+            Where we invest
+          </h2>
+
+          <div className="grid grid-cols-3 ">
+            {carouselItems?.map((project, index) => {
+              return <div key={index}>{project}</div>;
+            })}
+          </div>
+          <div className="flex lg:flex-row flex-col items-center justify-center gap-5 mt-12">
+            <Button
+              type={"beta"}
+              soundPath={"/audio/button2.mp3"}
+              label={"Join The Pre-sale Now"}
+              onClick={openIFrameModal}
+              className={"bg-[#FF0000]"}
+            />
+            <ButtonWithSound
+              type={"alpha"}
+              soundPath={"/audio/button2.mp3"}
+              label={"tokenomics and presale details"}
+              onClick={handleTokenoMics}
+            />
+          </div>
+          <div className="flex justify-center my-9">
+            <button
+              className="underline  text-lg font-normal lg:mb-0 mb-7"
+              onClick={handleExplanationModal}
+            >
+              Why does the presale price show $0.001 instead of $0.0001?
+            </button>
+          </div>
+        </div>
+      </section>
       <section
         className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page lg:block hidden"
         ref={sectionRefs[2]}
@@ -461,8 +515,8 @@ export default function App() {
         <RoadMapSlider />
 
         {isOpen && <VideoModal />}
-        {/* {isIframeOpen && <IFrameModal />} */}
-        {/* {isOpenPrizeModal && (
+        {isIframeOpen && <IFrameModal />}
+        {isOpenPrizeModal && (
           <WhyIsPriceDifferent
             title={
               selectedModal === "explanation"
@@ -542,7 +596,7 @@ export default function App() {
               )
             }
           />
-        )} */}
+        )}
       </section>
       <section className="h-[40vh] relative lg:block hidden">
         <div className="flex justify-center items-center h-full pt-10 absolute top-16 w-full">
