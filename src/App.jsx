@@ -387,13 +387,22 @@ export default function App() {
           </div>
         </div>
         <HowToPlay items={howToPlay} />
+        <div className="flex justify-center items-center my-5">
+          <Button
+            type={"beta"}
+            soundPath={"/audio/button2.mp3"}
+            label={"Join The Pre-sale Now"}
+            onClick={openIFrameModal}
+            className={"bg-[#FF0000]"}
+          />
+        </div>
       </section>
 
       <section
         className="bg-[#4F7298] px-16 py-8   border-t-[9px] border-black relative  h-full"
         ref={sectionRefs[4]}
       >
-        <div className="absolute lg:-top-20 -top-8 left-1/2 -translate-x-1/2 ">
+        <div className="absolute lg:-top-12 -top-8 left-1/2 -translate-x-1/2 ">
           <img src="/images/HANGING.png" alt="hanging" />
         </div>
         <div className="grid lg:grid-cols-7 grid-cols-1 w-full  mt-10 justify-center items-end   ">

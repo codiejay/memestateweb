@@ -112,6 +112,23 @@ const HowToPlay = ({ items }) => {
           </button>
         </div>
       </div>
+      <div className="flex justify-center mt-4 space-x-2 gap-4 mt-6">
+        {items.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-[14px] h-[14px] rounded-full transition-all border-[2px] border-black  cursor-pointer  ${
+              currentIndex === index ? "bg-[#FF0000]" : "bg-gray-400"
+            }`}
+            style={{
+              transform: currentIndex === index ? "scale(1.2)" : "scale(1)",
+
+              boxShadow:
+                currentIndex === index ? "4px 4px 0px 0px #000000" : "",
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };
