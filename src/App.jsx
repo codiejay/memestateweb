@@ -387,15 +387,6 @@ export default function App() {
           </div>
         </div>
         <HowToPlay items={howToPlay} />
-        <div className="flex justify-center items-center my-5">
-          <Button
-            type={"beta"}
-            soundPath={"/audio/button2.mp3"}
-            label={"Join The Pre-sale Now"}
-            onClick={openIFrameModal}
-            className={"bg-[#FF0000]"}
-          />
-        </div>
       </section>
 
       <section
