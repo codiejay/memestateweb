@@ -90,14 +90,13 @@ export default function App() {
 
               <div className="flex lg:flex-row flex-col  lg:justify-start justify-center  items-center w-full  gap-5   ">
                 <div className="banner-content">
-                  <a href="https://forms.gle/nKTyEKYFYpEnFDkX8" target="_blank">
-                    <ButtonWithSound
-                      type={"beta"}
-                      soundPath={"/audio/button.mp3"}
-                      label={"Join the Presale now"}
-                      className={"bg-[#FF0000] "}
-                    />
-                  </a>
+                  <ButtonWithSound
+                    type={"beta"}
+                    soundPath={"/audio/button.mp3"}
+                    label={"Join the Presale now"}
+                    className={"bg-[#FF0000] "}
+                    onClick={openIFrameModal}
+                  />
                 </div>
 
                 <div className="banner-content ">
@@ -302,14 +301,13 @@ export default function App() {
             })}
           </div>
           <div className="flex lg:flex-row flex-col items-center justify-center gap-5 mt-12">
-            <a href="https://forms.gle/nKTyEKYFYpEnFDkX8" target="_blank">
-              <Button
-                type={"beta"}
-                soundPath={"/audio/button2.mp3"}
-                label={"Join The Pre-sale Now"}
-                className={"bg-[#FF0000]"}
-              />
-            </a>
+            <Button
+              type={"beta"}
+              soundPath={"/audio/button2.mp3"}
+              label={"Join The Pre-sale Now"}
+              className={"bg-[#FF0000]"}
+              onClick={openIFrameModal}
+            />
 
             <ButtonWithSound
               type={"alpha"}
@@ -391,6 +389,16 @@ export default function App() {
           </div>
         </div>
         <HowToPlay items={howToPlay} />
+        <div className="flex justify-center mt-8">
+          <a href="https://forms.gle/nKTyEKYFYpEnFDkX8" target="_blank">
+            <ButtonWithSound
+              type={"beta"}
+              soundPath={"/audio/button.mp3"}
+              label={"Join the game waitlist"}
+              className={"bg-[#FF0000] "}
+            />
+          </a>
+        </div>
       </section>
 
       <section
