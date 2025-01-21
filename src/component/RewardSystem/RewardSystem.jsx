@@ -122,7 +122,7 @@ const RewardSystem = () => {
                     </div>
                   </div>
                   {/* Right Section */}
-                  <div className="-ml-40 z-30 mt-6 relative lg:block">
+                  <div className="-ml-40 z-30 mt-6 relative lg:block masked-div-2-container">
                     <div className="masked-div-2">
                       <div className="py-4 flex justify-end items-center">
                         <div className="w-[400px] mt-6">

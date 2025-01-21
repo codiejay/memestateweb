@@ -74,28 +74,30 @@ export default function App() {
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="flex justify-center lg:flex-row flex-col items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center ">
-              <div className="banner-content flex w-full  lg:justify-start justify-center ">
+              <div className="banner-content  w-full  lg:justify-start justify-center  hidden">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
                   className="w-[70%] bannerImg"
                 />
               </div>
-              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-3  lg:text-left text-center max-w-[702px] capitalize">
-                Secure your $GEMS today at exclusive presale pricing and
-                maximize your potential ROI while powering the first sustainable
-                P2E model, combining fun and potential real-world earnings
+              <h1 className="z-[1000]">First Sustainable P2E Game</h1>
+              <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-3  lg:text-left text-center max-w-[702px] ">
+                Secure your $GEMS at exclusive presale prices and unlock the
+                potential for real-world earnings with the first sustainable P2E
+                model!
               </p>
 
               <div className="flex lg:flex-row flex-col  lg:justify-start justify-center  items-center w-full  gap-5   ">
                 <div className="banner-content">
-                  <ButtonWithSound
-                    type={"beta"}
-                    soundPath={"/audio/button.mp3"}
-                    label={"Join the Presale now"}
-                    className={"bg-[#FF0000] "}
-                    onClick={openIFrameModal}
-                  />
+                  <a href="https://forms.gle/nKTyEKYFYpEnFDkX8" target="_blank">
+                    <ButtonWithSound
+                      type={"beta"}
+                      soundPath={"/audio/button.mp3"}
+                      label={"Join the Presale now"}
+                      className={"bg-[#FF0000] "}
+                    />
+                  </a>
                 </div>
 
                 <div className="banner-content ">
@@ -117,15 +119,15 @@ export default function App() {
                 <div className="relative  flex justify-end lg:mt-0 mt-4 w-full lg:order-2 order-1 xl:w-[80%] lg:w-full ">
                   <div className="  lg:w-fit  w-full">
                     <div className=" w-full relative">
-                      <div className="border-[#000] border-[12px] shadow-black-custom  py-4 h-fit bg-[#9D9FD8] flex justify-center items-center ">
+                      <div className="border-[#000] border-b-0 border-[12px] shadow-black-custom  py-4 h-fit bg-[#9D9FD8] flex justify-center items-center ">
                         <h1 className="text-black text-center  lg:text-[36px] text-xl    px-2 leading-9">
                           Buy your $gems Token in presale now!
                         </h1>
                       </div>
-                      <div className="lg:absolute relative  lg:top-[7rem] lg:left-1/2 lg:-translate-x-1/2  countdownStyle lg:w-[82%] w-full lg:mt-0 mt-8 ">
+                      <div className="lg:absolute relative  lg:top-[7rem] lg:left-1/2 lg:-translate-x-1/2  countdownStyle lg:w-[82%] w-full lg:mt-0 mt-8 hidden">
                         <CountDown />
                       </div>
-                      <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  mt-10 px-6 py-6  h-fit ">
+                      <div className="border-[#000] border-[12px] shadow-black-custom  bg-[#9D9FD8] flex justify-center items-center flex-col  px-6 py-6  h-fit ">
                         <div className="text-black text-center flex justify-center items-center gap-4 my-6">
                           <p className="lg:text-3xl text-2xl">1 $GEMS</p>{" "}
                           <img src="/images/equals.svg" alt="" />
@@ -300,13 +302,15 @@ export default function App() {
             })}
           </div>
           <div className="flex lg:flex-row flex-col items-center justify-center gap-5 mt-12">
-            <Button
-              type={"beta"}
-              soundPath={"/audio/button2.mp3"}
-              label={"Join The Pre-sale Now"}
-              onClick={openIFrameModal}
-              className={"bg-[#FF0000]"}
-            />
+            <a href="https://forms.gle/nKTyEKYFYpEnFDkX8" target="_blank">
+              <Button
+                type={"beta"}
+                soundPath={"/audio/button2.mp3"}
+                label={"Join The Pre-sale Now"}
+                className={"bg-[#FF0000]"}
+              />
+            </a>
+
             <ButtonWithSound
               type={"alpha"}
               soundPath={"/audio/button2.mp3"}
@@ -349,7 +353,7 @@ export default function App() {
 
         <RewardSystem />
       </section>
-      <section className="bg-[#27297A] lg:px-0  px-2  lg:pt-20 h-full pt-24 pb-10 relative lg:hidden block">
+      <section className="bg-[#27297A] lg:px-0  px-2  h-full  relative lg:hidden block ">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
@@ -371,10 +375,10 @@ export default function App() {
         <CardScrollEffect />
       </section>
       <section
-        className="bg-[#27297A] lg:px-14 px-0 py-16 relative overflow-hidden  page  "
+        className="bg-[#27297A] lg:px-14 px-0 py-16 relative overflow-hidden  howToPlaySection  page  "
         ref={sectionRefs[3]}
       >
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col justify-center items-center mb-8  ">
           <h1 className="text-white font-normal capitalize mb-2  lg:text-[48px] text-2xl">
             Playing
           </h1>

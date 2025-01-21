@@ -234,10 +234,18 @@ h1 {
   color: #16263a;
 }
 
+.howToPlaySection {
+  transform: translateY(-14vh);
+}
+
 @media (max-width: 1555px) {
   .card__inner {
     flex-direction: column;
   }
+
+  /* .howToPlaySection {
+    transform: translateY(0);
+  } */
 
   .card__image-container {
     width: 100%;
@@ -259,6 +267,19 @@ h1 {
     padding: 30px 20px;
   }
 }
+
+@media (max-width:1261px) {
+  .masked-div-2-container {
+    margin-left: unset !important;
+  }
+}
+
+@media (max-width: 999px) {
+  .howToPlaySection {
+    transform: translateY(0);
+  }
+}
+
 
 @media (max-width: 1086px) {
   .slick-slider .button1 {
@@ -287,6 +308,8 @@ h1 {
 }
 
 @media (min-width: 1600px) {
+
+
   .bannerImg {
     width: 800px;
   }

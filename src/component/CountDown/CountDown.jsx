@@ -32,7 +32,7 @@ const CountDown = () => {
 
     return (
       <div
-        className="countdown-display bg-[#D10000] rounded-[33px] py-4 grid grid-cols-4 justify-center items-center lg:gap-6 lg:px-6 px-3 "
+        className="countdown-display bg-[#393ebd] rounded-[33px] py-4 grid grid-cols-4 justify-center items-center lg:gap-6 lg:px-6 px-3 "
         style={{
           boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
         }}
@@ -44,7 +44,7 @@ const CountDown = () => {
           >
             days
           </p>
-          <span className="text-3xl font-normal text-black">
+          <span className=" lg:text-[40px]  text-3xl font-normal text-black">
             {days.toString().padStart(2, "0")}
           </span>
         </div>
@@ -55,7 +55,7 @@ const CountDown = () => {
           >
             Hour
           </span>
-          <span className="text-3xl font-normal text-black">
+          <span className=" lg:text-[40px]  text-3xl font-normal text-black">
             {hours.toString().padStart(2, "0")}
           </span>
         </div>
@@ -66,7 +66,7 @@ const CountDown = () => {
           >
             mins
           </span>
-          <span className="text-3xl font-normal text-black">
+          <span className=" lg:text-[40px]  text-3xl font-normal text-black">
             {minutes.toString().padStart(2, "0")}
           </span>
         </div>
@@ -77,7 +77,7 @@ const CountDown = () => {
           >
             secs
           </span>
-          <span className="text-3xl font-normal text-black">
+          <span className=" lg:text-[40px]  text-3xl font-normal text-black">
             {seconds.toString().padStart(2, "0")}
           </span>
         </div>
