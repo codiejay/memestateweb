@@ -74,14 +74,14 @@ export default function App() {
         <div className="h-full  flex justify-center items-center flex-col  bannerContent lg:pt-32 pt-[6rem]  ">
           <div className="flex justify-center lg:flex-row flex-col items-center lg:px-20 px-4 py-10 gap-20">
             <div className=" flex flex-col  justify-center items-center ">
-              <div className="banner-content  w-full  lg:justify-start justify-center  hidden">
+              <div className="banner-content  w-full  lg:justify-start justify-center ">
                 <img
                   src="/images/bannerContent.png"
                   alt=""
                   className="w-[70%] bannerImg"
                 />
               </div>
-              <h1 className="z-[1000]">First Sustainable P2E Game</h1>
+              {/* <h1 className="z-[1000]">First Sustainable P2E Game</h1> */}
               <p className="text-xl font-bold text-[#EEEFFF]   banner-content font-poppins mt-5 mb-3  lg:text-left text-center max-w-[702px] ">
                 Secure your $GEMS at exclusive presale prices and unlock the
                 potential for real-world earnings with the first sustainable P2E
