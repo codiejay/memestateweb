@@ -37,6 +37,11 @@ export const SOCIAL_ICONS = [
     icon: "/images/youtube.svg",
     link: "https://www.youtube.com/@memestatep2",
   },
+  {
+    name: "Telegram",
+    icon: "/images/telegram.svg",
+    link: "https://t.me/+xGp2HdwO_LI0NTUy",
+  },
 ];
 
 const Navbar = () => {
