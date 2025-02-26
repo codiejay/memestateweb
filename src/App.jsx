@@ -23,6 +23,9 @@ import RoadMapSlider from "./component/RoadMapSlider/RoadMapSLider";
 import CardScrollEffect from "./component/StackCard/StackCard";
 import { useIframeModal } from "./context/IframeContext";
 import { useDifferentPrize } from "./context/WhyIsPriceDifferentContext";
+import StackingCardsGSAP from "./component/StackingNewCard/StackingNewCard";
+import { projects } from "./utils/data";
+import StackingNewCard from "./component/StackingNewCard/StackingNewCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -273,6 +276,11 @@ export default function App() {
           <img src="/images/coin.png" alt="" />
         </div>
       </section>
+      {/* <section>
+        {projects.map((project, index) => {
+          return <StackingNewCard key={index} {...project} />;
+        })}
+      </section> */}
       <section
         className="bg-[#27297A] lg:px-14 px-3  section-2 py-5 relative page   h-full   "
         ref={sectionRefs[1]}
@@ -326,10 +334,12 @@ export default function App() {
           </div>
         </div>
       </section>
-      <section
-        className="bg-[#27297A] lg:px-0  px-4  lg:pt-20 h-full pt-24 pb-10 relative overflow-x-hidden page lg:block hidden"
-        ref={sectionRefs[2]}
-      >
+      {/* <section>
+        {projects.map((project, index) => {
+          return <StackingNewCard key={index} {...project} />;
+        })}
+      </section> */}
+      <section className="bg-[#27297A] lg:px-0  px-4  lg:pt-20  pt-24  relative overflow-x-hidden page lg:block hidden">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
             <div className="lg:relative absolute lg:bottom-[unset] lg:left-[unset] bottom-28 left-0">
@@ -343,14 +353,20 @@ export default function App() {
                 <img src="/images/rewardSystem.png" alt="" />
               </div>
             </div>
-            <div className=" absolute -right-16 -bottom-8 lg:block  hidden">
+            <div className=" absolute -right-16 bottom-8 lg:block  hidden">
               <img src="/images/dice.png" alt="" />
             </div>
           </div>
         </div>
 
-        <RewardSystem />
+        {/* <RewardSystem /> */}
       </section>
+      <section className="lg:block hidden">
+        {projects.map((project, index) => {
+          return <StackingNewCard key={index} {...project} />;
+        })}
+      </section>
+
       <section className="bg-[#27297A] lg:px-0  px-2  h-full  relative lg:hidden block ">
         <div className="flex justify-center relative ">
           <div className="w-fit flex justify-center relative">
